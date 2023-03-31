@@ -1,0 +1,354 @@
+@prefix : <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3> .
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to
+:attached_to rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             owl:inverseOf :enables_attachment ;
+             rdfs:domain :CPU ,
+                         :Cooler ,
+                         :Graphic_card ,
+                         :HDD ,
+                         :Network_card ,
+                         :PSU ,
+                         :RAM ,
+                         :SSD ,
+                         :Sound_card ;
+             rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains
+:contains rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain :Computer_case ;
+          rdfs:range :Motherboard ;
+          owl:propertyChainAxiom ( :contains
+                                   :enables_attachment
+                                 ) .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment
+:enables_attachment rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache
+:has_cache rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :CPU ;
+           rdfs:range :Cache .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_price
+:has_price rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Hardware ,
+                       :Software ;
+           rdfs:range :Price .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket
+:has_socket rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :CPU ,
+                        :Motherboard ;
+            rdfs:range :Socket .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#placed_on
+:placed_on rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Stock ;
+           rdfs:range :CPU .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_clock_speed
+:has_clock_speed rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :CPU ;
+                 rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cores
+:has_cores rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :CPU ;
+           rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_currency
+:has_currency rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Price ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_name
+:has_name rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Manufacturer ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_size_mb
+:has_size_mb rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Cache ;
+             rdfs:range xsd:float .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_tdp
+:has_tdp rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :CPU ;
+         rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_threads
+:has_threads rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :CPU ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_value
+:has_value rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Price ;
+           rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU
+:CPU rdf:type owl:Class ;
+     rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU_attributes
+:CPU_attributes rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache
+:Cache rdf:type owl:Class ;
+       rdfs:subClassOf :CPU_attributes ;
+       owl:disjointWith :Socket .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case
+:Computer_case rdf:type owl:Class ;
+               rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler
+:Cooler rdf:type owl:Class ;
+        rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card
+:Graphic_card rdf:type owl:Class ;
+              rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD
+:HDD rdf:type owl:Class ;
+     rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware
+:Hardware rdf:type owl:Class ;
+          owl:disjointWith :Software .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input
+:Input rdf:type owl:Class ;
+       rdfs:subClassOf :Peripheral ;
+       owl:disjointWith :Output .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal
+:Internal rdf:type owl:Class ;
+          rdfs:subClassOf :Hardware ;
+          owl:disjointWith :Peripheral .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1
+:L1 rdf:type owl:Class ;
+    rdfs:subClassOf :Cache .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2
+:L2 rdf:type owl:Class ;
+    rdfs:subClassOf :Cache .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3
+:L3 rdf:type owl:Class ;
+    rdfs:subClassOf :Cache .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer
+:Manufacturer rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard
+:Motherboard rdf:type owl:Class ;
+             rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card
+:Network_card rdf:type owl:Class ;
+              rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output
+:Output rdf:type owl:Class ;
+        rdfs:subClassOf :Peripheral .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU
+:PSU rdf:type owl:Class ;
+     rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral
+:Peripheral rdf:type owl:Class ;
+            rdfs:subClassOf :Hardware .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Price
+:Price rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM
+:RAM rdf:type owl:Class ;
+     rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD
+:SSD rdf:type owl:Class ;
+     rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket
+:Socket rdf:type owl:Class ;
+        rdfs:subClassOf :CPU_attributes .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software
+:Software rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card
+:Sound_card rdf:type owl:Class ;
+            rdfs:subClassOf :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Stock
+:Stock rdf:type owl:Class ;
+       rdfs:subClassOf :Cooler .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4
+:AM4 rdf:type owl:NamedIndividual ,
+              :Socket .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_5_5500
+:AMD_Ryzen_5_5500 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :has_cache :L1 ;
+                  :has_price <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD> ;
+                  :has_socket :AM4 ;
+                  :has_clock_speed 3.6 ;
+                  :has_cores 6 ;
+                  :has_tdp 65 ;
+                  :has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1
+:L1 rdf:type owl:NamedIndividual ,
+             :L1 ;
+    :has_size_mb 0.3 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO
+:MSI_B550-M_PRO rdf:type owl:NamedIndividual ,
+                         :Motherboard ;
+                :enables_attachment :AMD_Ryzen_5_5500 ;
+                :has_socket :AM4 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H16
+:Thermaltake_Versa_H16 rdf:type owl:NamedIndividual ,
+                                :Computer_case ;
+                       :contains :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD> rdf:type owl:NamedIndividual ,
+                                                                                                 :Price ;
+                                                                                        :has_currency "USD" ;
+                                                                                        :has_value 98 .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CPU
+                :Computer_case
+                :Cooler
+                :Graphic_card
+                :HDD
+                :Motherboard
+                :Network_card
+                :PSU
+                :RAM
+                :SSD
+                :Sound_card
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :CPU_attributes
+                :Hardware
+                :Manufacturer
+                :Price
+                :Software
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :L1
+                :L2
+                :L3
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
