@@ -16,15 +16,18 @@
 :attached_to rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              owl:inverseOf :enables_attachment ;
-             rdfs:domain :CPU ,
-                         :Cooler ,
-                         :Graphic_card ,
-                         :HDD ,
-                         :Network_card ,
-                         :PSU ,
-                         :RAM ,
-                         :SSD ,
-                         :Sound_card ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :CPU
+                                         :Cooler
+                                         :Graphic_card
+                                         :HDD
+                                         :Network_card
+                                         :PSU
+                                         :RAM
+                                         :SSD
+                                         :Sound_card
+                                       )
+                         ] ;
              rdfs:range :Motherboard .
 
 
@@ -40,7 +43,19 @@
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment
 :enables_attachment rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty .
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                 owl:unionOf ( :CPU
+                                               :Cooler
+                                               :Graphic_card
+                                               :HDD
+                                               :Network_card
+                                               :PSU
+                                               :RAM
+                                               :SSD
+                                               :Sound_card
+                                             )
+                               ] .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache
@@ -53,16 +68,22 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_price
 :has_price rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Hardware ,
-                       :Software ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Hardware
+                                       :Software
+                                     )
+                       ] ;
            rdfs:range :Price .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket
 :has_socket rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain :CPU ,
-                        :Motherboard ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :CPU
+                                        :Motherboard
+                                      )
+                        ] ;
             rdfs:range :Socket .
 
 
@@ -81,7 +102,7 @@
 :has_clock_speed rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :CPU ;
-                 rdfs:range xsd:float .
+                 rdfs:range xsd:decimal .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cores
@@ -109,7 +130,7 @@
 :has_size_mb rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain :Cache ;
-             rdfs:range xsd:float .
+             rdfs:range xsd:decimal .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_tdp
@@ -130,7 +151,7 @@
 :has_value rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf owl:topDataProperty ;
            rdfs:domain :Price ;
-           rdfs:range xsd:float .
+           rdfs:range xsd:decimal .
 
 
 #################################################################
