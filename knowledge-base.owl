@@ -35,7 +35,19 @@
 :contains rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :Computer_case ;
-          rdfs:range :Motherboard ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :CPU
+                                     :Cooler
+                                     :Graphic_card
+                                     :HDD
+                                     :Motherboard
+                                     :Network_card
+                                     :PSU
+                                     :RAM
+                                     :SSD
+                                     :Sound_card
+                                   )
+                     ] ;
           owl:propertyChainAxiom ( :contains
                                    :enables_attachment
                                  ) .
@@ -44,6 +56,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment
 :enables_attachment rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :Motherboard ;
                     rdfs:range [ rdf:type owl:Class ;
                                  owl:unionOf ( :CPU
                                                :Cooler
