@@ -16,18 +16,7 @@
 :attached_to rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf owl:topObjectProperty ;
              owl:inverseOf :enables_attachment ;
-             rdfs:domain [ rdf:type owl:Class ;
-                           owl:unionOf ( :CPU
-                                         :Cooler
-                                         :Graphic_card
-                                         :HDD
-                                         :Network_card
-                                         :PSU
-                                         :RAM
-                                         :SSD
-                                         :Sound_card
-                                       )
-                         ] ;
+             rdfs:domain :Internal ;
              rdfs:range :Motherboard .
 
 
@@ -35,40 +24,188 @@
 :contains rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
           rdfs:domain :Computer_case ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :CPU
-                                     :Cooler
-                                     :Graphic_card
-                                     :HDD
-                                     :Motherboard
-                                     :Network_card
-                                     :PSU
-                                     :RAM
-                                     :SSD
-                                     :Sound_card
-                                   )
-                     ] ;
-          owl:propertyChainAxiom ( :contains
+          rdfs:range :Internal ;
+          owl:propertyChainAxiom ( :contains_motherboard
                                    :enables_attachment
                                  ) .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cooler
+:contains_cooler rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :contains ;
+                 rdfs:domain :Computer_case ;
+                 rdfs:range :Cooler .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cpu
+:contains_cpu rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
+              rdfs:domain :Computer_case ;
+              rdfs:range :CPU .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_graphic_card
+:contains_graphic_card rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :contains ;
+                       rdfs:domain :Computer_case ;
+                       rdfs:range :Graphic_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_hdd
+:contains_hdd rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
+              rdfs:domain :Computer_case ;
+              rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard
+:contains_motherboard rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :contains ;
+                      rdfs:domain :Computer_case ;
+                      rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_network_card
+:contains_network_card rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :contains ;
+                       rdfs:domain :Computer_case ;
+                       rdfs:range :Network_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_psu
+:contains_psu rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
+              rdfs:domain :Computer_case ;
+              rdfs:range :PSU .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ram
+:contains_ram rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
+              rdfs:domain :Computer_case ;
+              rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_sound_card
+:contains_sound_card rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :contains ;
+                     rdfs:domain :Computer_case ;
+                     rdfs:range :Sound_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ssd
+:contains_ssd rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :contains ;
+              rdfs:domain :Computer_case ;
+              rdfs:range :SSD .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_attached_to
+:cooler_attached_to rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :attached_to ;
+                    owl:inverseOf :enables_attachment_cooler ;
+                    rdfs:domain :Cooler ;
+                    rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_attached_to
+:cpu_attached_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :attached_to ;
+                 owl:inverseOf :enables_attachment_cpu ;
+                 rdfs:domain :CPU ;
+                 rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_socket
+:cpu_has_socket rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :has_socket ;
+                rdfs:domain :CPU ;
+                rdfs:range :Socket ;
+                owl:propertyDisjointWith :motherboard_has_socket .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment
 :enables_attachment rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :Motherboard ;
-                    rdfs:range [ rdf:type owl:Class ;
-                                 owl:unionOf ( :CPU
-                                               :Cooler
-                                               :Graphic_card
-                                               :HDD
-                                               :Network_card
-                                               :PSU
-                                               :RAM
-                                               :SSD
-                                               :Sound_card
-                                             )
-                               ] .
+                    rdfs:range :Internal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler
+:enables_attachment_cooler rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :enables_attachment ;
+                           rdfs:domain :Motherboard ;
+                           rdfs:range :Cooler .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu
+:enables_attachment_cpu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :enables_attachment ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :CPU .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_graphic_card
+:enables_attachment_graphic_card rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :enables_attachment ;
+                                 owl:inverseOf :graphic_card_attached_to ;
+                                 rdfs:domain :Motherboard ;
+                                 rdfs:range :Graphic_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_hdd
+:enables_attachment_hdd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :enables_attachment ;
+                        owl:inverseOf :hdd_attached_to ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :HDD .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_network_card
+:enables_attachment_network_card rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :enables_attachment ;
+                                 owl:inverseOf :network_card_attached_to ;
+                                 rdfs:domain :Motherboard ;
+                                 rdfs:range :Network_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_psu
+:enables_attachment_psu rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :enables_attachment ;
+                        owl:inverseOf :psu_attached_to ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :PSU .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ram
+:enables_attachment_ram rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :enables_attachment ;
+                        owl:inverseOf :ram_attached_to ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :RAM .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_sound_card
+:enables_attachment_sound_card rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :enables_attachment ;
+                               owl:inverseOf :sound_card_attached_to ;
+                               rdfs:domain :Motherboard ;
+                               rdfs:range :Sound_card .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ssd
+:enables_attachment_ssd rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :enables_attachment ;
+                        owl:inverseOf :ssd_attached_to ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :SSD .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to
+:graphic_card_attached_to rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :attached_to ;
+                          rdfs:domain :Graphic_card ;
+                          rdfs:range :Motherboard .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache
@@ -89,62 +226,104 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port
 :has_port rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf owl:topObjectProperty ;
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :Hub
-                                      :Switch
-                                    )
-                      ] ;
+          rdfs:domain :Network_gear ;
           rdfs:range :Port .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_price
-:has_price rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:unionOf ( :Hardware
-                                       :Software
-                                     )
-                       ] ;
-           rdfs:range :Price .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket
 :has_socket rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:unionOf ( :CPU
-                                        :Motherboard
-                                      )
-                        ] ;
+            rdfs:domain :Internal ;
             rdfs:range :Socket .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to
+:hdd_attached_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :attached_to ;
+                 rdfs:domain :HDD ;
+                 rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port
+:hub_has_port rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :has_port ;
+              rdfs:domain :Hub ;
+              rdfs:range :Port ;
+              owl:propertyDisjointWith :switch_has_port .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#is_part_of_motherboard
 :is_part_of_motherboard rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf owl:topObjectProperty .
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :Chipset ;
+                        rdfs:range :Motherboard .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#placed_on
-:placed_on rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf owl:topObjectProperty ;
-           rdfs:domain :Stock ;
-           rdfs:range :CPU .
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket
+:motherboard_has_socket rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :has_socket ;
+                        rdfs:domain :Motherboard ;
+                        rdfs:range :Socket .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to
+:network_card_attached_to rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :attached_to ;
+                          rdfs:domain :Network_card ;
+                          rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to
+:psu_attached_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :attached_to ;
+                 rdfs:domain :PSU ;
+                 rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to
+:ram_attached_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :attached_to ;
+                 rdfs:domain :RAM ;
+                 rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to
+:sound_card_attached_to rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :attached_to ;
+                        rdfs:domain :Sound_card ;
+                        rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to
+:ssd_attached_to rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :attached_to ;
+                 rdfs:domain :SSD ;
+                 rdfs:range :Motherboard .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port
+:switch_has_port rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :has_port ;
+                 rdfs:domain :Switch ;
+                 rdfs:range :Port .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_capacity
-:has_capacity rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain [ rdf:type owl:Class ;
-                            owl:unionOf ( :HDD
-                                          :RAM
-                                          :SSD
-                                        )
-                          ] ;
-              rdfs:range xsd:integer .
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp
+:cpu_has_tdp rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :CPU ;
+             rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_tdp
+:graphic_card_has_tdp rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Graphic_card ;
+                      rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_charger_voltage
@@ -196,24 +375,6 @@
            rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_currency
-:has_currency rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdfs:domain :Price ;
-              rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_form_factor
-:has_form_factor rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( :HDD
-                                             :SSD
-                                           )
-                             ] ;
-                 rdfs:range xsd:string .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_interface
 :has_interface rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
@@ -237,24 +398,6 @@
                       rdfs:subPropertyOf owl:topDataProperty ;
                       rdfs:domain :Graphic_card ;
                       rdfs:range xsd:integer .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_name
-:has_name rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain :Manufacturer ;
-          rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port_number
-:has_port_number rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdfs:domain [ rdf:type owl:Class ;
-                               owl:unionOf ( :Hub
-                                             :Switch
-                                           )
-                             ] ;
-                 rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port_type
@@ -320,37 +463,11 @@
              rdfs:range xsd:decimal .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_switch_type
-:has_switch_type rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_tdp
-:has_tdp rdf:type owl:DatatypeProperty ;
-         rdfs:subPropertyOf owl:topDataProperty ;
-         rdfs:domain :CPU ;
-         rdfs:range xsd:integer .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_tdp_gpu
-:has_tdp_gpu rdf:type owl:DatatypeProperty ;
-             rdfs:subPropertyOf owl:topDataProperty ;
-             rdfs:domain :Graphic_card ;
-             rdfs:range xsd:integer .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_threads
 :has_threads rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdfs:domain :CPU ;
              rdfs:range xsd:integer .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_value
-:has_value rdf:type owl:DatatypeProperty ;
-           rdfs:subPropertyOf owl:topDataProperty ;
-           rdfs:domain :Price ;
-           rdfs:range xsd:decimal .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_version
@@ -372,6 +489,55 @@
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain :SSD ;
                      rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_capacity
+:hdd_has_capacity rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :HDD ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_form_factor
+:hdd_has_form_factor rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :HDD ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port_number
+:hub_has_port_number rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :Hub ;
+                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_capacity
+:ram_has_capacity rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :RAM ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_has_capacity
+:ssd_has_capacity rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :SSD ;
+                  rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_has_form_factor
+:ssd_has_form_factor rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :SSD ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port_number
+:switch_has_port_number rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain :Switch ;
+                        rdfs:range xsd:integer .
 
 
 #################################################################
@@ -488,21 +654,6 @@
           rdfs:subClassOf :Input .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1
-:L1 rdf:type owl:Class ;
-    rdfs:subClassOf :Cache .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2
-:L2 rdf:type owl:Class ;
-    rdfs:subClassOf :Cache .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3
-:L3 rdf:type owl:Class ;
-    rdfs:subClassOf :Cache .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery
 :Laptop_battery rdf:type owl:Class ;
                 rdfs:subClassOf :Internal .
@@ -516,10 +667,6 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler
 :Laptop_cooler rdf:type owl:Class ;
                rdfs:subClassOf :Peripheral .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer
-:Manufacturer rdf:type owl:Class .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone
@@ -591,10 +738,6 @@
       rdfs:subClassOf :Motherboard_attributes .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Price
-:Price rdf:type owl:Class .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer
 :Printer rdf:type owl:Class ;
          rdfs:subClassOf :Output .
@@ -639,75 +782,9 @@
           rdfs:subClassOf :Output .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Stock
-:Stock rdf:type owl:Class ;
-       rdfs:subClassOf :Cooler .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch
 :Switch rdf:type owl:Class ;
         rdfs:subClassOf :Network_gear .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4
-:AM4 rdf:type owl:NamedIndividual ,
-              :Socket .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_5_5500
-:AMD_Ryzen_5_5500 rdf:type owl:NamedIndividual ,
-                           :CPU ;
-                  :has_cache :L1 ;
-                  :has_price <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD> ;
-                  :has_socket :AM4 ;
-                  :has_clock_speed 3.6 ;
-                  :has_cores 6 ;
-                  :has_tdp 65 ;
-                  :has_threads 12 .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1
-:L1 rdf:type owl:NamedIndividual ,
-             :L1 ;
-    :has_size_mb 0.3 .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO
-:MSI_B550-M_PRO rdf:type owl:NamedIndividual ,
-                         :Motherboard ;
-                :enables_attachment :AMD_Ryzen_5_5500 ;
-                :has_socket :AM4 .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RJ-45
-:RJ-45 rdf:type owl:NamedIndividual ,
-                :Port ;
-       :has_port_type "LAN" .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TP-LINK_Switch_TL-SG105
-:TP-LINK_Switch_TL-SG105 rdf:type owl:NamedIndividual ,
-                                  :Switch ;
-                         :has_port :RJ-45 ;
-                         :has_port_number 5 ;
-                         :has_switch_type "unmanageable" .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H16
-:Thermaltake_Versa_H16 rdf:type owl:NamedIndividual ,
-                                :Computer_case ;
-                       :contains :MSI_B550-M_PRO .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD
-<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#98_USD> rdf:type owl:NamedIndividual ,
-                                                                                                 :Price ;
-                                                                                        :has_currency "USD" ;
-                                                                                        :has_value 98 .
 
 
 #################################################################
@@ -739,16 +816,6 @@
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :CPU_attributes
-                :Hardware
-                :Manufacturer
-                :Price
-                :Software
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Extender
                 :Router
                 :Switch
@@ -775,10 +842,45 @@
 ] .
 
 
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :L1
-                :L2
-                :L3
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :contains_cooler
+                :contains_cpu
+                :contains_graphic_card
+                :contains_hdd
+                :contains_motherboard
+                :contains_network_card
+                :contains_psu
+                :contains_ram
+                :contains_sound_card
+                :contains_ssd
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :cooler_attached_to
+                :cpu_attached_to
+                :graphic_card_attached_to
+                :hdd_attached_to
+                :network_card_attached_to
+                :psu_attached_to
+                :ram_attached_to
+                :sound_card_attached_to
+                :ssd_attached_to
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointProperties ;
+  owl:members ( :enables_attachment_cooler
+                :enables_attachment_cpu
+                :enables_attachment_graphic_card
+                :enables_attachment_hdd
+                :enables_attachment_network_card
+                :enables_attachment_psu
+                :enables_attachment_ram
+                :enables_attachment_sound_card
+                :enables_attachment_ssd
               )
 ] .
 
