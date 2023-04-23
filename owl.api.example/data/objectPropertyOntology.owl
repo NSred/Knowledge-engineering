@@ -1,0 +1,1527 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_antivirus -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_antivirus">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_driver -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_driver">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_office_package -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_office_package">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_peripheral -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_peripheral">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral"/>
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_driver"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        </propertyChainAxiom>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_is_part_of_motherboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_is_part_of_motherboard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+        <propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        </propertyChainAxiom>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cooler -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cooler">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cpu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_graphic_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_graphic_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_hdd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_network_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_network_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_psu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_psu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ram -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_sound_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_sound_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ssd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_socket">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_is_compatible_with_graphic_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_is_compatible_with_graphic_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_camera -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_camera">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_graphical_table -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_graphical_table">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_headphones -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_headphones">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joypad -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joypad">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joystick -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joystick">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_keyboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_keyboard">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_microphone -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_microphone">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_monitor -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_monitor">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_mouse -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_mouse">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_printer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_printer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_projector -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_projector">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_scanner -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_scanner">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_speakers -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_speakers">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_graphic_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_graphic_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_hdd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_network_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_network_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_psu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_psu">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ram -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ram">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_sound_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_sound_card">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ssd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_supports -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_supports">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hardware_produced_by_manufacturer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hardware_produced_by_manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#produced_by_manufacturer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#keyboard_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#keyboard_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_charger_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_charger_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_cooler_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_cooler_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#monitor_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#monitor_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#port_is_part_of_motherboard"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#optical_devices_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#optical_devices_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#port_is_part_of_motherboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#port_is_part_of_motherboard">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#printer_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#printer_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#produced_by_manufacturer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#produced_by_manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#projector_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#projector_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#router_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#router_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_goes_together_with -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_goes_together_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#produced_by_manufacturer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#speaker_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#speaker_connects_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#connects_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#attached_to"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_hdd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_ssd">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_port"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_OS -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_OS">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_graphical_library -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_graphical_library">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/ -->
+
+
