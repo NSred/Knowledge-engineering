@@ -17,6 +17,11 @@ import java.util.List;
 @RequestMapping("/api/cpu")
 public class CPUController {
 
+    @GetMapping()
+    public ResponseEntity<List<CPUResponseDTO>> getAllCPUs() {
+        return new ResponseEntity<>(this.CPUService.getAllCPUs(), HttpStatus.OK);
+    }
+
     @GetMapping("/cpu-by-spec")
     public ResponseEntity<List<CPUResponseDTO>> getCPUBySpec(
             @RequestParam(required = false, defaultValue = "0") int lowerTDP,

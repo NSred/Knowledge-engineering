@@ -12,7 +12,6 @@ import org.semanticweb.owlapi.vocab.XSDVocabulary;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 @Service
@@ -20,92 +19,90 @@ public class CPUService {
 
     private OntologyManager ontologyManager;
 
+    private OWLDataProperty hasName;
+    private OWLDataProperty hasTDP;
+    private OWLDataProperty hasCores;
+    private OWLDataProperty hasThreads;
+    private OWLDataProperty hasClockSpeed;
+    private OWLClassExpression classCPU;
+    private OWLOntologyManager manager;
+    private OWLDataFactory dataFactory;
+    private OWLReasonerFactory reasonerFactory;
+    private OWLReasoner reasoner;
+
+
     public CPUService() throws OWLOntologyCreationException, OWLOntologyStorageException {
-        this.ontologyManager = new OntologyManager();
+        ontologyManager = new OntologyManager();
+        manager = OWLManager.createOWLOntologyManager();
+        dataFactory = manager.getOWLDataFactory();
+        reasonerFactory = new ReasonerFactory();
+        reasoner = reasonerFactory.createReasoner(this.ontologyManager.getOntology());
+        hasName = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_name"));
+        hasTDP = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp_in_watts"));
+        hasCores = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_cores"));
+        hasThreads = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_threads"));
+        hasClockSpeed = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_clock_speed_in_ghz"));
+        classCPU = dataFactory.getOWLClass(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"));
     }
 
-    public List<CPUResponseDTO> getCPUBySpec(CPURequestDTO cpu) {
-        OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+    public List<CPUResponseDTO> getAllCPUs(){
+        return getCpuResponseDTOs(classCPU);
+    }
 
-        OWLDataFactory df = man.getOWLDataFactory();
-        OWLReasonerFactory rf = new ReasonerFactory();
-        OWLReasoner r = rf.createReasoner(this.ontologyManager.getOntology());
-
-        OWLClassExpression classCPU = df.getOWLClass(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"));
-
-        OWLDataProperty hasCoresProperty = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_cores"));
-        OWLDataRange coresRange = df.getOWLDatatypeRestriction(df.getIntegerOWLDatatype(),
-                df.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, df.getOWLLiteral(cpu.getLowerCores())),
-                df.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, df.getOWLLiteral(cpu.getHigherCores())));
-
-        OWLDataProperty hasThreadsProperty = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_threads"));
-        OWLDataRange threadsRange = df.getOWLDatatypeRestriction(df.getIntegerOWLDatatype(),
-                df.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, df.getOWLLiteral(cpu.getLowerThreads())),
-                df.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, df.getOWLLiteral(cpu.getHigherThreads())));
-
-        OWLDataProperty hasClockSpeedProperty = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_clock_speed_in_ghz"));
-        OWLDataRange clockSpeedRange = df.getOWLDatatypeRestriction(df.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()),
-                df.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, df.getOWLLiteral(String.valueOf(cpu.getLowerClockSpeed()), df.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()))),
-                df.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, df.getOWLLiteral(String.valueOf(cpu.getHigherClockSpeed()), df.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()))));
-
-        OWLDataProperty hasTDPProperty = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp_in_watts"));
-        OWLDataRange TDPRange = df.getOWLDatatypeRestriction(df.getIntegerOWLDatatype(),
-                df.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, df.getOWLLiteral(cpu.getLowerTDP())),
-                df.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, df.getOWLLiteral(cpu.getHigherTDP())));
-
-        OWLClassExpression queryExpression = df.getOWLObjectIntersectionOf(
-                classCPU,
-                df.getOWLDataSomeValuesFrom(hasCoresProperty, coresRange),
-                df.getOWLDataSomeValuesFrom(hasThreadsProperty, threadsRange),
-                df.getOWLDataSomeValuesFrom(hasTDPProperty, TDPRange),
-                df.getOWLDataSomeValuesFrom(hasClockSpeedProperty, clockSpeedRange)
-                );
-        Set<OWLNamedIndividual> individuals = r.getInstances(queryExpression, false).getFlattened();
+    private List<CPUResponseDTO> getCpuResponseDTOs(OWLClassExpression classCPU) {
+        Set<OWLNamedIndividual> individuals = reasoner.getInstances(classCPU, false).getFlattened();
         List<CPUResponseDTO> cpus = new ArrayList<>();
         for (OWLNamedIndividual individual : individuals) {
-            cpus.add(setSpec(df, individual));
+            cpus.add(setSpec(individual));
         }
         return cpus;
     }
 
-    private CPUResponseDTO setSpec(OWLDataFactory df, OWLNamedIndividual individual) {
-        CPUResponseDTO cpuResponseDTO = new CPUResponseDTO();
-        OWLDataProperty dp = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_name"));
-        for (OWLDataPropertyAssertionAxiom assertion : this.ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
+    public List<CPUResponseDTO> getCPUBySpec(CPURequestDTO cpu) {
+
+        OWLDataRange coresRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getLowerCores())),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getHigherCores())));
+
+        OWLDataRange threadsRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getLowerThreads())),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getHigherThreads())));
+
+        OWLDataRange clockSpeedRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(String.valueOf(cpu.getLowerClockSpeed()), dataFactory.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()))),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, dataFactory.getOWLLiteral(String.valueOf(cpu.getHigherClockSpeed()), dataFactory.getOWLDatatype(XSDVocabulary.DECIMAL.getIRI()))));
+
+        OWLDataRange TDPRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getLowerTDP())),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MAX_INCLUSIVE, dataFactory.getOWLLiteral(cpu.getHigherTDP())));
+
+        OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
+                classCPU,
+                dataFactory.getOWLDataSomeValuesFrom(hasCores, coresRange),
+                dataFactory.getOWLDataSomeValuesFrom(hasThreads, threadsRange),
+                dataFactory.getOWLDataSomeValuesFrom(hasTDP, TDPRange),
+                dataFactory.getOWLDataSomeValuesFrom(hasClockSpeed, clockSpeedRange)
+                );
+        return getCpuResponseDTOs(queryExpression);
+    }
+
+    private CPUResponseDTO setSpec(OWLNamedIndividual individual) {
+        CPUResponseDTO cpuResponseDTO = new CPUResponseDTO();for (OWLDataPropertyAssertionAxiom assertion : ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
             OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
-            if (dp.equals(property)) {
+            if (hasName.equals(property)) {
                 OWLLiteral value = assertion.getObject();
                 cpuResponseDTO.setName(value.getLiteral());
-            }
-        }
-        dp = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp_in_watts"));
-        for (OWLDataPropertyAssertionAxiom assertion : this.ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
-            OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
-            if (dp.equals(property)) {
+            } else if (hasTDP.equals(property)) {
                 OWLLiteral value = assertion.getObject();
                 cpuResponseDTO.setTDP(Integer.parseInt(value.getLiteral()));
-            }
-        }
-        dp = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_cores"));
-        for (OWLDataPropertyAssertionAxiom assertion : this.ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
-            OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
-            if (dp.equals(property)) {
+            } else if (hasCores.equals(property)) {
                 OWLLiteral value = assertion.getObject();
                 cpuResponseDTO.setCores(Integer.parseInt(value.getLiteral()));
-            }
-        }
-        dp = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_threads"));
-        for (OWLDataPropertyAssertionAxiom assertion : this.ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
-            OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
-            if (dp.equals(property)) {
+            } else if (hasThreads.equals(property)) {
                 OWLLiteral value = assertion.getObject();
                 cpuResponseDTO.setThreads(Integer.parseInt(value.getLiteral()));
             }
-        }
-        dp = df.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_clock_speed_in_ghz"));
-        for (OWLDataPropertyAssertionAxiom assertion : this.ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
-            OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
-            if (dp.equals(property)) {
+            else if (hasClockSpeed.equals(property)) {
                 OWLLiteral value = assertion.getObject();
                 cpuResponseDTO.setClockSpeed(Double.parseDouble(value.getLiteral()));
             }
