@@ -298,13 +298,28 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_is_compatible_with_graphic_card -->
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#devices_go_together -->
 
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_is_compatible_with_graphic_card">
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#devices_go_together">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
     </ObjectProperty>
     
 
@@ -1028,17 +1043,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_goes_together_with -->
-
-
-    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_goes_together_with">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer -->
 
 
@@ -1127,6 +1131,32 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#unit1_is_compatible_with_unit2 -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#unit1_is_compatible_with_unit2">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with -->
 
 
@@ -1164,6 +1194,15 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
     </ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </rdf:Description>
     
 
 

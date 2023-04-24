@@ -190,11 +190,20 @@
                 rdfs:range :Socket .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_is_compatible_with_graphic_card
-:cpu_is_compatible_with_graphic_card rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf owl:topObjectProperty ;
-                                     rdfs:domain :CPU ;
-                                     rdfs:range :Graphic_card .
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#devices_go_together
+:devices_go_together rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty ;
+                     rdf:type owl:SymmetricProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Printer
+                                                 :Scanner
+                                               )
+                                 ] ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Printer
+                                                :Scanner
+                                              )
+                                ] .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables
@@ -657,13 +666,6 @@
                      rdfs:range :Port .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_goes_together_with
-:scanner_goes_together_with rdf:type owl:ObjectProperty ;
-                            rdfs:subPropertyOf owl:topObjectProperty ;
-                            rdfs:domain :Scanner ;
-                            rdfs:range :Printer .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer
 :software_produced_by_manufacturer rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf :produced_by_manufacturer ;
@@ -720,6 +722,22 @@
                  rdfs:range :Port .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#unit1_is_compatible_with_unit2
+:unit1_is_compatible_with_unit2 rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                rdf:type owl:SymmetricProperty ;
+                                rdfs:domain [ rdf:type owl:Class ;
+                                              owl:unionOf ( :CPU
+                                                            :Graphic_card
+                                                          )
+                                            ] ;
+                                rdfs:range [ rdf:type owl:Class ;
+                                             owl:unionOf ( :CPU
+                                                           :Graphic_card
+                                                         )
+                                           ] .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with
 :video_game_is_compatible_with rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf owl:topObjectProperty ;
@@ -743,6 +761,11 @@
                                                  rdfs:subPropertyOf :video_game_is_compatible_with ;
                                                  rdfs:domain :Video_game ;
                                                  rdfs:range :Graphic_library .
+
+
+###  http://www.w3.org/2002/07/owl#topObjectProperty
+owl:topObjectProperty rdf:type owl:ObjectProperty ,
+                               owl:SymmetricProperty .
 
 
 #################################################################
@@ -957,13 +980,6 @@
                             rdfs:subPropertyOf owl:topDataProperty ;
                             rdfs:domain :Graphic_card ;
                             rdfs:range xsd:integer .
-
-
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_tdp
-:graphic_card_has_tdp rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdfs:domain :Graphic_card ;
-                      rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_library_has_name
@@ -1232,13 +1248,6 @@
                                   rdfs:range xsd:decimal .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters
-:manufacturer_has_headquarters rdf:type owl:DatatypeProperty ;
-                               rdfs:subPropertyOf owl:topDataProperty ;
-                               rdfs:domain :Manufacturer ;
-                               rdfs:range xsd:string .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_name
 :manufacturer_has_name rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf owl:topDataProperty ;
@@ -1423,7 +1432,7 @@
 :operating_system_has_version rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf owl:topDataProperty ;
                               rdfs:domain :Operating_system ;
-                              rdfs:range xsd:string .
+                              rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#operation_system_has_type
@@ -2067,6 +2076,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ACER_Projector_XD1320Wi_-_MR.JU311.001
 :ACER_Projector_XD1320Wi_-_MR.JU311.001 rdf:type owl:NamedIndividual ,
                                                  :Projector ;
+                                        :projector_connects_to :USB_3.0 ;
                                         :projector_has_ANSI_lumen 1600 ;
                                         :projector_has_lightning_type "LED" ;
                                         :projector_has_name "ACER Projector XD1320Wi-MRJU311.001" ;
@@ -2082,13 +2092,65 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD
 :AMD rdf:type owl:NamedIndividual ,
               :Manufacturer ;
-     :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
      :manufacturer_has_name "Advanced Micro Devices, Inc." .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U
+:AMD_Ryzen_3_3350U rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_attached_to :MSI_B550-M_PRO ;
+                   :cpu_has_socket :AM4 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :has_cache :L1_1 ,
+                              :L2_1 ,
+                              :L3_1 ;
+                   :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                                   :Radeon_RX_6900_XT ,
+                                                   :Radeon_RX_6950_XT ;
+                   :cpu_has_clock_speed_in_ghz 2.1 ;
+                   :cpu_has_cores 4 ;
+                   :cpu_has_name "AMD Ryzen 3 3350U" ;
+                   :cpu_has_tdp_in_watts 15 ;
+                   :cpu_has_threads 4 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_PRO_5995WX
+:AMD_Ryzen_Threadripper_PRO_5995WX rdf:type owl:NamedIndividual ,
+                                            :CPU ;
+                                   :cpu_attached_to :MSI_B550-M_PRO ;
+                                   :cpu_has_socket :sWRX8 ;
+                                   :hardware_produced_by_manufacturer :AMD ;
+                                   :has_cache :L1_3 ,
+                                              :L2_3 ,
+                                              :L3_3 ;
+                                   :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                                                   :Radeon_RX_6900_XT ,
+                                                                   :Radeon_RX_6950_XT ,
+                                                                   :Radeon_RX_7900_XT ,
+                                                                   :Radeon_RX_7900_XTX ;
+                                   :cpu_has_clock_speed_in_ghz 2.7 ;
+                                   :cpu_has_cores 64 ;
+                                   :cpu_has_name "AMD Ryzen Threadripper PRO 5995WX" ;
+                                   :cpu_has_tdp_in_watts 280 ;
+                                   :cpu_has_threads 128 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Software_Adrenalin_Driver
 :AMD_Software_Adrenalin_Driver rdf:type owl:NamedIndividual ,
                                         :Driver ;
+                               :driver_enables_camera :Logitech_Brio_500_Graphite ;
+                               :driver_enables_graphical_table :HUION_Graphical_table_KD200 ;
+                               :driver_enables_headphones :WHITE_SHARK_Gaming_earbuds_GE-536_Eagle ;
+                               :driver_enables_joypad :Logitech_gamepad_F310 ;
+                               :driver_enables_joystick :T-16000M_FCS_Joystick ;
+                               :driver_enables_keyboard :Genesis_Thor_TKL_300 ;
+                               :driver_enables_microphone :GEMBIRD_mic-205 ;
+                               :driver_enables_monitor :DELL_Monitor_27_Inch_S2721HN ;
+                               :driver_enables_mouse :INPHIC_Wireless_Mouse ;
+                               :driver_enables_printer :HP_Printer_LaserJet_M111a ;
+                               :driver_enables_projector :ACER_Projector_XD1320Wi_-_MR.JU311.001 ;
+                               :driver_enables_scanner :EPSON_scanner_workforce_DS-530II ;
+                               :driver_enables_speakers :EDIFIER_Speakers_R1700BT ;
                                :driver_has_name "AMD Software Adrenalin Driver" ;
                                :driver_has_version "23.2.1" .
 
@@ -2096,6 +2158,10 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop
 :Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop rdf:type owl:NamedIndividual ,
                                                    :Laptop ;
+                                          :laptop_has_OS :Windows_11_S ;
+                                          :laptop_has_battery :HP_OA04_Notebook_Battery ;
+                                          :laptop_has_cpu :AMD_Ryzen_3_3350U ;
+                                          :laptop_has_port :USB_3.0 ;
                                           :laptop_has_brand "Acer" ;
                                           :laptop_has_hard_disk_size_in_tb 1 ;
                                           :laptop_has_name "Acer Aspire 5 15.6\" FHD IPS Slim Laptop" ;
@@ -2106,6 +2172,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card
 :Audigy_FX_Sound_card rdf:type owl:NamedIndividual ,
                                :Sound_card ;
+                      :sound_card_attached_to :MSI_B550-M_PRO ;
                       :sound_card_has_interface "PCI Express x1" ;
                       :sound_card_has_name "Audigy FX Sound card" ;
                       :sound_card_has_sample_rate_in_khz 192 .
@@ -2121,12 +2188,14 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#B550
 :B550 rdf:type owl:NamedIndividual ,
                :Chipset ;
+      :chipset_is_part_of_motherboard :MSI_B550-M_PRO ;
       :chipset_has_name "B550" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400
 :DEEP_COOL_PF400 rdf:type owl:NamedIndividual ,
                           :PSU ;
+                 :psu_attached_to :MSI_B550-M_PRO ;
                  :psu_has_certificate "80 Plus" ;
                  :psu_has_dimensions "150 x 86 x 140 mm" ;
                  :psu_has_name "DEEP COOL PF400" ;
@@ -2136,6 +2205,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_GAMMAXX_GTE_V2
 :DEEP_GAMMAXX_GTE_V2 rdf:type owl:NamedIndividual ,
                               :Cooler ;
+                     :cooler_attached_to :MSI_B550-M_PRO ;
                      :cooler_has_dimensions "129x77x157 mm" ;
                      :cooler_has_name "DEEP_GAMMAXX_GTE_V2" ;
                      :cooler_has_speed_in_rpm 1650 .
@@ -2144,6 +2214,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DELL_Monitor_27_Inch_S2721HN
 :DELL_Monitor_27_Inch_S2721HN rdf:type owl:NamedIndividual ,
                                        :Monitor ;
+                              :monitor_connects_to :USB_3.0 ;
                               :monitor_has_diagonal "27 Inch" ;
                               :monitor_has_name "DELL Monitor 27'' S2721HN" ;
                               :monitor_has_panel_type "IPS" ;
@@ -2151,9 +2222,17 @@
                               :monitor_has_resolution "1920 x 1080 Full HD" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX
+:DirectX rdf:type owl:NamedIndividual ,
+                  :Graphic_library ;
+         :graphic_library_has_name "DirectX" ;
+         :graphic_library_has_version 12 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EDIFIER_Speakers_R1700BT
 :EDIFIER_Speakers_R1700BT rdf:type owl:NamedIndividual ,
                                    :Speakers ;
+                          :speaker_connects_to :USB_3.0 ;
                           :speakers_have_bluetooth "true"^^xsd:boolean ;
                           :speakers_have_impedance_in_ohm 6 ;
                           :speakers_have_name "EDIFIER Speakers R1700BT" ;
@@ -2163,6 +2242,8 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EPSON_scanner_workforce_DS-530II
 :EPSON_scanner_workforce_DS-530II rdf:type owl:NamedIndividual ,
                                            :Scanner ;
+                                  :devices_go_together :HP_Printer_LaserJet_M111a ;
+                                  :scanner_connects_to :USB_3.0 ;
                                   :scanner_has_format "A4" ;
                                   :scanner_has_name "EPSON scanner workforce DS-530II" .
 
@@ -2170,19 +2251,35 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet
 :E_GREEN_Gigabit_Ethernet rdf:type owl:NamedIndividual ,
                                    :Network_card ;
+                          :network_card_attached_to :MSI_B550-M_PRO ;
                           :network_card_has_interface "PCI-Express" ;
                           :network_card_has_name "E_GREEN Gigabit Ethernet" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189
+:FCLGA4189 rdf:type owl:NamedIndividual ,
+                    :Socket ;
+           :socket_has_name "FCLGA4189" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677
+:FCLGA4677 rdf:type owl:NamedIndividual ,
+                    :Socket ;
+           :socket_has_name "FCLGA4677" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FIFA_23
 :FIFA_23 rdf:type owl:NamedIndividual ,
                   :Video_game ;
+         :video_game_is_compatible_with_OS :Windows_10_Pro ;
+         :video_game_is_compatible_with_graphical_library :DirectX ;
          :video_game_has_name "FIFA 23" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GEMBIRD_mic-205
 :GEMBIRD_mic-205 rdf:type owl:NamedIndividual ,
                           :Microphone ;
+                 :microphone_connects_to :USB_3.0 ;
                  :microphone_has_max_frequency_in_khz 16 ;
                  :microphone_has_min_frequency_in_hz 50 ;
                  :microphone_has_name "GEMBIRD mic-205" .
@@ -2191,6 +2288,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Genesis_Thor_TKL_300
 :Genesis_Thor_TKL_300 rdf:type owl:NamedIndividual ,
                                :Keyboard ;
+                      :keyboard_connects_to :USB_3.0 ;
                       :keyboard_has_dimensions "136 x 355 x 38 mm" ;
                       :keyboard_has_name "Genesis Thor TKL 300" ;
                       :keyboard_has_type "mechanical" .
@@ -2208,6 +2306,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_Printer_LaserJet_M111a
 :HP_Printer_LaserJet_M111a rdf:type owl:NamedIndividual ,
                                     :Printer ;
+                           :printer_connects_to :USB_3.0 ;
                            :printer_has_format "A4" ;
                            :printer_has_name "HP Printer LaserJet M111a" ;
                            :printer_has_resolution "600 x 600 dpi" ;
@@ -2217,6 +2316,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HUION_Graphical_table_KD200
 :HUION_Graphical_table_KD200 rdf:type owl:NamedIndividual ,
                                       :Graphical_table ;
+                             :graphical_table_connects_to :USB_3.0 ;
                              :graphical_table_has_name "HUION Graphical table KD200" ;
                              :graphical_table_has_resolution "5080 ipi" ;
                              :graphical_table_has_size "226 x 142 mm" .
@@ -2225,6 +2325,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#INPHIC_Wireless_Mouse
 :INPHIC_Wireless_Mouse rdf:type owl:NamedIndividual ,
                                 :Mouse ;
+                       :mouse_connects_to :USB_3.0 ;
                        :mouse_has_connectivity_technology "Wireless Nanometer USB" ;
                        :mouse_has_model_name "PM6" ;
                        :mouse_has_movement_detection_technology "Optical" ;
@@ -2235,13 +2336,74 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel
 :Intel rdf:type owl:NamedIndividual ,
                 :Manufacturer ;
-       :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
        :manufacturer_has_name "Intel Corporation" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS
+:Intel_Core_i9-13900KS rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :cpu_attached_to :MSI_B550-M_PRO ;
+                       :hardware_produced_by_manufacturer :Intel ;
+                       :has_cache :L1_1 ,
+                                  :L2_1 ,
+                                  :L3_1 ;
+                       :has_socket :LGA_1700 ;
+                       :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                                       :Radeon_RX_6900_XT ,
+                                                       :Radeon_RX_6950_XT ,
+                                                       :Radeon_RX_7900_XT ;
+                       :cpu_has_clock_speed_in_ghz 3.2 ;
+                       :cpu_has_cores 24 ;
+                       :cpu_has_name "Intel Core i9-13900KS" ;
+                       :cpu_has_tdp_in_watts 125 ;
+                       :cpu_has_threads 32 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Platinum_8380
+:Intel_Xeon_Platinum_8380 rdf:type owl:NamedIndividual ,
+                                   :CPU ;
+                          :cpu_attached_to :MSI_B550-M_PRO ;
+                          :hardware_produced_by_manufacturer :Intel ;
+                          :has_cache :L1_2 ,
+                                     :L2_2 ,
+                                     :L3_2 ;
+                          :has_socket :FCLGA4189 ;
+                          :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                                          :Radeon_RX_6900_XT ,
+                                                          :Radeon_RX_6950_XT ,
+                                                          :Radeon_RX_7900_XT ;
+                          :cpu_has_clock_speed_in_ghz 2.3 ;
+                          :cpu_has_cores 40 ;
+                          :cpu_has_name "Intel Xeon Platinum 8380" ;
+                          :cpu_has_tdp_in_watts 270 ;
+                          :cpu_has_threads 80 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_w9-3475X
+:Intel_Xeon_w9-3475X rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :cpu_attached_to :MSI_B550-M_PRO ;
+                     :hardware_produced_by_manufacturer :Intel ;
+                     :has_cache :L1_3 ,
+                                :L2_3 ,
+                                :L3_3 ;
+                     :has_socket :FCLGA4677 ;
+                     :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                                     :Radeon_RX_6900_XT ,
+                                                     :Radeon_RX_6950_XT ,
+                                                     :Radeon_RX_7900_XT ,
+                                                     :Radeon_RX_7900_XTX ;
+                     :cpu_has_clock_speed_in_ghz 2.2 ;
+                     :cpu_has_cores 36 ;
+                     :cpu_has_name "Intel Xeon w9-3475X" ;
+                     :cpu_has_tdp_in_watts 300 ;
+                     :cpu_has_threads 72 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#KFD-HP_Laptop_Charger
 :KFD-HP_Laptop_Charger rdf:type owl:NamedIndividual ,
                                 :Laptop_charger ;
+                       :laptop_charger_connects_to :USB_3.0 ;
                        :laptop_charger_has_name "KFD-HP Laptop Charger" ;
                        :laptop_charger_has_power_in_watts 90 .
 
@@ -2249,6 +2411,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ
 :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ rdf:type owl:NamedIndividual ,
                                                 :RAM ;
+                                       :ram_attached_to :MSI_B550-M_PRO ;
                                        :ram_has_capacity_in_gb 8 ;
                                        :ram_has_frequency_in_mhz 3200 ;
                                        :ram_has_latency "CL16" ;
@@ -2257,16 +2420,79 @@
                                        :ram_has_voltage 1.2 .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1
-:L1 rdf:type owl:NamedIndividual ,
-             :Cache ;
-    :cache_has_level "L1" ;
-    :cache_has_size_in_mb 16 .
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1
+:L1_1 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L1" ;
+      :cache_has_size_in_mb 2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2
+:L1_2 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L1" ;
+      :cache_has_size_in_mb 4 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3
+:L1_3 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L1" ;
+      :cache_has_size_in_mb 8 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1
+:L2_1 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L2" ;
+      :cache_has_size_in_mb 8 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2
+:L2_2 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L2" ;
+      :cache_has_size_in_mb 16 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3
+:L2_3 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L2" ;
+      :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1
+:L3_1 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L3" ;
+      :cache_has_size_in_mb 32 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2
+:L3_2 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L3" ;
+      :cache_has_size_in_mb 64 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3
+:L3_3 rdf:type owl:NamedIndividual ,
+               :Cache ;
+      :cache_has_level "L3" ;
+      :cache_has_size_in_mb 96 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700
+:LGA_1700 rdf:type owl:NamedIndividual ,
+                   :Socket ;
+          :socket_has_name "LGA 1700" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_Brio_500_Graphite
 :Logitech_Brio_500_Graphite rdf:type owl:NamedIndividual ,
                                      :Camera ;
+                            :camera_connects_to :USB_3.0 ;
                             :camera_has_name "Logitech Brio 500 Graphite" ;
                             :camera_has_resolution "1920 x 1080" .
 
@@ -2274,12 +2500,14 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_gamepad_F310
 :Logitech_gamepad_F310 rdf:type owl:NamedIndividual ,
                                 :Joypad ;
+                       :joypad_connects_to :USB_3.0 ;
                        :joypad_has_name "Logitech gamepad F310" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MERCUSYS_Router_AC12G
 :MERCUSYS_Router_AC12G rdf:type owl:NamedIndividual ,
                                 :Router ;
+                       :router_connects_to :USB_3.0 ;
                        :router_has_flow_rate_in_Mbps 867 ;
                        :router_has_name "MERCUSYS Router AC12G" ;
                        :router_has_type "wireless" .
@@ -2288,15 +2516,36 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO
 :MSI_B550-M_PRO rdf:type owl:NamedIndividual ,
                          :Motherboard ;
+                :enables_attachment_cooler :DEEP_GAMMAXX_GTE_V2 ;
+                :enables_attachment_cpu :AMD_Ryzen_3_3350U ,
+                                        :Ryzen_7_5800x ;
+                :enables_attachment_graphic_card :Radeon_RX_6600_XT ;
+                :enables_attachment_hdd :Seagate_HDD_IronWolf_10TB ;
+                :enables_attachment_network_card :E_GREEN_Gigabit_Ethernet ;
+                :enables_attachment_psu :DEEP_COOL_PF400 ;
+                :enables_attachment_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ ;
+                :enables_attachment_sound_card :Audigy_FX_Sound_card ;
+                :enables_attachment_ssd :Samsung_980_PRO_1TB ;
+                :has_chipset :B550 ;
+                :motherboard_has_port :USB_3.0 ;
+                :motherboard_has_socket :AM4 ;
+                :motherboard_has_storage_interface :SATA ;
                 :motherboard_has_dimensions "24.4 x 21 cm" ;
                 :motherboard_has_form_factor "M-ATX" ;
                 :motherboard_has_name "MSI B550-M PRO" ;
                 :motherboard_has_socket "AM4" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft
+:Microsoft rdf:type owl:NamedIndividual ,
+                    :Manufacturer ;
+           :manufacturer_has_name "Microsoft Corporation" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft_Office_2016
 :Microsoft_Office_2016 rdf:type owl:NamedIndividual ,
                                 :Office_package ;
+                       :software_produced_by_manufacturer :Microsoft ;
                        :office_package_has_name "Microsoft Office 2016" ;
                        :office_package_has_version 2016 .
 
@@ -2304,6 +2553,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motorola_MB8600_DOCSIS_3.1_Cable_Modem
 :Motorola_MB8600_DOCSIS_3.1_Cable_Modem rdf:type owl:NamedIndividual ,
                                                  :Modem ;
+                                        :modem_connects_to :USB_3.0 ;
                                         :modem_has_brand "Motorola" ;
                                         :modem_has_connectivity_technology "Cable" ;
                                         :modem_has_dimensions "7.25 x 2.25 x 7.88 inches" ;
@@ -2313,6 +2563,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#NETGEAR_8-Port_Gigabit_Ethernet_Unmanaged_Switch
 :NETGEAR_8-Port_Gigabit_Ethernet_Unmanaged_Switch rdf:type owl:NamedIndividual ,
                                                            :Switch ;
+                                                  :switch_has_port :USB_3.0 ;
                                                   :switch_has_brand "NETGEAR" ;
                                                   :switch_has_dimensions "6.22 x 4.02 x 1.02 inches" ;
                                                   :switch_has_name "NETGEAR 8-Port Gigabit Ethernet Unmanaged Switch" ;
@@ -2322,7 +2573,6 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia
 :Nvidia rdf:type owl:NamedIndividual ,
                  :Manufacturer ;
-        :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
         :manufacturer_has_name "Nvidia Corporation" .
 
 
@@ -2336,6 +2586,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PLUGIT_HDMI_adapter_mini
 :PLUGIT_HDMI_adapter_mini rdf:type owl:NamedIndividual ,
                                    :Adapter ;
+                          :adapter_connects_to :USB_3.0 ;
                           :adapter_has_name "PLUGIT HDMI adapter mini" ;
                           :adapter_has_version "HDMI 1.4" .
 
@@ -2343,6 +2594,12 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT
 :Radeon_RX_6600_XT rdf:type owl:NamedIndividual ,
                             :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :MSI_B550-M_PRO ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :hardware_produced_by_manufacturer :AMD ;
                    :gpu_has_core_clock_in_mhz 1968 ;
                    :gpu_has_memory_clock 16000 ;
                    :gpu_has_name "Radeon RX 6600 XT" ;
@@ -2350,9 +2607,82 @@
                    :gpu_has_video_memory_in_mb 8192 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT
+:Radeon_RX_6900_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :MSI_B550-M_PRO ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :gpu_has_core_clock_in_mhz 1825 ;
+                   :gpu_has_memory_clock 16000 ;
+                   :gpu_has_name "Radeon RX 6900 XT" ;
+                   :gpu_has_tdp_in_watts 300 ;
+                   :gpu_has_video_memory_in_mb 16384 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT
+:Radeon_RX_6950_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :MSI_B550-M_PRO ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :gpu_has_core_clock_in_mhz 1925 ;
+                   :gpu_has_memory_clock 2250 ;
+                   :gpu_has_name "Radeon RX 6950 XT" ;
+                   :gpu_has_tdp_in_watts 335 ;
+                   :gpu_has_video_memory_in_mb 16384 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT
+:Radeon_RX_7900_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :MSI_B550-M_PRO ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :gpu_has_core_clock_in_mhz 2000 ;
+                   :gpu_has_memory_clock 2500 ;
+                   :gpu_has_name "Radeon RX 7900 XT" ;
+                   :gpu_has_tdp_in_watts 315 ;
+                   :gpu_has_video_memory_in_mb 20480 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XTX
+:Radeon_RX_7900_XTX rdf:type owl:NamedIndividual ,
+                             :Graphic_card ;
+                    :gpu_supports :DirectX ,
+                                  :OpenGL ;
+                    :graphic_card_attached_to :MSI_B550-M_PRO ;
+                    :graphic_card_has_port :USB_3.0 ;
+                    :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                    :hardware_produced_by_manufacturer :AMD ;
+                    :gpu_has_core_clock_in_mhz 1855 ;
+                    :gpu_has_memory_clock 2500 ;
+                    :gpu_has_name "Radeon RX 7900 XTX" ;
+                    :gpu_has_tdp_in_watts 355 ;
+                    :gpu_has_video_memory_in_mb 24576 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x
 :Ryzen_7_5800x rdf:type owl:NamedIndividual ,
                         :CPU ;
+               :cpu_attached_to :MSI_B550-M_PRO ;
+               :cpu_has_socket :AM4 ;
+               :hardware_produced_by_manufacturer :AMD ;
+               :has_cache :L1_2 ,
+                          :L2_2 ,
+                          :L3_2 ;
+               :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
+                                               :Radeon_RX_6900_XT ,
+                                               :Radeon_RX_6950_XT ;
                :cpu_has_clock_speed_in_ghz 3.8 ;
                :cpu_has_cores 8 ;
                :cpu_has_name "Ryzen 7 5800x" ;
@@ -2363,6 +2693,8 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SATA
 :SATA rdf:type owl:NamedIndividual ,
                :Storage_interface ;
+      :storage_interface_is_compatible_with_hdd :Seagate_HDD_IronWolf_10TB ;
+      :storage_interface_is_compatible_with_ssd :Samsung_980_PRO_1TB ;
       :storage_interface_has_name "SATA" ;
       :storage_interface_has_version 1 .
 
@@ -2370,6 +2702,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB
 :Samsung_980_PRO_1TB rdf:type owl:NamedIndividual ,
                               :SSD ;
+                     :ssd_attached_to :MSI_B550-M_PRO ;
                      :ssd_has_capacity_in_gb 1000 ;
                      :ssd_has_form_factor "M.2" ;
                      :ssd_has_name "Samsung 980 PRO 1TB" ;
@@ -2380,6 +2713,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB
 :Seagate_HDD_IronWolf_10TB rdf:type owl:NamedIndividual ,
                                     :HDD ;
+                           :hdd_attached_to :MSI_B550-M_PRO ;
                            :hdd_has_capacity_in_gb 10000 ;
                            :hdd_has_form_factor "3.5 inch" ;
                            :hdd_has_name "Seagate HDD IronWolf 10TB" ;
@@ -2389,12 +2723,14 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick
 :T-16000M_FCS_Joystick rdf:type owl:NamedIndividual ,
                                 :Joystick ;
+                       :joystick_connects_to :USB_3.0 ;
                        :joystick_has_name "T-16000M FCS Joystick" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TP-Link_TL-SG105
 :TP-Link_TL-SG105 rdf:type owl:NamedIndividual ,
                            :Hub ;
+                  :hub_has_port :USB_3.0 ;
                   :hub_has_brand "TP-Link" ;
                   :hub_has_dimensions "3.9 x 3.9 x 1 inches" ;
                   :hub_has_name "TP-Link TL-SG105" ;
@@ -2404,6 +2740,17 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H15
 :Thermaltake_Versa_H15 rdf:type owl:NamedIndividual ,
                                 :Computer_case ;
+                       :contains_cooler :DEEP_GAMMAXX_GTE_V2 ;
+                       :contains_cpu :AMD_Ryzen_3_3350U ,
+                                     :Ryzen_7_5800x ;
+                       :contains_graphic_card :Radeon_RX_6600_XT ;
+                       :contains_hdd :Seagate_HDD_IronWolf_10TB ;
+                       :contains_motherboard :MSI_B550-M_PRO ;
+                       :contains_network_card :E_GREEN_Gigabit_Ethernet ;
+                       :contains_psu :DEEP_COOL_PF400 ;
+                       :contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ ;
+                       :contains_sound_card :Audigy_FX_Sound_card ;
+                       :contains_ssd :Samsung_980_PRO_1TB ;
                        :computer_case_has_dimensions "500x300x100 mm" ;
                        :computer_case_has_name "Thermaltake_Versa_H15" ;
                        :computer_case_supports_motherboard_format "ATX" ,
@@ -2421,6 +2768,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#VERBATIM_DVD-RW
 :VERBATIM_DVD-RW rdf:type owl:NamedIndividual ,
                           :Optical_devices ;
+                 :optical_devices_connects_to :USB_3.0 ;
                  :optical_devices_has_name "VERBATIM DVD-RW" ;
                  :optical_devices_has_type "external" .
 
@@ -2428,6 +2776,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#WHITE_SHARK_Gaming_earbuds_GE-536_Eagle
 :WHITE_SHARK_Gaming_earbuds_GE-536_Eagle rdf:type owl:NamedIndividual ,
                                                   :Headphones ;
+                                         :headphones_connects_to :USB_3.0 ;
                                          :headphones_have_mic "true"^^xsd:boolean ;
                                          :headphones_have_name "White Shark Gaming Earbuds GE-536 Eagle" ;
                                          :headphones_have_sensitivity_in_db 110 ;
@@ -2437,6 +2786,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#WHITE_SHARK_Ice_Warrior_-_GCP-25
 :WHITE_SHARK_Ice_Warrior_-_GCP-25 rdf:type owl:NamedIndividual ,
                                            :Laptop_cooler ;
+                                  :laptop_cooler_connects_to :USB_3.0 ;
                                   :laptop_cooler_has_air_flow 21 ;
                                   :laptop_cooler_has_dimensions "17.3 inch" ;
                                   :laptop_cooler_has_fan_speed_in_rpm 1500 ;
@@ -2446,14 +2796,35 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_10_Pro
 :Windows_10_Pro rdf:type owl:NamedIndividual ,
                          :Operating_system ;
+                :OS_is_compatible_with_antivirus :Avast_Antivirus ;
+                :OS_is_compatible_with_driver :AMD_Software_Adrenalin_Driver ;
+                :OS_is_compatible_with_office_package :Microsoft_Office_2016 ;
                 :operating_system_has_name "Windows" ;
-                :operating_system_has_version "\"10\"" ;
+                :operating_system_has_version 10 ;
                 :operation_system_has_type "Pro" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_11_S
+:Windows_11_S rdf:type owl:NamedIndividual ,
+                       :Operating_system ;
+              :OS_is_compatible_with_antivirus :Avast_Antivirus ;
+              :OS_is_compatible_with_driver :AMD_Software_Adrenalin_Driver ;
+              :OS_is_compatible_with_office_package :Microsoft_Office_2016 ;
+              :operating_system_has_name "Windows 11 S" ;
+              :operating_system_has_version 11 ;
+              :operation_system_has_type "S mode" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8
+:sWRX8 rdf:type owl:NamedIndividual ,
+                :Socket ;
+       :socket_has_name "sWRX8" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Verbatim_Store_&_Go_53023_External_HDD
 <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Verbatim_Store_&_Go_53023_External_HDD> rdf:type owl:NamedIndividual ,
                                                                                                                                  :External_storage ;
+                                                                                                                        :external_storage_connects_to :USB_3.0 ;
                                                                                                                         :external_storage_has_capacity_in_gb 1000 ;
                                                                                                                         :external_storage_has_form_factor "2.5 inch" ;
                                                                                                                         :external_storage_has_name "Verbatim Store & Go 53023 External HDD" .

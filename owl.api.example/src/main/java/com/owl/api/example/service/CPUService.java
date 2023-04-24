@@ -87,7 +87,8 @@ public class CPUService {
     }
 
     private CPUResponseDTO setSpec(OWLNamedIndividual individual) {
-        CPUResponseDTO cpuResponseDTO = new CPUResponseDTO();for (OWLDataPropertyAssertionAxiom assertion : ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
+        CPUResponseDTO cpuResponseDTO = new CPUResponseDTO();
+        for (OWLDataPropertyAssertionAxiom assertion : ontologyManager.getOntology().getDataPropertyAssertionAxioms(individual)) {
             OWLDataProperty property = assertion.getProperty().asOWLDataProperty();
             if (hasName.equals(property)) {
                 OWLLiteral value = assertion.getObject();

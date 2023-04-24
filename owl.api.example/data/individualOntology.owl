@@ -14,6 +14,634 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_antivirus -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_antivirus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_driver -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_driver"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_office_package -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OS_is_compatible_with_office_package"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_is_part_of_motherboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_is_part_of_motherboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cooler -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cooler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_cpu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_graphic_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_graphic_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_hdd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_motherboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_network_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_network_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_psu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_psu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ram -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ram"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_sound_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_sound_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#contains_ssd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_socket"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#devices_go_together -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#devices_go_together"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_camera -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_camera"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_graphical_table -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_graphical_table"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_headphones -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_headphones"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joypad -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joypad"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joystick -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_joystick"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_keyboard -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_keyboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_microphone -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_microphone"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_monitor -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_monitor"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_mouse -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_mouse"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_printer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_printer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_projector -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_projector"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_scanner -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_scanner"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_speakers -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_enables_speakers"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cooler"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_cpu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_graphic_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_graphic_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_hdd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_network_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_network_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_psu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_psu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ram -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ram"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_sound_card -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_sound_card"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#enables_attachment_ssd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_supports -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_supports"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_has_port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hardware_produced_by_manufacturer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hardware_produced_by_manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_cache"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#keyboard_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#keyboard_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_charger_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_charger_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_cooler_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_cooler_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_OS -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_OS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_cpu"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#monitor_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#monitor_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#optical_devices_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#optical_devices_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#printer_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#printer_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#projector_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#projector_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#router_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#router_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#scanner_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#software_produced_by_manufacturer"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sound_card_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#speaker_connects_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#speaker_connects_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ssd_attached_to"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_hdd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_hdd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_ssd -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#storage_interface_is_compatible_with_ssd"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#unit1_is_compatible_with_unit2 -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#unit1_is_compatible_with_unit2"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_OS -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_OS"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_graphical_library -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#video_game_is_compatible_with_graphical_library"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Data properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -492,13 +1120,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters -->
-
-
-    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters"/>
-    
-
-
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_name -->
 
 
@@ -608,13 +1229,6 @@
 
 
     <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_name"/>
-    
-
-
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket -->
-
-
-    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket"/>
     
 
 
@@ -1389,6 +2003,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ACER_Projector_XD1320Wi_-_MR.JU311.001">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector"/>
+        <untitled-ontology-3:projector_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:projector_has_ANSI_lumen rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</untitled-ontology-3:projector_has_ANSI_lumen>
         <untitled-ontology-3:projector_has_lightning_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LED</untitled-ontology-3:projector_has_lightning_type>
         <untitled-ontology-3:projector_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACER Projector XD1320Wi-MRJU311.001</untitled-ontology-3:projector_has_name>
@@ -1412,8 +2027,55 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
-        <untitled-ontology-3:manufacturer_has_headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Clara, California, U.S.</untitled-ontology-3:manufacturer_has_headquarters>
         <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advanced Micro Devices, Inc.</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3350U</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_PRO_5995WX -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_PRO_5995WX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XTX"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.7</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen Threadripper PRO 5995WX</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</untitled-ontology-3:cpu_has_threads>
     </NamedIndividual>
     
 
@@ -1423,6 +2085,19 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Software_Adrenalin_Driver">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver"/>
+        <untitled-ontology-3:driver_enables_camera rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_Brio_500_Graphite"/>
+        <untitled-ontology-3:driver_enables_graphical_table rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HUION_Graphical_table_KD200"/>
+        <untitled-ontology-3:driver_enables_headphones rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#WHITE_SHARK_Gaming_earbuds_GE-536_Eagle"/>
+        <untitled-ontology-3:driver_enables_joypad rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_gamepad_F310"/>
+        <untitled-ontology-3:driver_enables_joystick rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick"/>
+        <untitled-ontology-3:driver_enables_keyboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Genesis_Thor_TKL_300"/>
+        <untitled-ontology-3:driver_enables_microphone rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GEMBIRD_mic-205"/>
+        <untitled-ontology-3:driver_enables_monitor rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DELL_Monitor_27_Inch_S2721HN"/>
+        <untitled-ontology-3:driver_enables_mouse rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#INPHIC_Wireless_Mouse"/>
+        <untitled-ontology-3:driver_enables_printer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_Printer_LaserJet_M111a"/>
+        <untitled-ontology-3:driver_enables_projector rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ACER_Projector_XD1320Wi_-_MR.JU311.001"/>
+        <untitled-ontology-3:driver_enables_scanner rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EPSON_scanner_workforce_DS-530II"/>
+        <untitled-ontology-3:driver_enables_speakers rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EDIFIER_Speakers_R1700BT"/>
         <untitled-ontology-3:driver_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Software Adrenalin Driver</untitled-ontology-3:driver_has_name>
         <untitled-ontology-3:driver_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23.2.1</untitled-ontology-3:driver_has_version>
     </NamedIndividual>
@@ -1434,6 +2109,10 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <untitled-ontology-3:laptop_has_OS rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_11_S"/>
+        <untitled-ontology-3:laptop_has_battery rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_OA04_Notebook_Battery"/>
+        <untitled-ontology-3:laptop_has_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U"/>
+        <untitled-ontology-3:laptop_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:laptop_has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acer</untitled-ontology-3:laptop_has_brand>
         <untitled-ontology-3:laptop_has_hard_disk_size_in_tb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-3:laptop_has_hard_disk_size_in_tb>
         <untitled-ontology-3:laptop_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acer Aspire 5 15.6&quot; FHD IPS Slim Laptop</untitled-ontology-3:laptop_has_name>
@@ -1448,6 +2127,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card"/>
+        <untitled-ontology-3:sound_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:sound_card_has_interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCI Express x1</untitled-ontology-3:sound_card_has_interface>
         <untitled-ontology-3:sound_card_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audigy FX Sound card</untitled-ontology-3:sound_card_has_name>
         <untitled-ontology-3:sound_card_has_sample_rate_in_khz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">192</untitled-ontology-3:sound_card_has_sample_rate_in_khz>
@@ -1471,6 +2151,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#B550">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset"/>
+        <untitled-ontology-3:chipset_is_part_of_motherboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:chipset_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B550</untitled-ontology-3:chipset_has_name>
     </NamedIndividual>
     
@@ -1481,6 +2162,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 Plus</untitled-ontology-3:psu_has_certificate>
         <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
         <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEEP COOL PF400</untitled-ontology-3:psu_has_name>
@@ -1494,6 +2176,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_GAMMAXX_GTE_V2">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler"/>
+        <untitled-ontology-3:cooler_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:cooler_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129x77x157 mm</untitled-ontology-3:cooler_has_dimensions>
         <untitled-ontology-3:cooler_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEEP_GAMMAXX_GTE_V2</untitled-ontology-3:cooler_has_name>
         <untitled-ontology-3:cooler_has_speed_in_rpm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1650</untitled-ontology-3:cooler_has_speed_in_rpm>
@@ -1506,6 +2189,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DELL_Monitor_27_Inch_S2721HN">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor"/>
+        <untitled-ontology-3:monitor_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:monitor_has_diagonal rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27 Inch</untitled-ontology-3:monitor_has_diagonal>
         <untitled-ontology-3:monitor_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DELL Monitor 27&apos;&apos; S2721HN</untitled-ontology-3:monitor_has_name>
         <untitled-ontology-3:monitor_has_panel_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPS</untitled-ontology-3:monitor_has_panel_type>
@@ -1515,11 +2199,23 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
+        <untitled-ontology-3:graphic_library_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DirectX</untitled-ontology-3:graphic_library_has_name>
+        <untitled-ontology-3:graphic_library_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</untitled-ontology-3:graphic_library_has_version>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EDIFIER_Speakers_R1700BT -->
 
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EDIFIER_Speakers_R1700BT">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers"/>
+        <untitled-ontology-3:speaker_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:speakers_have_bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-3:speakers_have_bluetooth>
         <untitled-ontology-3:speakers_have_impedance_in_ohm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</untitled-ontology-3:speakers_have_impedance_in_ohm>
         <untitled-ontology-3:speakers_have_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDIFIER Speakers R1700BT</untitled-ontology-3:speakers_have_name>
@@ -1533,6 +2229,8 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EPSON_scanner_workforce_DS-530II">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner"/>
+        <untitled-ontology-3:devices_go_together rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_Printer_LaserJet_M111a"/>
+        <untitled-ontology-3:scanner_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:scanner_has_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</untitled-ontology-3:scanner_has_format>
         <untitled-ontology-3:scanner_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EPSON scanner workforce DS-530II</untitled-ontology-3:scanner_has_name>
     </NamedIndividual>
@@ -1544,8 +2242,29 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card"/>
+        <untitled-ontology-3:network_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:network_card_has_interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PCI-Express</untitled-ontology-3:network_card_has_interface>
         <untitled-ontology-3:network_card_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E_GREEN Gigabit Ethernet</untitled-ontology-3:network_card_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FCLGA4189</untitled-ontology-3:socket_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FCLGA4677</untitled-ontology-3:socket_has_name>
     </NamedIndividual>
     
 
@@ -1555,6 +2274,8 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FIFA_23">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
+        <untitled-ontology-3:video_game_is_compatible_with_OS rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_10_Pro"/>
+        <untitled-ontology-3:video_game_is_compatible_with_graphical_library rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
         <untitled-ontology-3:video_game_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FIFA 23</untitled-ontology-3:video_game_has_name>
     </NamedIndividual>
     
@@ -1565,6 +2286,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GEMBIRD_mic-205">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone"/>
+        <untitled-ontology-3:microphone_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:microphone_has_max_frequency_in_khz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:microphone_has_max_frequency_in_khz>
         <untitled-ontology-3:microphone_has_min_frequency_in_hz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</untitled-ontology-3:microphone_has_min_frequency_in_hz>
         <untitled-ontology-3:microphone_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GEMBIRD mic-205</untitled-ontology-3:microphone_has_name>
@@ -1577,6 +2299,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Genesis_Thor_TKL_300">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard"/>
+        <untitled-ontology-3:keyboard_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:keyboard_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">136 x 355 x 38 mm</untitled-ontology-3:keyboard_has_dimensions>
         <untitled-ontology-3:keyboard_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genesis Thor TKL 300</untitled-ontology-3:keyboard_has_name>
         <untitled-ontology-3:keyboard_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mechanical</untitled-ontology-3:keyboard_has_type>
@@ -1602,6 +2325,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_Printer_LaserJet_M111a">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer"/>
+        <untitled-ontology-3:printer_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:printer_has_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</untitled-ontology-3:printer_has_format>
         <untitled-ontology-3:printer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HP Printer LaserJet M111a</untitled-ontology-3:printer_has_name>
         <untitled-ontology-3:printer_has_resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">600 x 600 dpi</untitled-ontology-3:printer_has_resolution>
@@ -1615,6 +2339,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HUION_Graphical_table_KD200">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table"/>
+        <untitled-ontology-3:graphical_table_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:graphical_table_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUION Graphical table KD200</untitled-ontology-3:graphical_table_has_name>
         <untitled-ontology-3:graphical_table_has_resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5080 ipi</untitled-ontology-3:graphical_table_has_resolution>
         <untitled-ontology-3:graphical_table_has_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">226 x 142 mm</untitled-ontology-3:graphical_table_has_size>
@@ -1627,6 +2352,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#INPHIC_Wireless_Mouse">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <untitled-ontology-3:mouse_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:mouse_has_connectivity_technology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wireless Nanometer USB</untitled-ontology-3:mouse_has_connectivity_technology>
         <untitled-ontology-3:mouse_has_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PM6</untitled-ontology-3:mouse_has_model_name>
         <untitled-ontology-3:mouse_has_movement_detection_technology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Optical</untitled-ontology-3:mouse_has_movement_detection_technology>
@@ -1641,8 +2367,80 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
-        <untitled-ontology-3:manufacturer_has_headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Clara, California, U.S.</untitled-ontology-3:manufacturer_has_headquarters>
         <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Corporation</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1"/>
+        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.2</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Core i9-13900KS</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Platinum_8380 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Platinum_8380">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2"/>
+        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.3</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Xeon Platinum 8380</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_w9-3475X -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_w9-3475X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3"/>
+        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XTX"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel Xeon w9-3475X</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">72</untitled-ontology-3:cpu_has_threads>
     </NamedIndividual>
     
 
@@ -1652,6 +2450,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#KFD-HP_Laptop_Charger">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger"/>
+        <untitled-ontology-3:laptop_charger_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:laptop_charger_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KFD-HP Laptop Charger</untitled-ontology-3:laptop_charger_has_name>
         <untitled-ontology-3:laptop_charger_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</untitled-ontology-3:laptop_charger_has_power_in_watts>
     </NamedIndividual>
@@ -1663,6 +2462,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
         <untitled-ontology-3:ram_has_frequency_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3200</untitled-ontology-3:ram_has_frequency_in_mhz>
         <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL16</untitled-ontology-3:ram_has_latency>
@@ -1673,13 +2473,111 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1 -->
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1 -->
 
 
-    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1">
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
         <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L1</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L1</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L1</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</untitled-ontology-3:cache_has_level>
         <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L2</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L3</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L3</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache"/>
+        <untitled-ontology-3:cache_has_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L3</untitled-ontology-3:cache_has_level>
+        <untitled-ontology-3:cache_has_size_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</untitled-ontology-3:cache_has_size_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGA 1700</untitled-ontology-3:socket_has_name>
     </NamedIndividual>
     
 
@@ -1689,6 +2587,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_Brio_500_Graphite">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera"/>
+        <untitled-ontology-3:camera_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:camera_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logitech Brio 500 Graphite</untitled-ontology-3:camera_has_name>
         <untitled-ontology-3:camera_has_resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1920 x 1080</untitled-ontology-3:camera_has_resolution>
     </NamedIndividual>
@@ -1700,6 +2599,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Logitech_gamepad_F310">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad"/>
+        <untitled-ontology-3:joypad_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:joypad_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logitech gamepad F310</untitled-ontology-3:joypad_has_name>
     </NamedIndividual>
     
@@ -1710,6 +2610,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MERCUSYS_Router_AC12G">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router"/>
+        <untitled-ontology-3:router_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:router_has_flow_rate_in_Mbps rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">867</untitled-ontology-3:router_has_flow_rate_in_Mbps>
         <untitled-ontology-3:router_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MERCUSYS Router AC12G</untitled-ontology-3:router_has_name>
         <untitled-ontology-3:router_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wireless</untitled-ontology-3:router_has_type>
@@ -1722,10 +2623,34 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <untitled-ontology-3:enables_attachment_cooler rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_GAMMAXX_GTE_V2"/>
+        <untitled-ontology-3:enables_attachment_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U"/>
+        <untitled-ontology-3:enables_attachment_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x"/>
+        <untitled-ontology-3:enables_attachment_graphic_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:enables_attachment_hdd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB"/>
+        <untitled-ontology-3:enables_attachment_network_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet"/>
+        <untitled-ontology-3:enables_attachment_psu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:enables_attachment_ram rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ"/>
+        <untitled-ontology-3:enables_attachment_sound_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card"/>
+        <untitled-ontology-3:enables_attachment_ssd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB"/>
+        <untitled-ontology-3:has_chipset rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#B550"/>
+        <untitled-ontology-3:motherboard_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:motherboard_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4"/>
+        <untitled-ontology-3:motherboard_has_storage_interface rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SATA"/>
         <untitled-ontology-3:motherboard_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24.4 x 21 cm</untitled-ontology-3:motherboard_has_dimensions>
         <untitled-ontology-3:motherboard_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-ATX</untitled-ontology-3:motherboard_has_form_factor>
         <untitled-ontology-3:motherboard_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSI B550-M PRO</untitled-ontology-3:motherboard_has_name>
         <untitled-ontology-3:motherboard_has_socket rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM4</untitled-ontology-3:motherboard_has_socket>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Corporation</untitled-ontology-3:manufacturer_has_name>
     </NamedIndividual>
     
 
@@ -1735,6 +2660,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft_Office_2016">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package"/>
+        <untitled-ontology-3:software_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft"/>
         <untitled-ontology-3:office_package_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Office 2016</untitled-ontology-3:office_package_has_name>
         <untitled-ontology-3:office_package_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</untitled-ontology-3:office_package_has_version>
     </NamedIndividual>
@@ -1746,6 +2672,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motorola_MB8600_DOCSIS_3.1_Cable_Modem">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem"/>
+        <untitled-ontology-3:modem_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:modem_has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motorola</untitled-ontology-3:modem_has_brand>
         <untitled-ontology-3:modem_has_connectivity_technology rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cable</untitled-ontology-3:modem_has_connectivity_technology>
         <untitled-ontology-3:modem_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.25 x 2.25 x 7.88 inches</untitled-ontology-3:modem_has_dimensions>
@@ -1759,6 +2686,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#NETGEAR_8-Port_Gigabit_Ethernet_Unmanaged_Switch">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <untitled-ontology-3:switch_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:switch_has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NETGEAR</untitled-ontology-3:switch_has_brand>
         <untitled-ontology-3:switch_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.22 x 4.02 x 1.02 inches</untitled-ontology-3:switch_has_dimensions>
         <untitled-ontology-3:switch_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NETGEAR 8-Port Gigabit Ethernet Unmanaged Switch</untitled-ontology-3:switch_has_name>
@@ -1772,7 +2700,6 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
-        <untitled-ontology-3:manufacturer_has_headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Clara, California, U.S.</untitled-ontology-3:manufacturer_has_headquarters>
         <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nvidia Corporation</untitled-ontology-3:manufacturer_has_name>
     </NamedIndividual>
     
@@ -1794,6 +2721,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PLUGIT_HDMI_adapter_mini">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter"/>
+        <untitled-ontology-3:adapter_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:adapter_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PLUGIT HDMI adapter mini</untitled-ontology-3:adapter_has_name>
         <untitled-ontology-3:adapter_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HDMI 1.4</untitled-ontology-3:adapter_has_version>
     </NamedIndividual>
@@ -1805,6 +2733,12 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</untitled-ontology-3:gpu_has_core_clock_in_mhz>
         <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16000</untitled-ontology-3:gpu_has_memory_clock>
         <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6600 XT</untitled-ontology-3:gpu_has_name>
@@ -1814,11 +2748,100 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1825</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16000</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6900 XT</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16384</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1925</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2250</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6950 XT</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">335</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16384</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 7900 XT</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">315</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20480</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XTX -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_7900_XTX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1855</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 7900 XTX</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">355</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x -->
 
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
         <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.8</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
         <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:cpu_has_cores>
         <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryzen 7 5800x</untitled-ontology-3:cpu_has_name>
@@ -1833,6 +2856,8 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SATA">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface"/>
+        <untitled-ontology-3:storage_interface_is_compatible_with_hdd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB"/>
+        <untitled-ontology-3:storage_interface_is_compatible_with_ssd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB"/>
         <untitled-ontology-3:storage_interface_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SATA</untitled-ontology-3:storage_interface_has_name>
         <untitled-ontology-3:storage_interface_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</untitled-ontology-3:storage_interface_has_version>
     </NamedIndividual>
@@ -1844,6 +2869,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD"/>
+        <untitled-ontology-3:ssd_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:ssd_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</untitled-ontology-3:ssd_has_capacity_in_gb>
         <untitled-ontology-3:ssd_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M.2</untitled-ontology-3:ssd_has_form_factor>
         <untitled-ontology-3:ssd_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung 980 PRO 1TB</untitled-ontology-3:ssd_has_name>
@@ -1858,6 +2884,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD"/>
+        <untitled-ontology-3:hdd_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:hdd_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</untitled-ontology-3:hdd_has_capacity_in_gb>
         <untitled-ontology-3:hdd_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5 inch</untitled-ontology-3:hdd_has_form_factor>
         <untitled-ontology-3:hdd_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seagate HDD IronWolf 10TB</untitled-ontology-3:hdd_has_name>
@@ -1871,6 +2898,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
+        <untitled-ontology-3:joystick_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:joystick_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T-16000M FCS Joystick</untitled-ontology-3:joystick_has_name>
     </NamedIndividual>
     
@@ -1881,6 +2909,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TP-Link_TL-SG105">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <untitled-ontology-3:hub_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:hub_has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TP-Link</untitled-ontology-3:hub_has_brand>
         <untitled-ontology-3:hub_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.9 x 3.9 x 1 inches</untitled-ontology-3:hub_has_dimensions>
         <untitled-ontology-3:hub_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TP-Link TL-SG105</untitled-ontology-3:hub_has_name>
@@ -1894,6 +2923,17 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H15">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case"/>
+        <untitled-ontology-3:contains_cooler rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_GAMMAXX_GTE_V2"/>
+        <untitled-ontology-3:contains_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U"/>
+        <untitled-ontology-3:contains_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x"/>
+        <untitled-ontology-3:contains_graphic_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
+        <untitled-ontology-3:contains_hdd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB"/>
+        <untitled-ontology-3:contains_motherboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:contains_network_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet"/>
+        <untitled-ontology-3:contains_psu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:contains_ram rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ"/>
+        <untitled-ontology-3:contains_sound_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card"/>
+        <untitled-ontology-3:contains_ssd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB"/>
         <untitled-ontology-3:computer_case_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">500x300x100 mm</untitled-ontology-3:computer_case_has_dimensions>
         <untitled-ontology-3:computer_case_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermaltake_Versa_H15</untitled-ontology-3:computer_case_has_name>
         <untitled-ontology-3:computer_case_supports_motherboard_format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATX</untitled-ontology-3:computer_case_supports_motherboard_format>
@@ -1919,6 +2959,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#VERBATIM_DVD-RW">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices"/>
+        <untitled-ontology-3:optical_devices_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:optical_devices_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VERBATIM DVD-RW</untitled-ontology-3:optical_devices_has_name>
         <untitled-ontology-3:optical_devices_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">external</untitled-ontology-3:optical_devices_has_type>
     </NamedIndividual>
@@ -1930,6 +2971,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#WHITE_SHARK_Gaming_earbuds_GE-536_Eagle">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones"/>
+        <untitled-ontology-3:headphones_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:headphones_have_mic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-3:headphones_have_mic>
         <untitled-ontology-3:headphones_have_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White Shark Gaming Earbuds GE-536 Eagle</untitled-ontology-3:headphones_have_name>
         <untitled-ontology-3:headphones_have_sensitivity_in_db rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</untitled-ontology-3:headphones_have_sensitivity_in_db>
@@ -1943,6 +2985,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#WHITE_SHARK_Ice_Warrior_-_GCP-25">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler"/>
+        <untitled-ontology-3:laptop_cooler_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:laptop_cooler_has_air_flow rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</untitled-ontology-3:laptop_cooler_has_air_flow>
         <untitled-ontology-3:laptop_cooler_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17.3 inch</untitled-ontology-3:laptop_cooler_has_dimensions>
         <untitled-ontology-3:laptop_cooler_has_fan_speed_in_rpm rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</untitled-ontology-3:laptop_cooler_has_fan_speed_in_rpm>
@@ -1956,9 +2999,37 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_10_Pro">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <untitled-ontology-3:OS_is_compatible_with_antivirus rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Avast_Antivirus"/>
+        <untitled-ontology-3:OS_is_compatible_with_driver rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Software_Adrenalin_Driver"/>
+        <untitled-ontology-3:OS_is_compatible_with_office_package rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft_Office_2016"/>
         <untitled-ontology-3:operating_system_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows</untitled-ontology-3:operating_system_has_name>
-        <untitled-ontology-3:operating_system_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;10&quot;</untitled-ontology-3:operating_system_has_version>
+        <untitled-ontology-3:operating_system_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</untitled-ontology-3:operating_system_has_version>
         <untitled-ontology-3:operation_system_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pro</untitled-ontology-3:operation_system_has_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_11_S -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Windows_11_S">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+        <untitled-ontology-3:OS_is_compatible_with_antivirus rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Avast_Antivirus"/>
+        <untitled-ontology-3:OS_is_compatible_with_driver rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Software_Adrenalin_Driver"/>
+        <untitled-ontology-3:OS_is_compatible_with_office_package rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft_Office_2016"/>
+        <untitled-ontology-3:operating_system_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows 11 S</untitled-ontology-3:operating_system_has_name>
+        <untitled-ontology-3:operating_system_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</untitled-ontology-3:operating_system_has_version>
+        <untitled-ontology-3:operation_system_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S mode</untitled-ontology-3:operation_system_has_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sWRX8</untitled-ontology-3:socket_has_name>
     </NamedIndividual>
     
 
@@ -1968,6 +3039,7 @@
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Verbatim_Store_&amp;_Go_53023_External_HDD">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage"/>
+        <untitled-ontology-3:external_storage_connects_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
         <untitled-ontology-3:external_storage_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</untitled-ontology-3:external_storage_has_capacity_in_gb>
         <untitled-ontology-3:external_storage_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.5 inch</untitled-ontology-3:external_storage_has_form_factor>
         <untitled-ontology-3:external_storage_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbatim Store &amp; Go 53023 External HDD</untitled-ontology-3:external_storage_has_name>
