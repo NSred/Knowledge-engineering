@@ -789,6 +789,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_OS -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_OS">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery -->
 
 
@@ -796,6 +807,17 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_cpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_cpu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
     </ObjectProperty>
     
 

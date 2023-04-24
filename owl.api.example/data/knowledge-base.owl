@@ -505,11 +505,25 @@
                            rdfs:range :Port .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_OS
+:laptop_has_OS rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain :Laptop ;
+               rdfs:range :Operating_system .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_battery
 :laptop_has_battery rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf owl:topObjectProperty ;
                     rdfs:domain :Laptop ;
                     rdfs:range :Laptop_battery .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_cpu
+:laptop_has_cpu rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain :Laptop ;
+                rdfs:range :CPU .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_port
@@ -1043,6 +1057,34 @@
                       rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_brand
+:hub_has_brand rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Hub ;
+               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_dimensions
+:hub_has_dimensions rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :Hub ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_name
+:hub_has_name rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Hub ;
+              rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_number_of_ports
+:hub_has_number_of_ports rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :Hub ;
+                         rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port_number
 :hub_has_port_number rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf owl:topDataProperty ;
@@ -1055,6 +1097,13 @@
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :Joypad ;
                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_has_name
+:joystick_has_name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Joystick ;
+                   rdfs:range xsd:string .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#keyboard_has_dimensions
@@ -1148,6 +1197,55 @@
                         rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_brand
+:laptop_has_brand rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Laptop ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_hard_disk_size_in_tb
+:laptop_has_hard_disk_size_in_tb rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain :Laptop ;
+                                 rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_name
+:laptop_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Laptop ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_ram_installed_size_in_gb
+:laptop_has_ram_installed_size_in_gb rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                     rdfs:domain :Laptop ;
+                                     rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_screen_size_in_inches
+:laptop_has_screen_size_in_inches rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                  rdfs:domain :Laptop ;
+                                  rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters
+:manufacturer_has_headquarters rdf:type owl:DatatypeProperty ;
+                               rdfs:subPropertyOf owl:topDataProperty ;
+                               rdfs:domain :Manufacturer ;
+                               rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_name
+:manufacturer_has_name rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Manufacturer ;
+                       rdfs:range xsd:string .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_has_max_frequency_in_khz
 :microphone_has_max_frequency_in_khz rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf owl:topDataProperty ;
@@ -1167,6 +1265,26 @@
                      rdfs:subPropertyOf owl:topDataProperty ;
                      rdfs:domain :Microphone ;
                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_brand
+:modem_has_brand rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_connectivity_technology
+:modem_has_connectivity_technology rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_dimensions
+:modem_has_dimensions rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_name
+:modem_has_name rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#monitor_has_diagonal
@@ -1229,6 +1347,41 @@
 :motherboard_has_socket rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_connectivity_technology
+:mouse_has_connectivity_technology rdf:type owl:DatatypeProperty ;
+                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                   rdfs:domain :Mouse ;
+                                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_model_name
+:mouse_has_model_name rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :Mouse ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_movement_detection_technology
+:mouse_has_movement_detection_technology rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                         rdfs:domain :Mouse ;
+                                         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_name
+:mouse_has_name rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Mouse ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_number_of_buttons
+:mouse_has_number_of_buttons rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf owl:topDataProperty ;
+                             rdfs:domain :Mouse ;
+                             rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#network_card_has_interface
@@ -1574,6 +1727,34 @@
                                rdfs:range xsd:integer .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_brand
+:switch_has_brand rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :Switch ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_dimensions
+:switch_has_dimensions rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :Switch ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_name
+:switch_has_name rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Switch ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_number_of_ports
+:switch_has_number_of_ports rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :Switch ;
+                            rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port_number
 :switch_has_port_number rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
@@ -1898,11 +2079,28 @@
      :socket_has_name "AM4" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD
+:AMD rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
+     :manufacturer_has_name "Advanced Micro Devices, Inc." .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Software_Adrenalin_Driver
 :AMD_Software_Adrenalin_Driver rdf:type owl:NamedIndividual ,
                                         :Driver ;
                                :driver_has_name "AMD Software Adrenalin Driver" ;
                                :driver_has_version "23.2.1" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop
+:Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop rdf:type owl:NamedIndividual ,
+                                                   :Laptop ;
+                                          :laptop_has_brand "Acer" ;
+                                          :laptop_has_hard_disk_size_in_tb 1 ;
+                                          :laptop_has_name "Acer Aspire 5 15.6\" FHD IPS Slim Laptop" ;
+                                          :laptop_has_ram_installed_size_in_gb 20 ;
+                                          :laptop_has_screen_size_in_inches 15.6 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card
@@ -2024,6 +2222,23 @@
                              :graphical_table_has_size "226 x 142 mm" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#INPHIC_Wireless_Mouse
+:INPHIC_Wireless_Mouse rdf:type owl:NamedIndividual ,
+                                :Mouse ;
+                       :mouse_has_connectivity_technology "Wireless Nanometer USB" ;
+                       :mouse_has_model_name "PM6" ;
+                       :mouse_has_movement_detection_technology "Optical" ;
+                       :mouse_has_name "INPHIC Wireless Mouse" ;
+                       :mouse_has_number_of_buttons 6 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel
+:Intel rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
+       :manufacturer_has_name "Intel Corporation" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#KFD-HP_Laptop_Charger
 :KFD-HP_Laptop_Charger rdf:type owl:NamedIndividual ,
                                 :Laptop_charger ;
@@ -2086,6 +2301,31 @@
                        :office_package_has_version 2016 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motorola_MB8600_DOCSIS_3.1_Cable_Modem
+:Motorola_MB8600_DOCSIS_3.1_Cable_Modem rdf:type owl:NamedIndividual ,
+                                                 :Modem ;
+                                        :modem_has_brand "Motorola" ;
+                                        :modem_has_connectivity_technology "Cable" ;
+                                        :modem_has_dimensions "7.25 x 2.25 x 7.88 inches" ;
+                                        :modem_has_name "Motorola MB8600 DOCSIS 3.1 Cable Modem" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#NETGEAR_8-Port_Gigabit_Ethernet_Unmanaged_Switch
+:NETGEAR_8-Port_Gigabit_Ethernet_Unmanaged_Switch rdf:type owl:NamedIndividual ,
+                                                           :Switch ;
+                                                  :switch_has_brand "NETGEAR" ;
+                                                  :switch_has_dimensions "6.22 x 4.02 x 1.02 inches" ;
+                                                  :switch_has_name "NETGEAR 8-Port Gigabit Ethernet Unmanaged Switch" ;
+                                                  :switch_has_number_of_ports 8 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia
+:Nvidia rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_headquarters "Santa Clara, California, U.S." ;
+        :manufacturer_has_name "Nvidia Corporation" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL
 :OpenGL rdf:type owl:NamedIndividual ,
                  :Graphic_library ;
@@ -2144,6 +2384,21 @@
                            :hdd_has_form_factor "3.5 inch" ;
                            :hdd_has_name "Seagate HDD IronWolf 10TB" ;
                            :hdd_has_rpm 7200 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick
+:T-16000M_FCS_Joystick rdf:type owl:NamedIndividual ,
+                                :Joystick ;
+                       :joystick_has_name "T-16000M FCS Joystick" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TP-Link_TL-SG105
+:TP-Link_TL-SG105 rdf:type owl:NamedIndividual ,
+                           :Hub ;
+                  :hub_has_brand "TP-Link" ;
+                  :hub_has_dimensions "3.9 x 3.9 x 1 inches" ;
+                  :hub_has_name "TP-Link TL-SG105" ;
+                  :hub_has_number_of_ports 5 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H15

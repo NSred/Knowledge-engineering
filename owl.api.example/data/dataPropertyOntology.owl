@@ -506,6 +506,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_brand -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_brand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_dimensions -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_dimensions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_number_of_ports -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_number_of_ports">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port_number -->
 
 
@@ -523,6 +567,17 @@
     <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_has_name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joystick_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </DatatypeProperty>
     
@@ -671,6 +726,83 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_brand -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_brand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_hard_disk_size_in_tb -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_hard_disk_size_in_tb">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_ram_installed_size_in_gb -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_ram_installed_size_in_gb">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_screen_size_in_inches -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#laptop_has_screen_size_in_inches">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_headquarters">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#manufacturer_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#microphone_has_max_frequency_in_khz -->
 
 
@@ -700,6 +832,42 @@
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_brand -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_brand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_connectivity_technology -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_connectivity_technology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_dimensions -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_dimensions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#modem_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </DatatypeProperty>
     
 
@@ -798,6 +966,61 @@
     <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_connectivity_technology -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_connectivity_technology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_model_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_model_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_movement_detection_technology -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_movement_detection_technology">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_number_of_buttons -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_number_of_buttons">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </DatatypeProperty>
     
 
@@ -1341,6 +1564,50 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_brand -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_brand">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_dimensions -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_dimensions">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_name -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_number_of_ports -->
+
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_number_of_ports">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#switch_has_port_number -->
 
 
@@ -1494,10 +1761,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick"/>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard -->
 
 
     <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop"/>
     
 
 
@@ -1522,6 +1803,13 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone -->
 
 
@@ -1540,6 +1828,13 @@
 
 
     <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse -->
+
+
+    <Class rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse"/>
     
 
 
