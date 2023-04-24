@@ -49,8 +49,8 @@ public class GPUService {
         return getGpuResponseDTOs(classGPU);
     }
 
-    private List<GPUResponseDTO> getGpuResponseDTOs(OWLClassExpression classCPU) {
-        Set<OWLNamedIndividual> individuals = reasoner.getInstances(classCPU, false).getFlattened();
+    private List<GPUResponseDTO> getGpuResponseDTOs(OWLClassExpression classGPU) {
+        Set<OWLNamedIndividual> individuals = reasoner.getInstances(classGPU, false).getFlattened();
         List<GPUResponseDTO> gpus = new ArrayList<>();
         for (OWLNamedIndividual individual : individuals) {
             gpus.add(setSpec(individual));
