@@ -499,6 +499,13 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket"/>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface -->
 
 
@@ -1435,13 +1442,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_frequency_in_mhz -->
-
-
-    <DatatypeProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_frequency_in_mhz"/>
-    
-
-
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_latency -->
 
 
@@ -2157,13 +2157,114 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Gold</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cooler Master V750 Gold V2</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair Gaming, Inc.</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CM5S16GM4800A40K2_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CM5S16GM4800A40K2_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CM5S16GM4800A40K2 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMK16GX4M2F4400C19_8GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMK16GX4M2F4400C19_8GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CMK16GX4M2F4400C19 8GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Bronze</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CX450</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Bronze</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CX550F RGB</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Gold</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair RM550x</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400 -->
 
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
         <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
-        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 Plus</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS</untitled-ontology-3:psu_has_certificate>
         <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
         <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEEP COOL PF400</untitled-ontology-3:psu_has_name>
         <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</untitled-ontology-3:psu_has_power_in_watts>
@@ -2281,6 +2382,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G.SKILL International Enterprise</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GEMBIRD_mic-205 -->
 
 
@@ -2290,6 +2401,67 @@
         <untitled-ontology-3:microphone_has_max_frequency_in_khz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:microphone_has_max_frequency_in_khz>
         <untitled-ontology-3:microphone_has_min_frequency_in_hz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</untitled-ontology-3:microphone_has_min_frequency_in_hz>
         <untitled-ontology-3:microphone_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GEMBIRD mic-205</untitled-ontology-3:microphone_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZSWE_8GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZSWE_8GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G Skill Intl F4-4500C19-8GTZSWE 8GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-5600J4040C16G_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-5600J4040C16G_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G Skill Intl F5-5600J4040C16G 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4090 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4090">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_PRO_5995WX"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_w9-3475X"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2230</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 4090</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</untitled-ontology-3:gpu_has_video_memory_in_mb>
     </NamedIndividual>
     
 
@@ -2457,15 +2629,25 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingston Technology Corporation</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ -->
 
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston"/>
         <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
-        <untitled-ontology-3:ram_has_frequency_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3200</untitled-ontology-3:ram_has_frequency_in_mhz>
-        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CL16</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</untitled-ontology-3:ram_has_latency>
         <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingston HyperX Fury DDR4 8GB 3200MHZ</untitled-ontology-3:ram_has_name>
         <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
         <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
@@ -2640,7 +2822,6 @@
         <untitled-ontology-3:motherboard_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24.4 x 21 cm</untitled-ontology-3:motherboard_has_dimensions>
         <untitled-ontology-3:motherboard_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M-ATX</untitled-ontology-3:motherboard_has_form_factor>
         <untitled-ontology-3:motherboard_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSI B550-M PRO</untitled-ontology-3:motherboard_has_name>
-        <untitled-ontology-3:motherboard_has_socket rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AM4</untitled-ontology-3:motherboard_has_socket>
     </NamedIndividual>
     
 
@@ -2737,6 +2918,9 @@
         <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
         <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
         <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</untitled-ontology-3:gpu_has_core_clock_in_mhz>
@@ -2757,7 +2941,11 @@
         <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
         <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
         <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1825</untitled-ontology-3:gpu_has_core_clock_in_mhz>
         <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16000</untitled-ontology-3:gpu_has_memory_clock>
@@ -2777,7 +2965,11 @@
         <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
         <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
         <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1925</untitled-ontology-3:gpu_has_core_clock_in_mhz>
         <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2250</untitled-ontology-3:gpu_has_memory_clock>
@@ -2797,7 +2989,12 @@
         <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
         <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
         <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</untitled-ontology-3:gpu_has_core_clock_in_mhz>
         <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
@@ -2817,7 +3014,12 @@
         <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
         <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x"/>
         <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
         <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1855</untitled-ontology-3:gpu_has_core_clock_in_mhz>
         <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
@@ -2864,6 +3066,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung Electronics Co., Ltd.</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB -->
 
 
@@ -2875,6 +3087,22 @@
         <untitled-ontology-3:ssd_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung 980 PRO 1TB</untitled-ontology-3:ssd_has_name>
         <untitled-ontology-3:ssd_has_read_speed_in_mbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000</untitled-ontology-3:ssd_has_read_speed_in_mbs>
         <untitled-ontology-3:ssd_has_write_speed_in_mbs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5100</untitled-ontology-3:ssd_has_write_speed_in_mbs>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_M323R2GA3BB0-CQKOD_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_M323R2GA3BB0-CQKOD_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung M323R2GA3BB0-CQKOD 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
     </NamedIndividual>
     
 
@@ -3020,6 +3248,20 @@
         <untitled-ontology-3:operating_system_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows 11 S</untitled-ontology-3:operating_system_has_name>
         <untitled-ontology-3:operating_system_has_version rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</untitled-ontology-3:operating_system_has_version>
         <untitled-ontology-3:operation_system_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S mode</untitled-ontology-3:operation_system_has_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Gold</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XPG Core Reactor 650W</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</untitled-ontology-3:psu_has_power_in_watts>
     </NamedIndividual>
     
 

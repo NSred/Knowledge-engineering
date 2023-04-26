@@ -412,6 +412,7 @@
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply
 :graphic_card_power_supply rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf owl:topObjectProperty ;
+                           owl:inverseOf :psu_supplies_gpu ;
                            rdfs:domain :Graphic_card ;
                            rdfs:range :PSU .
 
@@ -645,6 +646,13 @@
                  rdfs:range :Motherboard .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_supplies_gpu
+:psu_supplies_gpu rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :PSU ;
+                  rdfs:range :Graphic_card .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to
 :ram_attached_to rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :attached_to ;
@@ -764,8 +772,7 @@
 
 
 ###  http://www.w3.org/2002/07/owl#topObjectProperty
-owl:topObjectProperty rdf:type owl:ObjectProperty ,
-                               owl:SymmetricProperty .
+owl:topObjectProperty rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -1352,12 +1359,6 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                       rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket
-:motherboard_has_socket rdf:type owl:DatatypeProperty ;
-                        rdfs:subPropertyOf owl:topDataProperty ;
-                        rdfs:range xsd:string .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#mouse_has_connectivity_technology
 :mouse_has_connectivity_technology rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf owl:topDataProperty ;
@@ -1561,18 +1562,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                         rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_frequency_in_mhz
-:ram_has_frequency_in_mhz rdf:type owl:DatatypeProperty ;
-                          rdfs:subPropertyOf owl:topDataProperty ;
-                          rdfs:domain :RAM ;
-                          rdfs:range xsd:integer .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_latency
 :ram_has_latency rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;
                  rdfs:domain :RAM ;
-                 rdfs:range xsd:string .
+                 rdfs:range xsd:integer .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_name
@@ -2192,11 +2186,84 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
       :chipset_has_name "B550" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler_Master_V750_Gold_V2
+:Cooler_Master_V750_Gold_V2 rdf:type owl:NamedIndividual ,
+                                     :PSU ;
+                            :psu_attached_to :MSI_B550-M_PRO ;
+                            :psu_has_certificate "80 PLUS Gold" ;
+                            :psu_has_dimensions "150 x 86 x 140 mm" ;
+                            :psu_has_name "Cooler Master V750 Gold V2" ;
+                            :psu_has_power_in_watts 750 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair
+:Corsair rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "Corsair Gaming, Inc." .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CM5S16GM4800A40K2_16GB
+:Corsair_CM5S16GM4800A40K2_16GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Corsair ;
+                                :ram_attached_to :MSI_B550-M_PRO ;
+                                :ram_has_capacity_in_gb 16 ;
+                                :ram_has_latency 25 ;
+                                :ram_has_name "Corsair CM5S16GM4800A40K2 16GB" ;
+                                :ram_has_type "DDR5" ;
+                                :ram_has_voltage 1.1 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMK16GX4M2F4400C19_8GB
+:Corsair_CMK16GX4M2F4400C19_8GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Corsair ;
+                                :ram_attached_to :MSI_B550-M_PRO ;
+                                :ram_has_capacity_in_gb 8 ;
+                                :ram_has_latency 25 ;
+                                :ram_has_name "Corsair CMK16GX4M2F4400C19 8GB" ;
+                                :ram_has_type "DDR4" ;
+                                :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450
+:Corsair_CX450 rdf:type owl:NamedIndividual ,
+                        :PSU ;
+               :hardware_produced_by_manufacturer :Corsair ;
+               :psu_attached_to :MSI_B550-M_PRO ;
+               :psu_has_certificate "80 PLUS Bronze" ;
+               :psu_has_dimensions "150 x 86 x 140 mm" ;
+               :psu_has_name "Corsair CX450" ;
+               :psu_has_power_in_watts 450 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX550F_RGB
+:Corsair_CX550F_RGB rdf:type owl:NamedIndividual ,
+                             :PSU ;
+                    :hardware_produced_by_manufacturer :Corsair ;
+                    :psu_attached_to :MSI_B550-M_PRO ;
+                    :psu_has_certificate "80 PLUS Bronze" ;
+                    :psu_has_dimensions "150 x 86 x 140 mm" ;
+                    :psu_has_name "Corsair CX550F RGB" ;
+                    :psu_has_power_in_watts 550 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x
+:Corsair_RM550x rdf:type owl:NamedIndividual ,
+                         :PSU ;
+                :hardware_produced_by_manufacturer :Corsair ;
+                :psu_attached_to :MSI_B550-M_PRO ;
+                :psu_has_certificate "80 PLUS Gold" ;
+                :psu_has_dimensions "150 x 86 x 140 mm" ;
+                :psu_has_name "Corsair RM550x" ;
+                :psu_has_power_in_watts 550 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400
 :DEEP_COOL_PF400 rdf:type owl:NamedIndividual ,
                           :PSU ;
                  :psu_attached_to :MSI_B550-M_PRO ;
-                 :psu_has_certificate "80 Plus" ;
+                 :psu_has_certificate "80 PLUS" ;
                  :psu_has_dimensions "150 x 86 x 140 mm" ;
                  :psu_has_name "DEEP COOL PF400" ;
                  :psu_has_power_in_watts 400 .
@@ -2276,6 +2343,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
          :video_game_has_name "FIFA 23" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL
+:G.SKILL rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "G.SKILL International Enterprise" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GEMBIRD_mic-205
 :GEMBIRD_mic-205 rdf:type owl:NamedIndividual ,
                           :Microphone ;
@@ -2283,6 +2356,55 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                  :microphone_has_max_frequency_in_khz 16 ;
                  :microphone_has_min_frequency_in_hz 50 ;
                  :microphone_has_name "GEMBIRD mic-205" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZSWE_8GB
+:G_Skill_Intl_F4-4500C19-8GTZSWE_8GB rdf:type owl:NamedIndividual ,
+                                              :RAM ;
+                                     :hardware_produced_by_manufacturer :G.SKILL ;
+                                     :ram_attached_to :MSI_B550-M_PRO ;
+                                     :ram_has_capacity_in_gb 8 ;
+                                     :ram_has_latency 23 ;
+                                     :ram_has_name "G Skill Intl F4-4500C19-8GTZSWE 8GB" ;
+                                     :ram_has_type "DDR4" ;
+                                     :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-5600J4040C16G_16GB
+:G_Skill_Intl_F5-5600J4040C16G_16GB rdf:type owl:NamedIndividual ,
+                                             :RAM ;
+                                    :hardware_produced_by_manufacturer :G.SKILL ;
+                                    :ram_attached_to :MSI_B550-M_PRO ;
+                                    :ram_has_capacity_in_gb 16 ;
+                                    :ram_has_latency 28 ;
+                                    :ram_has_name "G Skill Intl F5-5600J4040C16G 16GB" ;
+                                    :ram_has_type "DDR5" ;
+                                    :ram_has_voltage 1.1 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4090
+:GeForce_RTX_4090 rdf:type owl:NamedIndividual ,
+                           :Graphic_card ;
+                  :gpu_supports :DirectX ,
+                                :OpenGL ;
+                  :graphic_card_attached_to :MSI_B550-M_PRO ;
+                  :graphic_card_has_port :USB_3.0 ;
+                  :graphic_card_power_supply :Cooler_Master_V750_Gold_V2 ,
+                                             :Corsair_CX450 ,
+                                             :Corsair_CX550F_RGB ,
+                                             :Corsair_RM550x ,
+                                             :DEEP_COOL_PF400 ,
+                                             :XPG_Core_Reactor_650W ;
+                  :hardware_produced_by_manufacturer :Nvidia ;
+                  :unit1_is_compatible_with_unit2 :AMD_Ryzen_Threadripper_PRO_5995WX ,
+                                                  :Intel_Core_i9-13900KS ,
+                                                  :Intel_Xeon_w9-3475X ,
+                                                  :Ryzen_7_5800x ;
+                  :gpu_has_core_clock_in_mhz 2230 ;
+                  :gpu_has_memory_clock 2500 ;
+                  :gpu_has_name "GeForce RTX 4090" ;
+                  :gpu_has_tdp_in_watts 450 ;
+                  :gpu_has_video_memory_in_mb 24576 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Genesis_Thor_TKL_300
@@ -2408,13 +2530,19 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                        :laptop_charger_has_power_in_watts 90 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston
+:Kingston rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "Kingston Technology Corporation" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ
 :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ rdf:type owl:NamedIndividual ,
                                                 :RAM ;
+                                       :hardware_produced_by_manufacturer :Kingston ;
                                        :ram_attached_to :MSI_B550-M_PRO ;
                                        :ram_has_capacity_in_gb 8 ;
-                                       :ram_has_frequency_in_mhz 3200 ;
-                                       :ram_has_latency "CL16" ;
+                                       :ram_has_latency 14 ;
                                        :ram_has_name "Kingston HyperX Fury DDR4 8GB 3200MHZ" ;
                                        :ram_has_type "DDR4" ;
                                        :ram_has_voltage 1.2 .
@@ -2532,8 +2660,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                 :motherboard_has_storage_interface :SATA ;
                 :motherboard_has_dimensions "24.4 x 21 cm" ;
                 :motherboard_has_form_factor "M-ATX" ;
-                :motherboard_has_name "MSI B550-M PRO" ;
-                :motherboard_has_socket "AM4" .
+                :motherboard_has_name "MSI B550-M PRO" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft
@@ -2598,7 +2725,10 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                                  :OpenGL ;
                    :graphic_card_attached_to :MSI_B550-M_PRO ;
                    :graphic_card_has_port :USB_3.0 ;
-                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :graphic_card_power_supply :Corsair_CX450 ,
+                                              :Corsair_CX550F_RGB ,
+                                              :Corsair_RM550x ,
+                                              :DEEP_COOL_PF400 ;
                    :hardware_produced_by_manufacturer :AMD ;
                    :gpu_has_core_clock_in_mhz 1968 ;
                    :gpu_has_memory_clock 16000 ;
@@ -2614,7 +2744,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                                  :OpenGL ;
                    :graphic_card_attached_to :MSI_B550-M_PRO ;
                    :graphic_card_has_port :USB_3.0 ;
-                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :graphic_card_power_supply :Corsair_CX450 ,
+                                              :Corsair_CX550F_RGB ,
+                                              :Corsair_RM550x ,
+                                              :DEEP_COOL_PF400 ,
+                                              :XPG_Core_Reactor_650W ;
                    :hardware_produced_by_manufacturer :AMD ;
                    :gpu_has_core_clock_in_mhz 1825 ;
                    :gpu_has_memory_clock 16000 ;
@@ -2630,7 +2764,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                                  :OpenGL ;
                    :graphic_card_attached_to :MSI_B550-M_PRO ;
                    :graphic_card_has_port :USB_3.0 ;
-                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :graphic_card_power_supply :Corsair_CX450 ,
+                                              :Corsair_CX550F_RGB ,
+                                              :Corsair_RM550x ,
+                                              :DEEP_COOL_PF400 ,
+                                              :XPG_Core_Reactor_650W ;
                    :hardware_produced_by_manufacturer :AMD ;
                    :gpu_has_core_clock_in_mhz 1925 ;
                    :gpu_has_memory_clock 2250 ;
@@ -2646,7 +2784,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                                  :OpenGL ;
                    :graphic_card_attached_to :MSI_B550-M_PRO ;
                    :graphic_card_has_port :USB_3.0 ;
-                   :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                   :graphic_card_power_supply :Cooler_Master_V750_Gold_V2 ,
+                                              :Corsair_CX450 ,
+                                              :Corsair_CX550F_RGB ,
+                                              :Corsair_RM550x ,
+                                              :DEEP_COOL_PF400 ,
+                                              :XPG_Core_Reactor_650W ;
                    :hardware_produced_by_manufacturer :AMD ;
                    :gpu_has_core_clock_in_mhz 2000 ;
                    :gpu_has_memory_clock 2500 ;
@@ -2662,7 +2805,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                                   :OpenGL ;
                     :graphic_card_attached_to :MSI_B550-M_PRO ;
                     :graphic_card_has_port :USB_3.0 ;
-                    :graphic_card_power_supply :DEEP_COOL_PF400 ;
+                    :graphic_card_power_supply :Cooler_Master_V750_Gold_V2 ,
+                                               :Corsair_CX450 ,
+                                               :Corsair_CX550F_RGB ,
+                                               :Corsair_RM550x ,
+                                               :DEEP_COOL_PF400 ,
+                                               :XPG_Core_Reactor_650W ;
                     :hardware_produced_by_manufacturer :AMD ;
                     :gpu_has_core_clock_in_mhz 1855 ;
                     :gpu_has_memory_clock 2500 ;
@@ -2699,6 +2847,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
       :storage_interface_has_version 1 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung
+:Samsung rdf:type owl:NamedIndividual ,
+                  :Manufacturer ;
+         :manufacturer_has_name "Samsung Electronics Co., Ltd." .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB
 :Samsung_980_PRO_1TB rdf:type owl:NamedIndividual ,
                               :SSD ;
@@ -2708,6 +2862,18 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
                      :ssd_has_name "Samsung 980 PRO 1TB" ;
                      :ssd_has_read_speed_in_mbs 7000 ;
                      :ssd_has_write_speed_in_mbs 5100 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_M323R2GA3BB0-CQKOD_16GB
+:Samsung_M323R2GA3BB0-CQKOD_16GB rdf:type owl:NamedIndividual ,
+                                          :RAM ;
+                                 :hardware_produced_by_manufacturer :Samsung ;
+                                 :ram_attached_to :MSI_B550-M_PRO ;
+                                 :ram_has_capacity_in_gb 16 ;
+                                 :ram_has_latency 38 ;
+                                 :ram_has_name "Samsung M323R2GA3BB0-CQKOD 16GB" ;
+                                 :ram_has_type "DDR5" ;
+                                 :ram_has_voltage 1.1 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB
@@ -2813,6 +2979,16 @@ owl:topObjectProperty rdf:type owl:ObjectProperty ,
               :operating_system_has_name "Windows 11 S" ;
               :operating_system_has_version 11 ;
               :operation_system_has_type "S mode" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#XPG_Core_Reactor_650W
+:XPG_Core_Reactor_650W rdf:type owl:NamedIndividual ,
+                                :PSU ;
+                       :psu_attached_to :MSI_B550-M_PRO ;
+                       :psu_has_certificate "80 PLUS Gold" ;
+                       :psu_has_dimensions "150 x 86 x 140 mm" ;
+                       :psu_has_name "XPG Core Reactor 650W" ;
+                       :psu_has_power_in_watts 650 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8

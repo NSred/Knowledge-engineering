@@ -644,6 +644,7 @@
 
     <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_card_power_supply">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_supplies_gpu"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
     </ObjectProperty>
@@ -1010,6 +1011,17 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_supplies_gpu -->
+
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#psu_supplies_gpu">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_attached_to -->
 
 
@@ -1194,15 +1206,6 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library"/>
     </ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-
-    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    </rdf:Description>
     
 
 

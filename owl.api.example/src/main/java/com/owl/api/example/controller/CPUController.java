@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/cpu")
 public class CPUController {
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<CPUResponseDTO>> getAllCPUs() {
         return new ResponseEntity<>(this.CPUService.getAllCPUs(), HttpStatus.OK);
     }

@@ -17,7 +17,7 @@ import java.util.List;
 @RequestMapping("/api/gpu")
 public class GPUController {
 
-    @GetMapping()
+    @GetMapping
     public ResponseEntity<List<GPUResponseDTO>> getAllGPUs() {
         return new ResponseEntity<>(this.GPUService.getAllGPUs(), HttpStatus.OK);
     }
