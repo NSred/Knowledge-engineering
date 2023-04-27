@@ -2169,6 +2169,28 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                    :cpu_has_threads 4 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_9_7845HX
+:AMD_Ryzen_9_7845HX rdf:type owl:NamedIndividual ,
+                             :CPU ;
+                    :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                    :cpu_has_socket :FL1 ;
+                    :hardware_produced_by_manufacturer :AMD ;
+                    :has_cache :L1_2 ,
+                               :L2_2 ,
+                               :L3_2 ;
+                    :unit1_is_compatible_with_unit2 :GeForce_RTX_3090_Ti ,
+                                                    :GeForce_RTX_4070 ,
+                                                    :GeForce_RTX_4080 ,
+                                                    :Quadro_GV100 ,
+                                                    :RTX_A5000 ,
+                                                    :Radeon_RX_6750_XT ;
+                    :cpu_has_clock_speed_in_ghz 3 ;
+                    :cpu_has_cores 12 ;
+                    :cpu_has_name "AMD Ryzen 9 7845HX" ;
+                    :cpu_has_tdp_in_watts 55 ;
+                    :cpu_has_threads 24 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_3990X
 :AMD_Ryzen_Threadripper_3990X rdf:type owl:NamedIndividual ,
                                        :CPU ;
@@ -2474,6 +2496,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                           :network_card_has_name "E_GREEN Gigabit Ethernet" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA1700
+:FCLGA1700 rdf:type owl:NamedIndividual ,
+                    :Socket ;
+           :socket_has_name "FCLGA1700" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189
 :FCLGA4189 rdf:type owl:NamedIndividual ,
                     :Socket ;
@@ -2492,6 +2520,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
          :video_game_is_compatible_with_OS :Windows_10_Pro ;
          :video_game_is_compatible_with_graphical_library :DirectX ;
          :video_game_has_name "FIFA 23" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FL1
+:FL1 rdf:type owl:NamedIndividual ,
+              :Socket ;
+     :socket_has_name "FL1" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL
@@ -2727,6 +2761,27 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
             :chipset_has_name "Intel B760" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i7-13700
+:Intel_Core_i7-13700 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                     :cpu_has_socket :FCLGA1700 ;
+                     :hardware_produced_by_manufacturer :Intel ;
+                     :has_cache :L1_3 ,
+                                :L2_3 ,
+                                :L3_3 ;
+                     :unit1_is_compatible_with_unit2 :GeForce_RTX_4070 ,
+                                                     :GeForce_RTX_4080 ,
+                                                     :Quadro_GV100 ,
+                                                     :RTX_A5000 ,
+                                                     :Radeon_RX_6750_XT ;
+                     :cpu_has_clock_speed_in_ghz 2.1 ;
+                     :cpu_has_cores 16 ;
+                     :cpu_has_name "Intel Core i7-13700" ;
+                     :cpu_has_tdp_in_watts 65 ;
+                     :cpu_has_threads 24 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS
 :Intel_Core_i9-13900KS rdf:type owl:NamedIndividual ,
                                 :CPU ;
@@ -2745,6 +2800,27 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                        :cpu_has_name "Intel Core i9-13900KS" ;
                        :cpu_has_tdp_in_watts 125 ;
                        :cpu_has_threads 32 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Gold_6414U
+:Intel_Xeon_Gold_6414U rdf:type owl:NamedIndividual ,
+                                :CPU ;
+                       :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                       :cpu_has_socket :FCLGA4677 ;
+                       :hardware_produced_by_manufacturer :Intel ;
+                       :has_cache :L1_1 ,
+                                  :L2_1 ,
+                                  :L3_1 ;
+                       :unit1_is_compatible_with_unit2 :GeForce_RTX_3090_Ti ,
+                                                       :GeForce_RTX_4070 ,
+                                                       :GeForce_RTX_4080 ,
+                                                       :Quadro_GV100 ,
+                                                       :RTX_A5000 ;
+                       :cpu_has_clock_speed_in_ghz 2 ;
+                       :cpu_has_cores 32 ;
+                       :cpu_has_name "Intel Xeon Gold 6414U" ;
+                       :cpu_has_tdp_in_watts 250 ;
+                       :cpu_has_threads 64 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Platinum_8380
