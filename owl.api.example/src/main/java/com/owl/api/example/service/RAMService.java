@@ -1,11 +1,13 @@
 package com.owl.api.example.service;
 
+import com.owl.api.example.dto.MotherboardResponseDTO;
 import com.owl.api.example.dto.RAMResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
+import org.semanticweb.owlapi.vocab.OWLFacet;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -22,7 +24,9 @@ public class RAMService {
     private OWLDataProperty hasLatency;
     private OWLDataProperty hasCapacity;
     private OWLDataProperty hasVoltage;
+    private OWLObjectProperty attachedRAM;
     private OWLClassExpression classRAM;
+    private static String baseIRI = "http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#";
     private OWLOntologyManager manager;
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
@@ -35,16 +39,44 @@ public class RAMService {
         dataFactory = manager.getOWLDataFactory();
         reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(this.ontologyManager.getOntology());
-        hasName = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_name"));
-        hasType = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_type"));
-        hasLatency = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_latency"));
-        hasVoltage = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_voltage"));
-        hasCapacity = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ram_has_capacity_in_gb"));
-        classRAM = dataFactory.getOWLClass(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"));
+        hasName = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_name"));
+        hasType = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_type"));
+        hasLatency = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_latency"));
+        hasVoltage = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_voltage"));
+        hasCapacity = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_capacity_in_gb"));
+        attachedRAM = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "ram_attached_to"));
+        classRAM = dataFactory.getOWLClass(IRI.create(baseIRI + "RAM"));
     }
 
     public List<RAMResponseDTO> getAllRAMs(){
         return getRAMResponseDTOs(classRAM);
+    }
+
+    public List<RAMResponseDTO> getRAMUpgrades(String ram, String motherboard){
+
+        OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + ram.replace(" ", "_")));
+
+        Set<OWLLiteral> capacityLiterals = reasoner.getDataPropertyValues(ramIndividual, hasCapacity);
+        OWLLiteral capacityLiteral = capacityLiterals.stream().findFirst().orElse(null);
+
+        Set<OWLLiteral> latencyLiterals = reasoner.getDataPropertyValues(ramIndividual, hasLatency);
+        OWLLiteral latencyLiteral = latencyLiterals.stream().findFirst().orElse(null);
+
+        OWLDataRange capacityRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MIN_INCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(capacityLiteral.getLiteral()))));
+
+        OWLDataRange latencyRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
+                dataFactory.getOWLFacetRestriction(OWLFacet.MAX_EXCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(latencyLiteral.getLiteral()))));
+
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+
+        OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
+                classRAM,
+                dataFactory.getOWLDataSomeValuesFrom(hasCapacity, capacityRange),
+                dataFactory.getOWLDataSomeValuesFrom(hasLatency, latencyRange),
+                dataFactory.getOWLObjectHasValue(attachedRAM, motherboardIndividual)
+        );
+        return getRAMResponseDTOs(queryExpression);
     }
 
     private List<RAMResponseDTO> getRAMResponseDTOs(OWLClassExpression classRAM) {

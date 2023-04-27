@@ -17,17 +17,23 @@ import java.util.List;
 public class ComponentController {
 
     @GetMapping
-    public ResponseEntity<String> getComponent(@RequestParam String component) {
+    public ResponseEntity<?> getComponent(
+            @RequestParam(required = true) String component,
+            @RequestParam(required = true) String motherboard,
+            @RequestParam(required = true) String cpu,
+            @RequestParam(required = true) String gpu,
+            @RequestParam(required = true) String ram,
+            @RequestParam(required = true) String psu) {
         if (component.equals("CPU"))
-            return new ResponseEntity<>("CPU", HttpStatus.OK);
+            return new ResponseEntity<>(this.cpuService.getCPUUpgrades(cpu, motherboard, gpu), HttpStatus.OK);
         else if (component.equals("GPU"))
-            return new ResponseEntity<>("GPU", HttpStatus.OK);
+            return new ResponseEntity<>(this.gpuService.getGPUUpgrades(gpu, motherboard, cpu, psu), HttpStatus.OK);
         else if (component.equals("PSU"))
-            return new ResponseEntity<>("PSU", HttpStatus.OK);
+            return new ResponseEntity<>(this.psuService.getPSUUpgrades(psu, motherboard, gpu), HttpStatus.OK);
         else if (component.equals("RAM"))
-            return new ResponseEntity<>("RAM", HttpStatus.OK);
+            return new ResponseEntity<>(this.ramService.getRAMUpgrades(ram, motherboard), HttpStatus.OK);
         else if (component.equals("Motherboard"))
-            return new ResponseEntity<>("Motherboard", HttpStatus.OK);
+            return new ResponseEntity<>(this.motherboardService.getMotherboardUpgrades(motherboard, cpu, gpu, ram, psu), HttpStatus.OK);
         else
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }

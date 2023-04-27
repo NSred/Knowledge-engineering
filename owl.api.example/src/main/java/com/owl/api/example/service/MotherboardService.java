@@ -22,7 +22,13 @@ public class MotherboardService {
     private OWLDataProperty hasFormFactor;
     private OWLObjectProperty hasChipset;
     private OWLObjectProperty hasSocket;
+
+    private OWLObjectProperty enablesCPU;
+    private OWLObjectProperty enablesGPU;
+    private OWLObjectProperty enablesRAM;
+    private OWLObjectProperty enablesPSU;
     private OWLClassExpression classMotherboard;
+    private static String baseIRI = "http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#";
     private OWLOntologyManager manager;
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
@@ -35,16 +41,48 @@ public class MotherboardService {
         dataFactory = manager.getOWLDataFactory();
         reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(this.ontologyManager.getOntology());
-        hasName = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_name"));
-        hasDimensions = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_dimensions"));
-        hasFormFactor = dataFactory.getOWLDataProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_form_factor"));
-        hasSocket = dataFactory.getOWLObjectProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket"));
-        hasChipset = dataFactory.getOWLObjectProperty(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset"));
-        classMotherboard = dataFactory.getOWLClass(IRI.create("http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"));
+        hasName = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "motherboard_has_name"));
+        hasDimensions = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "motherboard_has_dimensions"));
+        hasFormFactor = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "motherboard_has_form_factor"));
+        hasSocket = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "motherboard_has_socket"));
+        hasChipset = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "has_chipset"));
+        enablesCPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "enables_attachment_cpu"));
+        enablesGPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "enables_attachment_graphic_card"));
+        enablesRAM = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "enables_attachment_ram"));
+        enablesPSU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "enables_attachment_psu"));
+        classMotherboard = dataFactory.getOWLClass(IRI.create(baseIRI + "Motherboard"));
     }
 
     public List<MotherboardResponseDTO> getAllMotherboards(){
         return getMotherboardResponseDTOs(classMotherboard);
+    }
+
+    public List<MotherboardResponseDTO> getMotherboardUpgrades(String motherboard, String cpu, String gpu, String ram, String psu){
+
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+
+        Set<OWLNamedIndividual> chipsetIndividuals = reasoner.getObjectPropertyValues(motherboardIndividual, hasChipset).getFlattened();
+        OWLNamedIndividual chipsetIndividual = chipsetIndividuals.stream().findFirst().orElse(null);
+
+        Set<OWLLiteral> formFactorLiterals = reasoner.getDataPropertyValues(motherboardIndividual, hasFormFactor);
+        OWLLiteral formFactorLiteral = formFactorLiterals.stream().findFirst().orElse(null);
+
+        OWLNamedIndividual cpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + cpu.replace(" ", "_")));
+        OWLNamedIndividual gpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + gpu.replace(" ", "_")));
+        OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + ram.replace(" ", "_")));
+        OWLNamedIndividual psuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + psu.replace(" ", "_")));
+
+
+        OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
+                classMotherboard,
+                dataFactory.getOWLObjectHasValue(hasChipset, chipsetIndividual),
+                dataFactory.getOWLDataHasValue(hasFormFactor, formFactorLiteral),
+                dataFactory.getOWLObjectHasValue(enablesRAM, ramIndividual),
+                dataFactory.getOWLObjectHasValue(enablesCPU, cpuIndividual),
+                dataFactory.getOWLObjectHasValue(enablesGPU, gpuIndividual),
+                dataFactory.getOWLObjectHasValue(enablesPSU, psuIndividual)
+                );
+        return getMotherboardResponseDTOs(queryExpression);
     }
 
     private List<MotherboardResponseDTO> getMotherboardResponseDTOs(OWLClassExpression classMotherboard) {
