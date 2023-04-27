@@ -1,7 +1,6 @@
 package com.owl.api.example.service;
 
 import com.owl.api.example.dto.PSUResponseDTO;
-import com.owl.api.example.dto.RAMResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;

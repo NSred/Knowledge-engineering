@@ -2,7 +2,6 @@ package com.owl.api.example.service;
 
 import com.owl.api.example.dto.GPURequestDTO;
 import com.owl.api.example.dto.GPUResponseDTO;
-import com.owl.api.example.dto.PSUResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;

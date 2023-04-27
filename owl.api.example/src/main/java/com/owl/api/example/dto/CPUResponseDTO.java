@@ -9,5 +9,6 @@ public class CPUResponseDTO {
     private double clockSpeed;
     private int cores;
     private int threads;
+    private String socket;
 }
 

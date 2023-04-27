@@ -1,6 +1,5 @@
 package com.owl.api.example.service;
 
-import com.owl.api.example.dto.MotherboardResponseDTO;
 import com.owl.api.example.dto.RAMResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;

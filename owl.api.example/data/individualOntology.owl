@@ -380,13 +380,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket -->
-
-
-    <ObjectProperty rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_socket"/>
-    
-
-
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_attached_to -->
 
 
@@ -1998,6 +1991,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#A-DATA_Technology_DDR4_3300_2OZ_4GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#A-DATA_Technology_DDR4_3300_2OZ_4GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ADATA"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A-DATA Technology DDR4 3300 2OZ 4GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ACER_Projector_XD1320Wi_-_MR.JU311.001 -->
 
 
@@ -2008,6 +2017,16 @@
         <untitled-ontology-3:projector_has_lightning_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LED</untitled-ontology-3:projector_has_lightning_type>
         <untitled-ontology-3:projector_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACER Projector XD1320Wi-MRJU311.001</untitled-ontology-3:projector_has_name>
         <untitled-ontology-3:projector_has_resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1280 x 800 (WXGA)</untitled-ontology-3:projector_has_resolution>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ADATA -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ADATA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADATA Technology Co., Ltd.</untitled-ontology-3:manufacturer_has_name>
     </NamedIndividual>
     
 
@@ -2032,6 +2051,57 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_7773X -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_7773X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP3"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.2</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD EPYC 7773X</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_9474F -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_9474F">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP5"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Quadro_GV100"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.6</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD EPYC 9474F</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U -->
 
 
@@ -2051,6 +2121,32 @@
         <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen 3 3350U</untitled-ontology-3:cpu_has_name>
         <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</untitled-ontology-3:cpu_has_tdp_in_watts>
         <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</untitled-ontology-3:cpu_has_threads>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_3990X -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_3990X">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
+        <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sTRX4"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1"/>
+        <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Quadro_GV100"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000"/>
+        <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT"/>
+        <untitled-ontology-3:cpu_has_clock_speed_in_ghz rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.9</untitled-ontology-3:cpu_has_clock_speed_in_ghz>
+        <untitled-ontology-3:cpu_has_cores rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</untitled-ontology-3:cpu_has_cores>
+        <untitled-ontology-3:cpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMD Ryzen Threadripper 3990X</untitled-ontology-3:cpu_has_name>
+        <untitled-ontology-3:cpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</untitled-ontology-3:cpu_has_tdp_in_watts>
+        <untitled-ontology-3:cpu_has_threads rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</untitled-ontology-3:cpu_has_threads>
     </NamedIndividual>
     
 
@@ -2181,6 +2277,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Titanium</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair AX1600i</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CM5S16GM4800A40K2_16GB -->
 
 
@@ -2209,6 +2320,38 @@
         <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CMK16GX4M2F4400C19 8GB</untitled-ontology-3:ram_has_name>
         <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
         <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMT32GX5M2X6600C32_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMT32GX5M2X6600C32_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CMT32GX5M2X6600C32 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMTS16GM4800A40T2_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMTS16GM4800A40T2_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair CMTS16GM4800A40T2 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
     </NamedIndividual>
     
 
@@ -2254,6 +2397,37 @@
         <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
         <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair RM550x</untitled-ontology-3:psu_has_name>
         <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Platinum</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corsair SF750</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">750</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Crucial_Technology_BLT8G4D30AETA.K16FD_8GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Crucial_Technology_BLT8G4D30AETA.K16FD_8GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Micron"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crucial Technology BLT8G4D30AETA.K16FD 8GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
     </NamedIndividual>
     
 
@@ -2338,6 +2512,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Gold</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EVGA SuperNOVA 850 G7</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">850</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet -->
 
 
@@ -2405,6 +2593,43 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard"/>
+        <untitled-ontology-3:enables_attachment_cooler rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_GAMMAXX_GTE_V2"/>
+        <untitled-ontology-3:enables_attachment_hdd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB"/>
+        <untitled-ontology-3:enables_attachment_network_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet"/>
+        <untitled-ontology-3:enables_attachment_sound_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Audigy_FX_Sound_card"/>
+        <untitled-ontology-3:enables_attachment_ssd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung_980_PRO_1TB"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Gigabyte"/>
+        <untitled-ontology-3:motherboard_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:motherboard_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700"/>
+        <untitled-ontology-3:motherboard_has_storage_interface rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SATA"/>
+        <untitled-ontology-3:motherboard_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24.4 x 21 cm</untitled-ontology-3:motherboard_has_dimensions>
+        <untitled-ontology-3:motherboard_has_form_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micro ATX</untitled-ontology-3:motherboard_has_form_factor>
+        <untitled-ontology-3:motherboard_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GIGABYTE B760M DS3H AX DDR4</untitled-ontology-3:motherboard_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZKKE_8GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZKKE_8GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G Skill Intl F4-4500C19-8GTZKKE 8GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR4</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.2</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZSWE_8GB -->
 
 
@@ -2433,6 +2658,95 @@
         <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G Skill Intl F5-5600J4040C16G 16GB</untitled-ontology-3:ram_has_name>
         <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
         <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-6800J3445G16G_16GB -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-6800J3445G16G_16GB">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G.SKILL"/>
+        <untitled-ontology-3:ram_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:ram_has_capacity_in_gb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</untitled-ontology-3:ram_has_capacity_in_gb>
+        <untitled-ontology-3:ram_has_latency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</untitled-ontology-3:ram_has_latency>
+        <untitled-ontology-3:ram_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G Skill Intl F5-6800J3445G16G 16GB</untitled-ontology-3:ram_has_name>
+        <untitled-ontology-3:ram_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DDR5</untitled-ontology-3:ram_has_type>
+        <untitled-ontology-3:ram_has_voltage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</untitled-ontology-3:ram_has_voltage>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1560</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1313</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 3090 Ti</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">450</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1920</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1313</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 4070</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12288</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2500</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GeForce RTX 4080</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16384</untitled-ontology-3:gpu_has_video_memory_in_mb>
     </NamedIndividual>
     
 
@@ -2475,6 +2789,16 @@
         <untitled-ontology-3:keyboard_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">136 x 355 x 38 mm</untitled-ontology-3:keyboard_has_dimensions>
         <untitled-ontology-3:keyboard_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genesis Thor TKL 300</untitled-ontology-3:keyboard_has_name>
         <untitled-ontology-3:keyboard_has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mechanical</untitled-ontology-3:keyboard_has_type>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Gigabyte -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Gigabyte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gigabyte Technology</untitled-ontology-3:manufacturer_has_name>
     </NamedIndividual>
     
 
@@ -2544,17 +2868,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_B760 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_B760">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset"/>
+        <untitled-ontology-3:chipset_is_part_of_motherboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:chipset_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel B760</untitled-ontology-3:chipset_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS -->
 
 
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
         <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_1"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_1"/>
-        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
@@ -2574,11 +2909,11 @@
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_Platinum_8380">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
         <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_2"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2"/>
-        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4189"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
@@ -2598,11 +2933,11 @@
     <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Xeon_w9-3475X">
         <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU"/>
         <untitled-ontology-3:cpu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
+        <untitled-ontology-3:cpu_has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677"/>
         <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3"/>
         <untitled-ontology-3:has_cache rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3"/>
-        <untitled-ontology-3:has_socket rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA4677"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT"/>
         <untitled-ontology-3:unit1_is_compatible_with_unit2 rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6950_XT"/>
@@ -2826,6 +3161,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Platinum</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MSI MEG Ai1000P PCIe 5</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Micron -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Micron">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micron Technology, Inc.</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft -->
 
 
@@ -2909,6 +3268,56 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Quadro_GV100 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Quadro_GV100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1132</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1696</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quadro GV100</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32768</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Nvidia"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1170</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16000</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RTX A5000</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">230</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24576</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT -->
 
 
@@ -2928,6 +3337,30 @@
         <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6600 XT</untitled-ontology-3:gpu_has_name>
         <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</untitled-ontology-3:gpu_has_tdp_in_watts>
         <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8192</untitled-ontology-3:gpu_has_video_memory_in_mb>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DirectX"/>
+        <untitled-ontology-3:gpu_supports rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#OpenGL"/>
+        <untitled-ontology-3:graphic_card_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:graphic_card_has_port rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5"/>
+        <untitled-ontology-3:graphic_card_power_supply rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD"/>
+        <untitled-ontology-3:gpu_has_core_clock_in_mhz rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2150</untitled-ontology-3:gpu_has_core_clock_in_mhz>
+        <untitled-ontology-3:gpu_has_memory_clock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2250</untitled-ontology-3:gpu_has_memory_clock>
+        <untitled-ontology-3:gpu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radeon RX 6750 XT</untitled-ontology-3:gpu_has_name>
+        <untitled-ontology-3:gpu_has_tdp_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</untitled-ontology-3:gpu_has_tdp_in_watts>
+        <untitled-ontology-3:gpu_has_video_memory_in_mb rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12288</untitled-ontology-3:gpu_has_video_memory_in_mb>
     </NamedIndividual>
     
 
@@ -3066,6 +3499,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP3 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SP3</untitled-ontology-3:socket_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP5 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SP5</untitled-ontology-3:socket_has_name>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung -->
 
 
@@ -3121,6 +3574,31 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer"/>
+        <untitled-ontology-3:manufacturer_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SilverStone Technology Co., Ltd.</untitled-ontology-3:manufacturer_has_name>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:hardware_produced_by_manufacturer rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Platinum</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SilverStone SX1000 SFX-L</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick -->
 
 
@@ -3146,6 +3624,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU"/>
+        <untitled-ontology-3:psu_attached_to rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
+        <untitled-ontology-3:psu_has_certificate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 PLUS Gold</untitled-ontology-3:psu_has_certificate>
+        <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
+        <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thermaltake Toughpower GF3 1350W</untitled-ontology-3:psu_has_name>
+        <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1350</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H15 -->
 
 
@@ -3156,6 +3648,7 @@
         <untitled-ontology-3:contains_cpu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Ryzen_7_5800x"/>
         <untitled-ontology-3:contains_graphic_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT"/>
         <untitled-ontology-3:contains_hdd rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Seagate_HDD_IronWolf_10TB"/>
+        <untitled-ontology-3:contains_motherboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4"/>
         <untitled-ontology-3:contains_motherboard rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO"/>
         <untitled-ontology-3:contains_network_card rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet"/>
         <untitled-ontology-3:contains_psu rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400"/>
@@ -3262,6 +3755,16 @@
         <untitled-ontology-3:psu_has_dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">150 x 86 x 140 mm</untitled-ontology-3:psu_has_dimensions>
         <untitled-ontology-3:psu_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XPG Core Reactor 650W</untitled-ontology-3:psu_has_name>
         <untitled-ontology-3:psu_has_power_in_watts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</untitled-ontology-3:psu_has_power_in_watts>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sTRX4 -->
+
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sTRX4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket"/>
+        <untitled-ontology-3:socket_has_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sTRX4</untitled-ontology-3:socket_has_name>
     </NamedIndividual>
     
 

@@ -111,10 +111,10 @@ public class MotherboardService {
         }
         Set<OWLNamedIndividual> sockets = reasoner.getObjectPropertyValues(individual, hasSocket).getFlattened();
         OWLNamedIndividual socket = sockets.stream().findFirst().orElse(null);
-        motherboardResponseDTO.setSocket(socket.getIRI().getShortForm());
+        motherboardResponseDTO.setSocket(socket.getIRI().getShortForm().replace("_", " "));
         Set<OWLNamedIndividual> chipsets = reasoner.getObjectPropertyValues(individual, hasChipset).getFlattened();
         OWLNamedIndividual chipset = chipsets.stream().findFirst().orElse(null);
-        motherboardResponseDTO.setChipset(chipset.getIRI().getShortForm());
+        motherboardResponseDTO.setChipset(chipset.getIRI().getShortForm().replace("_", " "));
         return motherboardResponseDTO;
     }
 }

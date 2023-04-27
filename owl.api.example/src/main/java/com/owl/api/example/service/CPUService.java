@@ -2,7 +2,6 @@ package com.owl.api.example.service;
 
 import com.owl.api.example.dto.CPURequestDTO;
 import com.owl.api.example.dto.CPUResponseDTO;
-import com.owl.api.example.dto.GPUResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.*;
@@ -27,6 +26,7 @@ public class CPUService {
     private OWLDataProperty hasClockSpeed;
     private OWLObjectProperty attachedCPU;
     private OWLObjectProperty compatibleGPU;
+    private OWLObjectProperty hasSocket;
     private OWLClassExpression classCPU;
     private static String baseIRI = "http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#";
     private OWLOntologyManager manager;
@@ -48,6 +48,7 @@ public class CPUService {
         hasClockSpeed = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "cpu_has_clock_speed_in_ghz"));
         attachedCPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "cpu_attached_to"));
         compatibleGPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "unit1_is_compatible_with_unit2"));
+        hasSocket = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "cpu_has_socket"));
         classCPU = dataFactory.getOWLClass(IRI.create(baseIRI + "CPU"));
     }
 
@@ -143,6 +144,9 @@ public class CPUService {
                 cpuResponseDTO.setClockSpeed(Double.parseDouble(value.getLiteral()));
             }
         }
+        Set<OWLNamedIndividual> sockets = reasoner.getObjectPropertyValues(individual, hasSocket).getFlattened();
+        OWLNamedIndividual socket = sockets.stream().findFirst().orElse(null);
+        cpuResponseDTO.setSocket(socket.getIRI().getShortForm().replace("_", " "));
         return cpuResponseDTO;
     }
 }

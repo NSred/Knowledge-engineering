@@ -2067,6 +2067,18 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 #    Individuals
 #################################################################
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#A-DATA_Technology_DDR4_3300_2OZ_4GB
+:A-DATA_Technology_DDR4_3300_2OZ_4GB rdf:type owl:NamedIndividual ,
+                                              :RAM ;
+                                     :hardware_produced_by_manufacturer :ADATA ;
+                                     :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                     :ram_has_capacity_in_gb 4 ;
+                                     :ram_has_latency 25 ;
+                                     :ram_has_name "A-DATA Technology DDR4 3300 2OZ 4GB" ;
+                                     :ram_has_type "DDR4" ;
+                                     :ram_has_voltage 1.2 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ACER_Projector_XD1320Wi_-_MR.JU311.001
 :ACER_Projector_XD1320Wi_-_MR.JU311.001 rdf:type owl:NamedIndividual ,
                                                  :Projector ;
@@ -2075,6 +2087,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                         :projector_has_lightning_type "LED" ;
                                         :projector_has_name "ACER Projector XD1320Wi-MRJU311.001" ;
                                         :projector_has_resolution "1280 x 800 (WXGA)" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ADATA
+:ADATA rdf:type owl:NamedIndividual ,
+                :Manufacturer ;
+       :manufacturer_has_name "ADATA Technology Co., Ltd." .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AM4
@@ -2087,6 +2105,49 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :AMD rdf:type owl:NamedIndividual ,
               :Manufacturer ;
      :manufacturer_has_name "Advanced Micro Devices, Inc." .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_7773X
+:AMD_EPYC_7773X rdf:type owl:NamedIndividual ,
+                         :CPU ;
+                :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                :cpu_has_socket :SP3 ;
+                :hardware_produced_by_manufacturer :AMD ;
+                :has_cache :L1_2 ,
+                           :L2_2 ,
+                           :L3_2 ;
+                :unit1_is_compatible_with_unit2 :GeForce_RTX_3090_Ti ,
+                                                :GeForce_RTX_4070 ,
+                                                :GeForce_RTX_4080 ,
+                                                :RTX_A5000 ,
+                                                :Radeon_RX_6750_XT ;
+                :cpu_has_clock_speed_in_ghz 2.2 ;
+                :cpu_has_cores 64 ;
+                :cpu_has_name "AMD EPYC 7773X" ;
+                :cpu_has_tdp_in_watts 280 ;
+                :cpu_has_threads 128 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_EPYC_9474F
+:AMD_EPYC_9474F rdf:type owl:NamedIndividual ,
+                         :CPU ;
+                :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                :cpu_has_socket :SP5 ;
+                :hardware_produced_by_manufacturer :AMD ;
+                :has_cache :L1_3 ,
+                           :L2_3 ,
+                           :L3_3 ;
+                :unit1_is_compatible_with_unit2 :GeForce_RTX_3090_Ti ,
+                                                :GeForce_RTX_4070 ,
+                                                :GeForce_RTX_4080 ,
+                                                :Quadro_GV100 ,
+                                                :RTX_A5000 ,
+                                                :Radeon_RX_6750_XT ;
+                :cpu_has_clock_speed_in_ghz 3.6 ;
+                :cpu_has_cores 48 ;
+                :cpu_has_name "AMD EPYC 9474F" ;
+                :cpu_has_tdp_in_watts 360 ;
+                :cpu_has_threads 96 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_3_3350U
@@ -2106,6 +2167,28 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                    :cpu_has_name "AMD Ryzen 3 3350U" ;
                    :cpu_has_tdp_in_watts 15 ;
                    :cpu_has_threads 4 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_3990X
+:AMD_Ryzen_Threadripper_3990X rdf:type owl:NamedIndividual ,
+                                       :CPU ;
+                              :cpu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                              :cpu_has_socket :sTRX4 ;
+                              :hardware_produced_by_manufacturer :AMD ;
+                              :has_cache :L1_1 ,
+                                         :L2_1 ,
+                                         :L3_1 ;
+                              :unit1_is_compatible_with_unit2 :GeForce_RTX_3090_Ti ,
+                                                              :GeForce_RTX_4070 ,
+                                                              :GeForce_RTX_4080 ,
+                                                              :Quadro_GV100 ,
+                                                              :RTX_A5000 ,
+                                                              :Radeon_RX_6750_XT ;
+                              :cpu_has_clock_speed_in_ghz 2.9 ;
+                              :cpu_has_cores 64 ;
+                              :cpu_has_name "AMD Ryzen Threadripper 3990X" ;
+                              :cpu_has_tdp_in_watts 280 ;
+                              :cpu_has_threads 128 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_Threadripper_PRO_5995WX
@@ -2202,6 +2285,17 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
          :manufacturer_has_name "Corsair Gaming, Inc." .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_AX1600i
+:Corsair_AX1600i rdf:type owl:NamedIndividual ,
+                          :PSU ;
+                 :hardware_produced_by_manufacturer :Corsair ;
+                 :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                 :psu_has_certificate "80 PLUS Titanium" ;
+                 :psu_has_dimensions "150 x 86 x 140 mm" ;
+                 :psu_has_name "Corsair AX1600i" ;
+                 :psu_has_power_in_watts 1600 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CM5S16GM4800A40K2_16GB
 :Corsair_CM5S16GM4800A40K2_16GB rdf:type owl:NamedIndividual ,
                                          :RAM ;
@@ -2224,6 +2318,30 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                 :ram_has_name "Corsair CMK16GX4M2F4400C19 8GB" ;
                                 :ram_has_type "DDR4" ;
                                 :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMT32GX5M2X6600C32_16GB
+:Corsair_CMT32GX5M2X6600C32_16GB rdf:type owl:NamedIndividual ,
+                                          :RAM ;
+                                 :hardware_produced_by_manufacturer :Corsair ;
+                                 :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                 :ram_has_capacity_in_gb 16 ;
+                                 :ram_has_latency 35 ;
+                                 :ram_has_name "Corsair CMT32GX5M2X6600C32 16GB" ;
+                                 :ram_has_type "DDR5" ;
+                                 :ram_has_voltage 1.1 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CMTS16GM4800A40T2_16GB
+:Corsair_CMTS16GM4800A40T2_16GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Corsair ;
+                                :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                :ram_has_capacity_in_gb 16 ;
+                                :ram_has_latency 30 ;
+                                :ram_has_name "Corsair CMTS16GM4800A40T2 16GB" ;
+                                :ram_has_type "DDR5" ;
+                                :ram_has_voltage 1.1 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX450
@@ -2257,6 +2375,29 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                 :psu_has_dimensions "150 x 86 x 140 mm" ;
                 :psu_has_name "Corsair RM550x" ;
                 :psu_has_power_in_watts 550 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750
+:Corsair_SF750 rdf:type owl:NamedIndividual ,
+                        :PSU ;
+               :hardware_produced_by_manufacturer :Corsair ;
+               :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+               :psu_has_certificate "80 PLUS Platinum" ;
+               :psu_has_dimensions "150 x 86 x 140 mm" ;
+               :psu_has_name "Corsair SF750" ;
+               :psu_has_power_in_watts 750 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Crucial_Technology_BLT8G4D30AETA.K16FD_8GB
+:Crucial_Technology_BLT8G4D30AETA.K16FD_8GB rdf:type owl:NamedIndividual ,
+                                                     :RAM ;
+                                            :hardware_produced_by_manufacturer :Micron ;
+                                            :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                            :ram_has_capacity_in_gb 8 ;
+                                            :ram_has_latency 22 ;
+                                            :ram_has_name "Crucial Technology BLT8G4D30AETA.K16FD 8GB" ;
+                                            :ram_has_type "DDR4" ;
+                                            :ram_has_voltage 1.2 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#DEEP_COOL_PF400
@@ -2315,6 +2456,16 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                   :scanner_has_name "EPSON scanner workforce DS-530II" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#EVGA_SuperNOVA_850_G7
+:EVGA_SuperNOVA_850_G7 rdf:type owl:NamedIndividual ,
+                                :PSU ;
+                       :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                       :psu_has_certificate "80 PLUS Gold" ;
+                       :psu_has_dimensions "150 x 86 x 140 mm" ;
+                       :psu_has_name "EVGA SuperNOVA 850 G7" ;
+                       :psu_has_power_in_watts 850 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#E_GREEN_Gigabit_Ethernet
 :E_GREEN_Gigabit_Ethernet rdf:type owl:NamedIndividual ,
                                    :Network_card ;
@@ -2358,6 +2509,35 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                  :microphone_has_name "GEMBIRD mic-205" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_B760M_DS3H_AX_DDR4
+:GIGABYTE_B760M_DS3H_AX_DDR4 rdf:type owl:NamedIndividual ,
+                                      :Motherboard ;
+                             :enables_attachment_cooler :DEEP_GAMMAXX_GTE_V2 ;
+                             :enables_attachment_hdd :Seagate_HDD_IronWolf_10TB ;
+                             :enables_attachment_network_card :E_GREEN_Gigabit_Ethernet ;
+                             :enables_attachment_sound_card :Audigy_FX_Sound_card ;
+                             :enables_attachment_ssd :Samsung_980_PRO_1TB ;
+                             :hardware_produced_by_manufacturer :Gigabyte ;
+                             :motherboard_has_port :USB_3.0 ;
+                             :motherboard_has_socket :LGA_1700 ;
+                             :motherboard_has_storage_interface :SATA ;
+                             :motherboard_has_dimensions "24.4 x 21 cm" ;
+                             :motherboard_has_form_factor "Micro ATX" ;
+                             :motherboard_has_name "GIGABYTE B760M DS3H AX DDR4" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZKKE_8GB
+:G_Skill_Intl_F4-4500C19-8GTZKKE_8GB rdf:type owl:NamedIndividual ,
+                                              :RAM ;
+                                     :hardware_produced_by_manufacturer :G.SKILL ;
+                                     :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                     :ram_has_capacity_in_gb 8 ;
+                                     :ram_has_latency 15 ;
+                                     :ram_has_name "G Skill Intl F4-4500C19-8GTZKKE 8GB" ;
+                                     :ram_has_type "DDR4" ;
+                                     :ram_has_voltage 1.2 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZSWE_8GB
 :G_Skill_Intl_F4-4500C19-8GTZSWE_8GB rdf:type owl:NamedIndividual ,
                                               :RAM ;
@@ -2380,6 +2560,79 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                     :ram_has_name "G Skill Intl F5-5600J4040C16G 16GB" ;
                                     :ram_has_type "DDR5" ;
                                     :ram_has_voltage 1.1 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F5-6800J3445G16G_16GB
+:G_Skill_Intl_F5-6800J3445G16G_16GB rdf:type owl:NamedIndividual ,
+                                             :RAM ;
+                                    :hardware_produced_by_manufacturer :G.SKILL ;
+                                    :ram_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                    :ram_has_capacity_in_gb 16 ;
+                                    :ram_has_latency 38 ;
+                                    :ram_has_name "G Skill Intl F5-6800J3445G16G 16GB" ;
+                                    :ram_has_type "DDR5" ;
+                                    :ram_has_voltage 1.1 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti
+:GeForce_RTX_3090_Ti rdf:type owl:NamedIndividual ,
+                              :Graphic_card ;
+                     :gpu_supports :DirectX ,
+                                   :OpenGL ;
+                     :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                     :graphic_card_has_port :USB_3.0 ;
+                     :graphic_card_power_supply :Corsair_AX1600i ,
+                                                :Corsair_SF750 ,
+                                                :EVGA_SuperNOVA_850_G7 ,
+                                                :MSI_MEG_Ai1000P_PCIe_5 ,
+                                                :SilverStone_SX1000_SFX-L ,
+                                                :Thermaltake_Toughpower_GF3_1350W ;
+                     :hardware_produced_by_manufacturer :Nvidia ;
+                     :gpu_has_core_clock_in_mhz 1560 ;
+                     :gpu_has_memory_clock 1313 ;
+                     :gpu_has_name "GeForce RTX 3090 Ti" ;
+                     :gpu_has_tdp_in_watts 450 ;
+                     :gpu_has_video_memory_in_mb 24576 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070
+:GeForce_RTX_4070 rdf:type owl:NamedIndividual ,
+                           :Graphic_card ;
+                  :gpu_supports :DirectX ,
+                                :OpenGL ;
+                  :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                  :graphic_card_has_port :USB_3.0 ;
+                  :graphic_card_power_supply :Corsair_AX1600i ,
+                                             :Corsair_SF750 ,
+                                             :MSI_MEG_Ai1000P_PCIe_5 ,
+                                             :SilverStone_SX1000_SFX-L ,
+                                             :Thermaltake_Toughpower_GF3_1350W ;
+                  :hardware_produced_by_manufacturer :Nvidia ;
+                  :gpu_has_core_clock_in_mhz 1920 ;
+                  :gpu_has_memory_clock 1313 ;
+                  :gpu_has_name "GeForce RTX 4070" ;
+                  :gpu_has_tdp_in_watts 200 ;
+                  :gpu_has_video_memory_in_mb 12288 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080
+:GeForce_RTX_4080 rdf:type owl:NamedIndividual ,
+                           :Graphic_card ;
+                  :gpu_supports :DirectX ,
+                                :OpenGL ;
+                  :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                  :graphic_card_has_port :USB_3.0 ;
+                  :graphic_card_power_supply :Corsair_AX1600i ,
+                                             :Corsair_SF750 ,
+                                             :EVGA_SuperNOVA_850_G7 ,
+                                             :SilverStone_SX1000_SFX-L ,
+                                             :Thermaltake_Toughpower_GF3_1350W ;
+                  :hardware_produced_by_manufacturer :Nvidia ;
+                  :gpu_has_core_clock_in_mhz 2000 ;
+                  :gpu_has_memory_clock 2500 ;
+                  :gpu_has_name "GeForce RTX 4080" ;
+                  :gpu_has_tdp_in_watts 320 ;
+                  :gpu_has_video_memory_in_mb 16384 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4090
@@ -2414,6 +2667,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                       :keyboard_has_dimensions "136 x 355 x 38 mm" ;
                       :keyboard_has_name "Genesis Thor TKL 300" ;
                       :keyboard_has_type "mechanical" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Gigabyte
+:Gigabyte rdf:type owl:NamedIndividual ,
+                   :Manufacturer ;
+          :manufacturer_has_name "Gigabyte Technology" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HP_OA04_Notebook_Battery
@@ -2461,15 +2720,22 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
        :manufacturer_has_name "Intel Corporation" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_B760
+:Intel_B760 rdf:type owl:NamedIndividual ,
+                     :Chipset ;
+            :chipset_is_part_of_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+            :chipset_has_name "Intel B760" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS
 :Intel_Core_i9-13900KS rdf:type owl:NamedIndividual ,
                                 :CPU ;
                        :cpu_attached_to :MSI_B550-M_PRO ;
+                       :cpu_has_socket :LGA_1700 ;
                        :hardware_produced_by_manufacturer :Intel ;
                        :has_cache :L1_1 ,
                                   :L2_1 ,
                                   :L3_1 ;
-                       :has_socket :LGA_1700 ;
                        :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
                                                        :Radeon_RX_6900_XT ,
                                                        :Radeon_RX_6950_XT ,
@@ -2485,11 +2751,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :Intel_Xeon_Platinum_8380 rdf:type owl:NamedIndividual ,
                                    :CPU ;
                           :cpu_attached_to :MSI_B550-M_PRO ;
+                          :cpu_has_socket :FCLGA4189 ;
                           :hardware_produced_by_manufacturer :Intel ;
                           :has_cache :L1_2 ,
                                      :L2_2 ,
                                      :L3_2 ;
-                          :has_socket :FCLGA4189 ;
                           :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
                                                           :Radeon_RX_6900_XT ,
                                                           :Radeon_RX_6950_XT ,
@@ -2505,11 +2771,11 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :Intel_Xeon_w9-3475X rdf:type owl:NamedIndividual ,
                               :CPU ;
                      :cpu_attached_to :MSI_B550-M_PRO ;
+                     :cpu_has_socket :FCLGA4677 ;
                      :hardware_produced_by_manufacturer :Intel ;
                      :has_cache :L1_3 ,
                                 :L2_3 ,
                                 :L3_3 ;
-                     :has_socket :FCLGA4677 ;
                      :unit1_is_compatible_with_unit2 :Radeon_RX_6600_XT ,
                                                      :Radeon_RX_6900_XT ,
                                                      :Radeon_RX_6950_XT ,
@@ -2663,6 +2929,22 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                 :motherboard_has_name "MSI B550-M PRO" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5
+:MSI_MEG_Ai1000P_PCIe_5 rdf:type owl:NamedIndividual ,
+                                 :PSU ;
+                        :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                        :psu_has_certificate "80 PLUS Platinum" ;
+                        :psu_has_dimensions "150 x 86 x 140 mm" ;
+                        :psu_has_name "MSI MEG Ai1000P PCIe 5" ;
+                        :psu_has_power_in_watts 1000 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Micron
+:Micron rdf:type owl:NamedIndividual ,
+                 :Manufacturer ;
+        :manufacturer_has_name "Micron Technology, Inc." .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microsoft
 :Microsoft rdf:type owl:NamedIndividual ,
                     :Manufacturer ;
@@ -2718,6 +3000,48 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                           :adapter_has_version "HDMI 1.4" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Quadro_GV100
+:Quadro_GV100 rdf:type owl:NamedIndividual ,
+                       :Graphic_card ;
+              :gpu_supports :DirectX ,
+                            :OpenGL ;
+              :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+              :graphic_card_has_port :USB_3.0 ;
+              :graphic_card_power_supply :Corsair_AX1600i ,
+                                         :Corsair_SF750 ,
+                                         :EVGA_SuperNOVA_850_G7 ,
+                                         :MSI_MEG_Ai1000P_PCIe_5 ,
+                                         :SilverStone_SX1000_SFX-L ,
+                                         :Thermaltake_Toughpower_GF3_1350W ;
+              :hardware_produced_by_manufacturer :Nvidia ;
+              :gpu_has_core_clock_in_mhz 1132 ;
+              :gpu_has_memory_clock 1696 ;
+              :gpu_has_name "Quadro GV100" ;
+              :gpu_has_tdp_in_watts 250 ;
+              :gpu_has_video_memory_in_mb 32768 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RTX_A5000
+:RTX_A5000 rdf:type owl:NamedIndividual ,
+                    :Graphic_card ;
+           :gpu_supports :DirectX ,
+                         :OpenGL ;
+           :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+           :graphic_card_has_port :USB_3.0 ;
+           :graphic_card_power_supply :Corsair_AX1600i ,
+                                      :Corsair_SF750 ,
+                                      :EVGA_SuperNOVA_850_G7 ,
+                                      :MSI_MEG_Ai1000P_PCIe_5 ,
+                                      :SilverStone_SX1000_SFX-L ,
+                                      :Thermaltake_Toughpower_GF3_1350W ;
+           :hardware_produced_by_manufacturer :Nvidia ;
+           :gpu_has_core_clock_in_mhz 1170 ;
+           :gpu_has_memory_clock 16000 ;
+           :gpu_has_name "RTX A5000" ;
+           :gpu_has_tdp_in_watts 230 ;
+           :gpu_has_video_memory_in_mb 24576 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT
 :Radeon_RX_6600_XT rdf:type owl:NamedIndividual ,
                             :Graphic_card ;
@@ -2735,6 +3059,26 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                    :gpu_has_name "Radeon RX 6600 XT" ;
                    :gpu_has_tdp_in_watts 160 ;
                    :gpu_has_video_memory_in_mb 8192 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6750_XT
+:Radeon_RX_6750_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :graphic_card_power_supply :Corsair_AX1600i ,
+                                              :Corsair_SF750 ,
+                                              :EVGA_SuperNOVA_850_G7 ,
+                                              :MSI_MEG_Ai1000P_PCIe_5 ,
+                                              :SilverStone_SX1000_SFX-L ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :gpu_has_core_clock_in_mhz 2150 ;
+                   :gpu_has_memory_clock 2250 ;
+                   :gpu_has_name "Radeon RX 6750 XT" ;
+                   :gpu_has_tdp_in_watts 250 ;
+                   :gpu_has_video_memory_in_mb 12288 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6900_XT
@@ -2847,6 +3191,18 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
       :storage_interface_has_version 1 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP3
+:SP3 rdf:type owl:NamedIndividual ,
+              :Socket ;
+     :socket_has_name "SP3" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SP5
+:SP5 rdf:type owl:NamedIndividual ,
+              :Socket ;
+     :socket_has_name "SP5" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Samsung
 :Samsung rdf:type owl:NamedIndividual ,
                   :Manufacturer ;
@@ -2886,6 +3242,23 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                            :hdd_has_rpm 7200 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone
+:SilverStone rdf:type owl:NamedIndividual ,
+                      :Manufacturer ;
+             :manufacturer_has_name "SilverStone Technology Co., Ltd." .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SilverStone_SX1000_SFX-L
+:SilverStone_SX1000_SFX-L rdf:type owl:NamedIndividual ,
+                                   :PSU ;
+                          :hardware_produced_by_manufacturer :SilverStone ;
+                          :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                          :psu_has_certificate "80 PLUS Platinum" ;
+                          :psu_has_dimensions "150 x 86 x 140 mm" ;
+                          :psu_has_name "SilverStone SX1000 SFX-L" ;
+                          :psu_has_power_in_watts 1000 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#T-16000M_FCS_Joystick
 :T-16000M_FCS_Joystick rdf:type owl:NamedIndividual ,
                                 :Joystick ;
@@ -2903,6 +3276,16 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                   :hub_has_number_of_ports 5 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W
+:Thermaltake_Toughpower_GF3_1350W rdf:type owl:NamedIndividual ,
+                                           :PSU ;
+                                  :psu_attached_to :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+                                  :psu_has_certificate "80 PLUS Gold" ;
+                                  :psu_has_dimensions "150 x 86 x 140 mm" ;
+                                  :psu_has_name "Thermaltake Toughpower GF3 1350W" ;
+                                  :psu_has_power_in_watts 1350 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Versa_H15
 :Thermaltake_Versa_H15 rdf:type owl:NamedIndividual ,
                                 :Computer_case ;
@@ -2911,7 +3294,8 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                      :Ryzen_7_5800x ;
                        :contains_graphic_card :Radeon_RX_6600_XT ;
                        :contains_hdd :Seagate_HDD_IronWolf_10TB ;
-                       :contains_motherboard :MSI_B550-M_PRO ;
+                       :contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ,
+                                             :MSI_B550-M_PRO ;
                        :contains_network_card :E_GREEN_Gigabit_Ethernet ;
                        :contains_psu :DEEP_COOL_PF400 ;
                        :contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ ;
@@ -2989,6 +3373,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                        :psu_has_dimensions "150 x 86 x 140 mm" ;
                        :psu_has_name "XPG Core Reactor 650W" ;
                        :psu_has_power_in_watts 650 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sTRX4
+:sTRX4 rdf:type owl:NamedIndividual ,
+                :Socket ;
+       :socket_has_name "sTRX4" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#sWRX8
