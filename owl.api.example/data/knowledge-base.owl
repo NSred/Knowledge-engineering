@@ -2254,6 +2254,88 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                :driver_has_version "23.2.1" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS
+:ASUS rdf:type owl:NamedIndividual ,
+               :Manufacturer ;
+      :manufacturer_has_name "ASUS"^^xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS_ROG_Strix_650G
+:ASUS_ROG_Strix_650G rdf:type owl:NamedIndividual ,
+                              :PSU ;
+                     :hardware_produced_by_manufacturer :ASUS ;
+                     :psu_attached_to :GIGABYTE_H410M_S2H ;
+                     :psu_supplies_gpu :Radeon_RX_5500_XT ,
+                                       :Radeon_RX_5600_XT ,
+                                       :Radeon_RX_5700 ,
+                                       :Radeon_RX_5700_XT ,
+                                       :Radeon_RX_6400 ;
+                     :psu_has_certificate "80 Plus Gold"^^xsd:string ;
+                     :psu_has_dimensions "160 x 150 x 85 mm"^^xsd:string ;
+                     :psu_has_name "ASUS ROG Strix 650G"^^xsd:string ;
+                     :psu_has_power_in_watts 650 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS_ROG_Strix_750W_Gold
+:ASUS_ROG_Strix_750W_Gold rdf:type owl:NamedIndividual ,
+                                   :PSU ;
+                          :hardware_produced_by_manufacturer :ASUS ;
+                          :psu_attached_to :GIGABYTE_H410M_S2H ;
+                          :psu_supplies_gpu :Radeon_RX_5500_XT ,
+                                            :Radeon_RX_5700 ,
+                                            :Radeon_RX_5700_XT ,
+                                            :Radeon_RX_6400 ;
+                          :psu_has_certificate "80 Plus Gold"^^xsd:string ;
+                          :psu_has_dimensions "160 x 150 x 86 mm"^^xsd:string ;
+                          :psu_has_name "ASUS ROG Strix 750w Gold"^^xsd:string ;
+                          :psu_has_power_in_watts 750 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS_ROG_Strix_850G
+:ASUS_ROG_Strix_850G rdf:type owl:NamedIndividual ,
+                              :PSU ;
+                     :hardware_produced_by_manufacturer :ASUS ;
+                     :psu_attached_to :GIGABYTE_H410M_S2H ;
+                     :psu_supplies_gpu :Radeon_RX_5500_XT ,
+                                       :Radeon_RX_5600_XT ,
+                                       :Radeon_RX_5700 ,
+                                       :Radeon_RX_5700_XT ;
+                     :psu_has_certificate "80 Plus Gold"^^xsd:string ;
+                     :psu_has_dimensions "160 x 150 x 86 mm"^^xsd:string ;
+                     :psu_has_name "ASUS ROG Strix 850G"^^xsd:string ;
+                     :psu_has_power_in_watts 850 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS_TUF_GAMING_550B
+:ASUS_TUF_GAMING_550B rdf:type owl:NamedIndividual ,
+                               :PSU ;
+                      :hardware_produced_by_manufacturer :ASUS ;
+                      :psu_attached_to :GIGABYTE_H410M_S2H ;
+                      :psu_supplies_gpu :Radeon_RX_5500_XT ,
+                                        :Radeon_RX_5600_XT ,
+                                        :Radeon_RX_5700 ;
+                      :psu_has_certificate "80 Plus Bronze"^^xsd:string ;
+                      :psu_has_dimensions "150 x 86 x 150 mm"^^xsd:string ;
+                      :psu_has_name "ASUS TUF GAMING 550B"^^xsd:string ;
+                      :psu_has_power_in_watts 550 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#ASUS_TUF_GAMING_750B
+:ASUS_TUF_GAMING_750B rdf:type owl:NamedIndividual ,
+                               :PSU ;
+                      :hardware_produced_by_manufacturer :ASUS ;
+                      :psu_attached_to :GIGABYTE_H410M_S2H ;
+                      :psu_supplies_gpu :Radeon_RX_5500_XT ,
+                                        :Radeon_RX_5600_XT ,
+                                        :Radeon_RX_5700 ,
+                                        :Radeon_RX_5700_XT ,
+                                        :Radeon_RX_6400 ;
+                      :psu_has_certificate "80 Plus Bronze"^^xsd:string ;
+                      :psu_has_dimensions "150 x 150 x 86 mm"^^xsd:string ;
+                      :psu_has_name "ASUS TUF GAMING 750B"^^xsd:string ;
+                      :psu_has_power_in_watts 750 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop
 :Acer_Aspire_5_15.6in_FHD_IPS_Slim_Laptop rdf:type owl:NamedIndividual ,
                                                    :Laptop ;
@@ -2784,17 +2866,68 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
             :chipset_has_name "Intel B760" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i3-10100F
+:Intel_Core_i3-10100F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_attached_to :GIGABYTE_H410M_S2H ;
+                      :cpu_has_socket :FCLGA1200 ;
+                      :hardware_produced_by_manufacturer :Intel ;
+                      :has_cache :L1_256 ,
+                                 :L2_1mb ,
+                                 :L3_6mb ;
+                      :cpu_has_clock_speed_in_ghz 3.6 ;
+                      :cpu_has_cores 4 ;
+                      :cpu_has_name "Intel Core i3-10100F"^^xsd:string ;
+                      :cpu_has_tdp_in_watts 65 ;
+                      :cpu_has_threads 8 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i5-10400F
 :Intel_Core_i5-10400F rdf:type owl:NamedIndividual ,
                                :CPU ;
                       :cpu_attached_to :GIGABYTE_H410M_S2H ;
                       :cpu_has_socket :FCLGA1200 ;
                       :hardware_produced_by_manufacturer :Intel ;
+                      :has_cache :L1_256 ,
+                                 :L2_1mb ,
+                                 :L3_12mb ;
                       :cpu_has_clock_speed_in_ghz 2.9 ;
                       :cpu_has_cores 6 ;
                       :cpu_has_name "Intel Core i5-10400F"^^xsd:string ;
                       :cpu_has_tdp_in_watts 65 ;
                       :cpu_has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i5-10500
+:Intel_Core_i5-10500 rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :cpu_attached_to :GIGABYTE_H410M_S2H ;
+                     :cpu_has_socket :FCLGA1200 ;
+                     :hardware_produced_by_manufacturer :Intel ;
+                     :has_cache :L1_256 ,
+                                :L2_1mb ,
+                                :L3_12mb ;
+                     :cpu_has_clock_speed_in_ghz 3.1 ;
+                     :cpu_has_cores 6 ;
+                     :cpu_has_name "Intel Core i5-10500"^^xsd:string ;
+                     :cpu_has_tdp_in_watts 65 ;
+                     :cpu_has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i7-10700K
+:Intel_Core_i7-10700K rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_attached_to :GIGABYTE_H410M_S2H ;
+                      :cpu_has_socket :FCLGA1200 ;
+                      :hardware_produced_by_manufacturer :Intel ;
+                      :has_cache :L1_256 ,
+                                 :L2_1mb ,
+                                 :L3_16mb ;
+                      :cpu_has_clock_speed_in_ghz 3.8 ;
+                      :cpu_has_cores 8 ;
+                      :cpu_has_name "Intel Core i7-10700K"^^xsd:string ;
+                      :cpu_has_tdp_in_watts 125 ;
+                      :cpu_has_threads 16 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i7-13700
@@ -2816,6 +2949,22 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                      :cpu_has_name "Intel Core i7-13700" ;
                      :cpu_has_tdp_in_watts 65 ;
                      :cpu_has_threads 24 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-10900F
+:Intel_Core_i9-10900F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_attached_to :GIGABYTE_H410M_S2H ;
+                      :cpu_has_socket :FCLGA1200 ;
+                      :hardware_produced_by_manufacturer :Intel ;
+                      :has_cache :L1_256 ,
+                                 :L2_2mb ,
+                                 :L3_20mb ;
+                      :cpu_has_clock_speed_in_ghz 2.8 ;
+                      :cpu_has_cores 10 ;
+                      :cpu_has_name "Intel Core i9-10900F"^^xsd:string ;
+                      :cpu_has_tdp_in_watts 65 ;
+                      :cpu_has_threads 20 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i9-13900KS
@@ -2944,7 +3093,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :L1_256 rdf:type owl:NamedIndividual ,
                  :Cache ;
         :cache_has_level "L1"^^xsd:string ;
-        :cache_has_size_in_mb 0.256 .
+        :cache_has_size_in_mb 1 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3
@@ -2961,11 +3110,25 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
       :cache_has_size_in_mb 8 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_1mb
+:L2_1mb rdf:type owl:NamedIndividual ,
+                 :Cache ;
+        :cache_has_level "L2"^^xsd:string ;
+        :cache_has_size_in_mb 1 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2
 :L2_2 rdf:type owl:NamedIndividual ,
                :Cache ;
       :cache_has_level "L2" ;
       :cache_has_size_in_mb 16 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_2mb
+:L2_2mb rdf:type owl:NamedIndividual ,
+                 :Cache ;
+        :cache_has_level "L2"^^xsd:string ;
+        :cache_has_size_in_mb 2 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L2_3
@@ -2982,6 +3145,20 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
       :cache_has_size_in_mb 32 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_12mb
+:L3_12mb rdf:type owl:NamedIndividual ,
+                  :Cache ;
+         :cache_has_level "L3"^^xsd:string ;
+         :cache_has_size_in_mb 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_16mb
+:L3_16mb rdf:type owl:NamedIndividual ,
+                  :Cache ;
+         :cache_has_level "L3"^^xsd:string ;
+         :cache_has_size_in_mb 16 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_2
 :L3_2 rdf:type owl:NamedIndividual ,
                :Cache ;
@@ -2989,11 +3166,25 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
       :cache_has_size_in_mb 64 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_20mb
+:L3_20mb rdf:type owl:NamedIndividual ,
+                  :Cache ;
+         :cache_has_level "L3"^^xsd:string ;
+         :cache_has_size_in_mb 20 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_3
 :L3_3 rdf:type owl:NamedIndividual ,
                :Cache ;
       :cache_has_level "L3" ;
       :cache_has_size_in_mb 96 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L3_6mb
+:L3_6mb rdf:type owl:NamedIndividual ,
+                 :Cache ;
+        :cache_has_level "L3"^^xsd:string ;
+        :cache_has_size_in_mb 6 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#LGA_1700
@@ -3159,6 +3350,106 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
            :gpu_has_name "RTX A5000" ;
            :gpu_has_tdp_in_watts 230 ;
            :gpu_has_video_memory_in_mb 24576 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_5500_XT
+:Radeon_RX_5500_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :GIGABYTE_H410M_S2H ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :unit1_is_compatible_with_unit2 :Intel_Core_i3-10100F ,
+                                                   :Intel_Core_i5-10400F ,
+                                                   :Intel_Core_i5-10500 ,
+                                                   :Intel_Core_i7-10700K ,
+                                                   :Intel_Core_i9-10900F ;
+                   :gpu_has_core_clock_in_mhz 1607 ;
+                   :gpu_has_memory_clock 1750 ;
+                   :gpu_has_name "Radeon RX 5500 XT"^^xsd:string ;
+                   :gpu_has_tdp_in_watts 130 ;
+                   :gpu_has_video_memory_in_mb 8192 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_5600_XT
+:Radeon_RX_5600_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :GIGABYTE_H410M_S2H ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :unit1_is_compatible_with_unit2 :Intel_Core_i3-10100F ,
+                                                   :Intel_Core_i5-10400F ,
+                                                   :Intel_Core_i5-10500 ,
+                                                   :Intel_Core_i7-10700K ,
+                                                   :Intel_Core_i9-10900F ;
+                   :gpu_has_core_clock_in_mhz 1130 ;
+                   :gpu_has_memory_clock 12000 ;
+                   :gpu_has_name "Radeon RX 5600 XT"^^xsd:string ;
+                   :gpu_has_tdp_in_watts 150 ;
+                   :gpu_has_video_memory_in_mb 6144 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_5700
+:Radeon_RX_5700 rdf:type owl:NamedIndividual ,
+                         :Graphic_card ;
+                :gpu_supports :DirectX ,
+                              :OpenGL ;
+                :graphic_card_attached_to :GIGABYTE_H410M_S2H ;
+                :graphic_card_has_port :USB_3.0 ;
+                :hardware_produced_by_manufacturer :AMD ;
+                :unit1_is_compatible_with_unit2 :Intel_Core_i3-10100F ,
+                                                :Intel_Core_i5-10400F ,
+                                                :Intel_Core_i5-10500 ,
+                                                :Intel_Core_i7-10700K ,
+                                                :Intel_Core_i9-10900F ;
+                :gpu_has_core_clock_in_mhz 1465 ;
+                :gpu_has_memory_clock 14000 ;
+                :gpu_has_name "Radeon RX 5700"^^xsd:string ;
+                :gpu_has_tdp_in_watts 180 ;
+                :gpu_has_video_memory_in_mb 8192 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_5700_XT
+:Radeon_RX_5700_XT rdf:type owl:NamedIndividual ,
+                            :Graphic_card ;
+                   :gpu_supports :DirectX ,
+                                 :OpenGL ;
+                   :graphic_card_attached_to :GIGABYTE_H410M_S2H ;
+                   :graphic_card_has_port :USB_3.0 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :unit1_is_compatible_with_unit2 :Intel_Core_i3-10100F ,
+                                                   :Intel_Core_i5-10400F ,
+                                                   :Intel_Core_i5-10500 ,
+                                                   :Intel_Core_i7-10700K ,
+                                                   :Intel_Core_i9-10900F ;
+                   :gpu_has_core_clock_in_mhz 1605 ;
+                   :gpu_has_memory_clock 14000 ;
+                   :gpu_has_name "Radeon RX 5700 XT"^^xsd:string ;
+                   :gpu_has_tdp_in_watts 225 ;
+                   :gpu_has_video_memory_in_mb 8192 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6400
+:Radeon_RX_6400 rdf:type owl:NamedIndividual ,
+                         :Graphic_card ;
+                :gpu_supports :DirectX ,
+                              :OpenGL ;
+                :graphic_card_attached_to :GIGABYTE_H410M_S2H ;
+                :graphic_card_has_port :USB_3.0 ;
+                :hardware_produced_by_manufacturer :AMD ;
+                :unit1_is_compatible_with_unit2 :Intel_Core_i3-10100F ,
+                                                :Intel_Core_i5-10400F ,
+                                                :Intel_Core_i5-10500 ,
+                                                :Intel_Core_i7-10700K ,
+                                                :Intel_Core_i9-10900F ;
+                :gpu_has_core_clock_in_mhz 1923 ;
+                :gpu_has_memory_clock 2000 ;
+                :gpu_has_name "Radeon RX 6400"^^xsd:string ;
+                :gpu_has_tdp_in_watts 53 ;
+                :gpu_has_video_memory_in_mb 4096 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Radeon_RX_6600_XT
@@ -3395,6 +3686,66 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                   :hub_has_number_of_ports 5 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TRANSCEND_JM3200HLH-4GB
+:TRANSCEND_JM3200HLH-4GB rdf:type owl:NamedIndividual ,
+                                  :RAM ;
+                         :hardware_produced_by_manufacturer :Transcend ;
+                         :ram_attached_to :GIGABYTE_H410M_S2H ;
+                         :ram_has_capacity_in_gb 4 ;
+                         :ram_has_latency 22 ;
+                         :ram_has_name "TRANSCEND JM3200HLH 4GB"^^xsd:string ;
+                         :ram_has_type "DDR4"^^xsd:string ;
+                         :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TRANSCEND_JetRam_JM2666HLB_8GB
+:TRANSCEND_JetRam_JM2666HLB_8GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Transcend ;
+                                :ram_attached_to :GIGABYTE_H410M_S2H ;
+                                :ram_has_capacity_in_gb 8 ;
+                                :ram_has_latency 19 ;
+                                :ram_has_name "TRANSCEND JetRam JM2666HLB 8GB"^^xsd:string ;
+                                :ram_has_type "DDR4"^^xsd:string ;
+                                :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TRANSCEND_JetRam_JM2666HLH_4GB
+:TRANSCEND_JetRam_JM2666HLH_4GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Transcend ;
+                                :ram_attached_to :GIGABYTE_H410M_S2H ;
+                                :ram_has_capacity_in_gb 4 ;
+                                :ram_has_latency 19 ;
+                                :ram_has_name "TRANSCEND JetRam JM2666HLH 4GB"^^xsd:string ;
+                                :ram_has_type "DDR4"^^xsd:string ;
+                                :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TRANSCEND_JetRam_JM3200HLE_32GB
+:TRANSCEND_JetRam_JM3200HLE_32GB rdf:type owl:NamedIndividual ,
+                                          :RAM ;
+                                 :hardware_produced_by_manufacturer :Transcend ;
+                                 :ram_attached_to :GIGABYTE_H410M_S2H ;
+                                 :ram_has_capacity_in_gb 32 ;
+                                 :ram_has_latency 22 ;
+                                 :ram_has_name "TRANSCEND JetRam JM3200HLE 32GB"^^xsd:string ;
+                                 :ram_has_type "DDR4"^^xsd:string ;
+                                 :ram_has_voltage 1.2 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#TRANSCEND_JetRam_JM3200HLG_8GB
+:TRANSCEND_JetRam_JM3200HLG_8GB rdf:type owl:NamedIndividual ,
+                                         :RAM ;
+                                :hardware_produced_by_manufacturer :Transcend ;
+                                :ram_attached_to :GIGABYTE_H410M_S2H ;
+                                :ram_has_capacity_in_gb 8 ;
+                                :ram_has_latency 22 ;
+                                :ram_has_name "TRANSCEND JetRam JM3200HLG 8GB"^^xsd:string ;
+                                :ram_has_type "DDR4"^^xsd:string ;
+                                :ram_has_voltage 1.2 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Thermaltake_Toughpower_GF3_1350W
 :Thermaltake_Toughpower_GF3_1350W rdf:type owl:NamedIndividual ,
                                            :PSU ;
@@ -3425,6 +3776,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                        :computer_case_supports_motherboard_format "ATX" ,
                                                                   "Micro-ATX" ,
                                                                   "Mini-ATX" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Transcend
+:Transcend rdf:type owl:NamedIndividual ,
+                    :Manufacturer ;
+           :manufacturer_has_name "Transcend"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0
