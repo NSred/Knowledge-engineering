@@ -2636,6 +2636,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                           :network_card_has_name "E_GREEN Gigabit Ethernet" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA1200
+:FCLGA1200 rdf:type owl:NamedIndividual ,
+                    :Socket ;
+           :socket_has_name "FCLGA1200"^^xsd:string .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA1700
 :FCLGA1700 rdf:type owl:NamedIndividual ,
                     :Socket ;
@@ -2698,6 +2704,23 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                              :motherboard_has_dimensions "24.4 x 21 cm" ;
                              :motherboard_has_form_factor "Micro ATX" ;
                              :motherboard_has_name "GIGABYTE B760M DS3H AX DDR4" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GIGABYTE_H410M_S2H
+:GIGABYTE_H410M_S2H rdf:type owl:NamedIndividual ,
+                             :Motherboard ;
+                    :enables_attachment_cooler :DEEP_GAMMAXX_GTE_V2 ;
+                    :enables_attachment_hdd :Seagate_HDD_IronWolf_10TB ;
+                    :enables_attachment_network_card :E_GREEN_Gigabit_Ethernet ;
+                    :enables_attachment_sound_card :Audigy_FX_Sound_card ;
+                    :enables_attachment_ssd :Samsung_980_PRO_1TB ;
+                    :hardware_produced_by_manufacturer :Gigabyte ;
+                    :motherboard_has_port :USB_3.0 ;
+                    :motherboard_has_socket :FCLGA1200 ;
+                    :motherboard_has_storage_interface :SATA ;
+                    :motherboard_has_dimensions "26.6 x 18.2 cm"^^xsd:string ;
+                    :motherboard_has_form_factor "Micro ATX"^^xsd:string ;
+                    :motherboard_has_name "GIGABYTE H410 S2H"^^xsd:string .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#G_Skill_Intl_F4-4500C19-8GTZKKE_8GB
@@ -2998,6 +3021,19 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
             :chipset_has_name "Intel B760" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i5-10400F
+:Intel_Core_i5-10400F rdf:type owl:NamedIndividual ,
+                               :CPU ;
+                      :cpu_attached_to :GIGABYTE_H410M_S2H ;
+                      :cpu_has_socket :FCLGA1200 ;
+                      :hardware_produced_by_manufacturer :Intel ;
+                      :cpu_has_clock_speed_in_ghz 2.9 ;
+                      :cpu_has_cores 6 ;
+                      :cpu_has_name "Intel Core i5-10400F"^^xsd:string ;
+                      :cpu_has_tdp_in_watts 65 ;
+                      :cpu_has_threads 12 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Core_i7-13700
 :Intel_Core_i7-13700 rdf:type owl:NamedIndividual ,
                               :CPU ;
@@ -3199,6 +3235,13 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                :Cache ;
       :cache_has_level "L1" ;
       :cache_has_size_in_mb 4 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_256
+:L1_256 rdf:type owl:NamedIndividual ,
+                 :Cache ;
+        :cache_has_level "L1"^^xsd:string ;
+        :cache_has_size_in_mb 0.256 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#L1_3
