@@ -2169,6 +2169,71 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                    :cpu_has_threads 4 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_5_5600
+:AMD_Ryzen_5_5600 rdf:type owl:NamedIndividual ,
+                           :CPU ;
+                  :cpu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                  :cpu_has_socket :AM4 ;
+                  :hardware_produced_by_manufacturer :AMD ;
+                  :cpu_has_clock_speed_in_ghz 3.5 ;
+                  :cpu_has_cores 6 ;
+                  :cpu_has_name "AMD Ryzen 5 5600" ;
+                  :cpu_has_tdp_in_watts 65 ;
+                  :cpu_has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_5_5600G
+:AMD_Ryzen_5_5600G rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                   :cpu_has_socket :AM4 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :cpu_has_clock_speed_in_ghz 3.9 ;
+                   :cpu_has_cores 6 ;
+                   :cpu_has_name "AMD Ryzen 5 5600G" ;
+                   :cpu_has_tdp_in_watts 65 ;
+                   :cpu_has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_5_5600X
+:AMD_Ryzen_5_5600X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                   :cpu_has_socket :AM4 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :cpu_has_clock_speed_in_ghz 3.7 ;
+                   :cpu_has_cores 6 ;
+                   :cpu_has_name "AMD Ryzen 5 5600X" ;
+                   :cpu_has_tdp_in_watts 65 ;
+                   :cpu_has_threads 12 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_7_5700X
+:AMD_Ryzen_7_5700X rdf:type owl:NamedIndividual ,
+                            :CPU ;
+                   :cpu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                   :cpu_has_socket :AM4 ;
+                   :hardware_produced_by_manufacturer :AMD ;
+                   :cpu_has_clock_speed_in_ghz 3.4 ;
+                   :cpu_has_cores 8 ;
+                   :cpu_has_name "AMD Ryzen 7 5700X" ;
+                   :cpu_has_tdp_in_watts 65 ;
+                   :cpu_has_threads 16 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_7_5800X3D
+:AMD_Ryzen_7_5800X3D rdf:type owl:NamedIndividual ,
+                              :CPU ;
+                     :cpu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                     :cpu_has_socket :AM4 ;
+                     :hardware_produced_by_manufacturer :AMD ;
+                     :cpu_has_clock_speed_in_ghz 3.4 ;
+                     :cpu_has_cores 8 ;
+                     :cpu_has_name "AMD Ryzen 7 5800X3D" ;
+                     :cpu_has_tdp_in_watts 105 ;
+                     :cpu_has_threads 16 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#AMD_Ryzen_9_7845HX
 :AMD_Ryzen_9_7845HX rdf:type owl:NamedIndividual ,
                              :CPU ;
@@ -2470,6 +2535,51 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                     :psu_has_power_in_watts 550 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_CX750M
+:Corsair_CX750M rdf:type owl:NamedIndividual ,
+                         :PSU ;
+                :psu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                :psu_supplies_gpu :GeForce_RTX_2080_Ti ,
+                                  :GeForce_RTX_3060 ,
+                                  :GeForce_RTX_3070_Ti ,
+                                  :GeForce_RTX_3080_12GB ,
+                                  :GeForce_RTX_4070_Ti ;
+                :psu_has_certificate "Bronze" ;
+                :psu_has_dimensions "150 x 85 x 140mm" ;
+                :psu_has_name "Corsair CX750M" ;
+                :psu_has_power_in_watts 750 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_HX1200
+:Corsair_HX1200 rdf:type owl:NamedIndividual ,
+                         :PSU ;
+                :psu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                :psu_supplies_gpu :GeForce_RTX_2080_Ti ,
+                                  :GeForce_RTX_3060 ,
+                                  :GeForce_RTX_3070_Ti ,
+                                  :GeForce_RTX_3080_12GB ,
+                                  :GeForce_RTX_4070_Ti ;
+                :psu_has_certificate "Platinum" ;
+                :psu_has_dimensions "150 x 86 x 200 mm" ;
+                :psu_has_name "Corsair HX1200" ;
+                :psu_has_power_in_watts 1200 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM1000x
+:Corsair_RM1000x rdf:type owl:NamedIndividual ,
+                          :PSU ;
+                 :psu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                 :psu_supplies_gpu :GeForce_RTX_2080_Ti ,
+                                   :GeForce_RTX_3060 ,
+                                   :GeForce_RTX_3070_Ti ,
+                                   :GeForce_RTX_3080_12GB ,
+                                   :GeForce_RTX_4070_Ti ;
+                 :psu_has_certificate "Gold" ;
+                 :psu_has_dimensions "150 x 86 x 180 mm" ;
+                 :psu_has_name "Corsair RM1000x" ;
+                 :psu_has_power_in_watts 1000 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM550x
 :Corsair_RM550x rdf:type owl:NamedIndividual ,
                          :PSU ;
@@ -2479,6 +2589,36 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                 :psu_has_dimensions "150 x 86 x 140 mm" ;
                 :psu_has_name "Corsair RM550x" ;
                 :psu_has_power_in_watts 550 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM750x
+:Corsair_RM750x rdf:type owl:NamedIndividual ,
+                         :PSU ;
+                :psu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                :psu_supplies_gpu :GeForce_RTX_2080_Ti ,
+                                  :GeForce_RTX_3060 ,
+                                  :GeForce_RTX_3070_Ti ,
+                                  :GeForce_RTX_3080_12GB ,
+                                  :GeForce_RTX_4070_Ti ;
+                :psu_has_certificate "Gold" ;
+                :psu_has_dimensions "160 x 150 x 86 mm" ;
+                :psu_has_name "Corsair RM750x" ;
+                :psu_has_power_in_watts 750 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_RM850x
+:Corsair_RM850x rdf:type owl:NamedIndividual ,
+                         :PSU ;
+                :psu_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                :psu_supplies_gpu :GeForce_RTX_2080_Ti ,
+                                  :GeForce_RTX_3060 ,
+                                  :GeForce_RTX_3070_Ti ,
+                                  :GeForce_RTX_3080_12GB ,
+                                  :GeForce_RTX_4070_Ti ;
+                :psu_has_certificate "Gold" ;
+                :psu_has_dimensions "86 x 160 x 150 mm" ;
+                :psu_has_name "Corsair RM850x" ;
+                :psu_has_power_in_watts 850 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Corsair_SF750
@@ -2713,6 +2853,84 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                     :ram_has_voltage 1.1 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_2080_Ti
+:GeForce_RTX_2080_Ti rdf:type owl:NamedIndividual ,
+                              :Graphic_card ;
+                     :gpu_supports :DirectX ,
+                                   :OpenGL ;
+                     :graphic_card_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                     :graphic_card_has_port :USB_3.0 ;
+                     :hardware_produced_by_manufacturer :Nvidia ;
+                     :unit1_is_compatible_with_unit2 :AMD_Ryzen_5_5600 ,
+                                                     :AMD_Ryzen_5_5600G ,
+                                                     :AMD_Ryzen_5_5600X ,
+                                                     :AMD_Ryzen_7_5700X ,
+                                                     :AMD_Ryzen_7_5800X3D ;
+                     :gpu_has_core_clock_in_mhz 1350 ;
+                     :gpu_has_memory_clock 14000 ;
+                     :gpu_has_name "GeForce RTX 2080 Ti" ;
+                     :gpu_has_tdp_in_watts 250 ;
+                     :gpu_has_video_memory_in_mb 11264 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3060
+:GeForce_RTX_3060 rdf:type owl:NamedIndividual ,
+                           :Graphic_card ;
+                  :gpu_supports :DirectX ,
+                                :OpenGL ;
+                  :graphic_card_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                  :graphic_card_has_port :USB_3.0 ;
+                  :hardware_produced_by_manufacturer :Nvidia ;
+                  :unit1_is_compatible_with_unit2 :AMD_Ryzen_5_5600 ,
+                                                  :AMD_Ryzen_5_5600G ,
+                                                  :AMD_Ryzen_5_5600X ,
+                                                  :AMD_Ryzen_7_5700X ,
+                                                  :AMD_Ryzen_7_5800X3D ;
+                  :gpu_has_core_clock_in_mhz 1320 ;
+                  :gpu_has_memory_clock 15000 ;
+                  :gpu_has_name "GeForce RTX 3060" ;
+                  :gpu_has_tdp_in_watts 170 ;
+                  :gpu_has_video_memory_in_mb 12288 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3070_Ti
+:GeForce_RTX_3070_Ti rdf:type owl:NamedIndividual ,
+                              :Graphic_card ;
+                     :gpu_supports :DirectX ,
+                                   :OpenGL ;
+                     :graphic_card_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                     :graphic_card_has_port :USB_3.0 ;
+                     :hardware_produced_by_manufacturer :Nvidia ;
+                     :unit1_is_compatible_with_unit2 :AMD_Ryzen_5_5600 ,
+                                                     :AMD_Ryzen_5_5600G ,
+                                                     :AMD_Ryzen_5_5600X ,
+                                                     :AMD_Ryzen_7_5700X ,
+                                                     :AMD_Ryzen_7_5800X3D ;
+                     :gpu_has_core_clock_in_mhz 1575 ;
+                     :gpu_has_name "GeForce RTX 3070 Ti" ;
+                     :gpu_has_tdp_in_watts 290 ;
+                     :gpu_has_video_memory_in_mb 8192 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3080_12GB
+:GeForce_RTX_3080_12GB rdf:type owl:NamedIndividual ,
+                                :Graphic_card ;
+                       :gpu_supports :DirectX ,
+                                     :OpenGL ;
+                       :graphic_card_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                       :graphic_card_has_port :USB_3.0 ;
+                       :hardware_produced_by_manufacturer :Nvidia ;
+                       :unit1_is_compatible_with_unit2 :AMD_Ryzen_5_5600 ,
+                                                       :AMD_Ryzen_5_5600G ,
+                                                       :AMD_Ryzen_5_5600X ,
+                                                       :AMD_Ryzen_7_5700X ,
+                                                       :AMD_Ryzen_7_5800X3D ;
+                       :gpu_has_core_clock_in_mhz 1260 ;
+                       :gpu_has_name "GeForce RTX 3080 12GB" ;
+                       :gpu_has_tdp_in_watts 350 ;
+                       :gpu_has_video_memory_in_mb 12288 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_3090_Ti
 :GeForce_RTX_3090_Ti rdf:type owl:NamedIndividual ,
                               :Graphic_card ;
@@ -2752,6 +2970,25 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                   :gpu_has_name "GeForce RTX 4070" ;
                   :gpu_has_tdp_in_watts 200 ;
                   :gpu_has_video_memory_in_mb 12288 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4070_Ti
+:GeForce_RTX_4070_Ti rdf:type owl:NamedIndividual ,
+                              :Graphic_card ;
+                     :gpu_supports :DirectX ,
+                                   :OpenGL ;
+                     :graphic_card_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                     :graphic_card_has_port :USB_3.0 ;
+                     :hardware_produced_by_manufacturer :Nvidia ;
+                     :unit1_is_compatible_with_unit2 :AMD_Ryzen_5_5600 ,
+                                                     :AMD_Ryzen_5_5600G ,
+                                                     :AMD_Ryzen_5_5600X ,
+                                                     :AMD_Ryzen_7_5700X ,
+                                                     :AMD_Ryzen_7_5800X3D ;
+                     :gpu_has_core_clock_in_mhz 2310 ;
+                     :gpu_has_name "GeForce RTX 4070 Ti" ;
+                     :gpu_has_tdp_in_watts 285 ;
+                     :gpu_has_video_memory_in_mb 12288 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GeForce_RTX_4080
@@ -3063,6 +3300,66 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
           :manufacturer_has_name "Kingston Technology Corporation" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_FURY_Beast_32_GB
+:Kingston_FURY_Beast_32_GB rdf:type owl:NamedIndividual ,
+                                    :RAM ;
+                           :hardware_produced_by_manufacturer :Kingston ;
+                           :ram_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                           :ram_has_capacity_in_gb 32 ;
+                           :ram_has_latency 16 ;
+                           :ram_has_name "Kingston FURY Beast 32 GB" ;
+                           :ram_has_type "DDR4-3200" ;
+                           :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_FURY_Beast_8_GB
+:Kingston_FURY_Beast_8_GB rdf:type owl:NamedIndividual ,
+                                   :RAM ;
+                          :hardware_produced_by_manufacturer :Kingston ;
+                          :ram_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                          :ram_has_capacity_in_gb 8 ;
+                          :ram_has_latency 16 ;
+                          :ram_has_name "Kingston FURY Beast 8 GB" ;
+                          :ram_has_type "DDR4-3200" ;
+                          :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_FURY_Beast_RGB_16_GB
+:Kingston_FURY_Beast_RGB_16_GB rdf:type owl:NamedIndividual ,
+                                        :RAM ;
+                               :hardware_produced_by_manufacturer :Kingston ;
+                               :ram_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                               :ram_has_capacity_in_gb 16 ;
+                               :ram_has_latency 16 ;
+                               :ram_has_name "Kingston FURY Beast RGB 16 GB" ;
+                               :ram_has_type "DDR4-3200" ;
+                               :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_FURY_Renegade_32_GB
+:Kingston_FURY_Renegade_32_GB rdf:type owl:NamedIndividual ,
+                                       :RAM ;
+                              :hardware_produced_by_manufacturer :Kingston ;
+                              :ram_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                              :ram_has_capacity_in_gb 32 ;
+                              :ram_has_latency 16 ;
+                              :ram_has_name "Kingston FURY Renegade 32 GB" ;
+                              :ram_has_type "DDR4-3600" ;
+                              :ram_has_voltage 1.35 .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_16_GB
+:Kingston_HyperX_Fury_16_GB rdf:type owl:NamedIndividual ,
+                                     :RAM ;
+                            :hardware_produced_by_manufacturer :Kingston ;
+                            :ram_attached_to :MSI_MAG_B550_TOMAHAWK_ATX ;
+                            :ram_has_capacity_in_gb 16 ;
+                            :ram_has_latency 16 ;
+                            :ram_has_name "Kingston HyperX Fury 16 GB" ;
+                            :ram_has_type "DDR4-3200" ;
+                            :ram_has_voltage 1.35 .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Kingston_HyperX_Fury_DDR4_8GB_3200MHZ
 :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ rdf:type owl:NamedIndividual ,
                                                 :RAM ;
@@ -3217,6 +3514,12 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                        :router_has_type "wireless" .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI
+:MSI rdf:type owl:NamedIndividual ,
+              :Manufacturer ;
+     :manufacturer_has_name "MSI" .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_B550-M_PRO
 :MSI_B550-M_PRO rdf:type owl:NamedIndividual ,
                          :Motherboard ;
@@ -3237,6 +3540,24 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                 :motherboard_has_dimensions "24.4 x 21 cm" ;
                 :motherboard_has_form_factor "M-ATX" ;
                 :motherboard_has_name "MSI B550-M PRO" .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MAG_B550_TOMAHAWK_ATX
+:MSI_MAG_B550_TOMAHAWK_ATX rdf:type owl:NamedIndividual ,
+                                    :Motherboard ;
+                           :enables_attachment_cooler :DEEP_GAMMAXX_GTE_V2 ;
+                           :enables_attachment_hdd :Seagate_HDD_IronWolf_10TB ;
+                           :enables_attachment_network_card :E_GREEN_Gigabit_Ethernet ;
+                           :enables_attachment_sound_card :Audigy_FX_Sound_card ;
+                           :enables_attachment_ssd :Samsung_980_PRO_1TB ;
+                           :hardware_produced_by_manufacturer :MSI ;
+                           :has_chipset :B550 ;
+                           :motherboard_has_port :USB_2.0 ;
+                           :motherboard_has_socket :AM4 ;
+                           :motherboard_has_storage_interface :SATA ;
+                           :motherboard_has_dimensions "24.4 x 30.5 cm" ;
+                           :motherboard_has_form_factor "ATX" ;
+                           :motherboard_has_name "MSI MAG B550 TOMAHAWK ATX" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#MSI_MEG_Ai1000P_PCIe_5
@@ -3782,6 +4103,13 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :Transcend rdf:type owl:NamedIndividual ,
                     :Manufacturer ;
            :manufacturer_has_name "Transcend"^^xsd:string .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_2.0
+:USB_2.0 rdf:type owl:NamedIndividual ,
+                  :Port ;
+         :port_has_name "USB 2.0" ;
+         :port_has_version 2.0 .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0
