@@ -1,0 +1,194 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+] .
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage> rdf:type owl:Class ;
+                                                                                                  
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table> rdf:type owl:Class ;
+                                                                                                 
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler> rdf:type owl:Class ;
+                                                                                               
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices> rdf:type owl:Class ;
+                                                                                                 
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input> .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Input>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output>
+              )
+] .
+
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner>
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/
+

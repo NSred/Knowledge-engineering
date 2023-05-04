@@ -1,0 +1,203 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+] .
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU_attributes
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU_attributes> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU_attributes> ;
+                                                                                       
+                                                                                       owl:disjointWith <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard_attributes> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GPU_attributes
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GPU_attributes> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library> rdf:type owl:Class ;
+                                                                                                 
+                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#GPU_attributes> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem> rdf:type owl:Class ;
+                                                                                       
+                                                                                       rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard_attributes
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard_attributes> rdf:type owl:Class ;
+                                                                                                        
+                                                                                                        rdfs:subClassOf owl:Thing .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port> rdf:type owl:Class ;
+                                                                                      
+                                                                                      rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard_attributes> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer> rdf:type owl:Class ;
+                                                                                         
+                                                                                         rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU_attributes> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Output> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_gear> .
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers>
+              )
+] .
+
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Modem>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch>
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/
+
