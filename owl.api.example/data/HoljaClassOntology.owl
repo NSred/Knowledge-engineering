@@ -1,0 +1,232 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+] .
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus> rdf:type owl:Class ;
+                                                                                           
+                                                                                           rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case> rdf:type owl:Class ;
+                                                                                               
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver> rdf:type owl:Class ;
+                                                                                        
+                                                                                        rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hardware> ;
+                                                                                          
+                                                                                          owl:disjointWith <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Peripheral> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard> rdf:type owl:Class ;
+                                                                                             
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card> rdf:type owl:Class ;
+                                                                                              
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package> rdf:type owl:Class ;
+                                                                                                
+                                                                                                rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system> rdf:type owl:Class ;
+                                                                                                  
+                                                                                                  rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD> rdf:type owl:Class ;
+                                                                                     
+                                                                                     rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> rdf:type owl:Class ;
+                                                                                          
+                                                                                          rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface> rdf:type owl:Class ;
+                                                                                                   
+                                                                                                   rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Internal> .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game> rdf:type owl:Class ;
+                                                                                            
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Software> .
+
+
+
+
+
+#################################################################
+#
+#    General axioms
+#
+#################################################################
+
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game>
+              )
+] .
+
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card>
+                <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface>
+              )
+] .
+
+
+
+
+###  Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/
+

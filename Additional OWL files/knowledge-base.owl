@@ -1108,13 +1108,6 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                          rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_port_number
-:hub_has_port_number rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain :Hub ;
-                     rdfs:range xsd:integer .
-
-
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#joypad_has_name
 :joypad_has_name rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf owl:topDataProperty ;

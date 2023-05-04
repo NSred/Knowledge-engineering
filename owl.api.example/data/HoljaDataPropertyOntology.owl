@@ -1,0 +1,870 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+] .
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                  
+                                                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                  
+                                                                                                  rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter> ;
+                                                                                                  
+                                                                                                  rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_has_version
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#adapter_has_version> rdf:type owl:DatatypeProperty ;
+                                                                                                     
+                                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                     
+                                                                                                     rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter> ;
+                                                                                                     
+                                                                                                     rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#antivirus_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#antivirus_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                    
+                                                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                    
+                                                                                                    rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus> ;
+                                                                                                    
+                                                                                                    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#antivirus_has_version
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#antivirus_has_version> rdf:type owl:DatatypeProperty ;
+                                                                                                       
+                                                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                       
+                                                                                                       rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus> ;
+                                                                                                       
+                                                                                                       rdfs:range xsd:decimal .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cache_has_level
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cache_has_level> rdf:type owl:DatatypeProperty ;
+                                                                                                 
+                                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                 
+                                                                                                 rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache> ;
+                                                                                                 
+                                                                                                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cache_has_size_in_mb
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cache_has_size_in_mb> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                 
+                                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                 
+                                                                                                 rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera> ;
+                                                                                                 
+                                                                                                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_has_resolution
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#camera_has_resolution> rdf:type owl:DatatypeProperty ;
+                                                                                                       
+                                                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                       
+                                                                                                       rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera> ;
+                                                                                                       
+                                                                                                       rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#chipset_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                  
+                                                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                  
+                                                                                                  rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset> ;
+                                                                                                  
+                                                                                                  rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_has_dimensions
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_has_dimensions> rdf:type owl:DatatypeProperty ;
+                                                                                                              
+                                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                              
+                                                                                                              rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case> ;
+                                                                                                              
+                                                                                                              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                        
+                                                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                        
+                                                                                                        rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case> ;
+                                                                                                        
+                                                                                                        rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_supports_motherboard_format
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#computer_case_supports_motherboard_format> rdf:type owl:DatatypeProperty ;
+                                                                                                                           
+                                                                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                                           
+                                                                                                                           rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case> ;
+                                                                                                                           
+                                                                                                                           rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_dimensions
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_dimensions> rdf:type owl:DatatypeProperty ;
+                                                                                                       
+                                                                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                       
+                                                                                                       rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler> ;
+                                                                                                       
+                                                                                                       rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                 
+                                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                 
+                                                                                                 rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler> ;
+                                                                                                 
+                                                                                                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_speed_in_rpm
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cooler_has_speed_in_rpm> rdf:type owl:DatatypeProperty ;
+                                                                                                         
+                                                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                         
+                                                                                                         rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler> ;
+                                                                                                         
+                                                                                                         rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_clock_speed_in_ghz
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_clock_speed_in_ghz> rdf:type owl:DatatypeProperty ;
+                                                                                                            
+                                                                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                            
+                                                                                                            rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> ;
+                                                                                                            
+                                                                                                            rdfs:range xsd:decimal .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_cores
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_cores> rdf:type owl:DatatypeProperty ;
+                                                                                               
+                                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                               
+                                                                                               rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> ;
+                                                                                               
+                                                                                               rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                              
+                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                              
+                                                                                              rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> ;
+                                                                                              
+                                                                                              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp_in_watts
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_tdp_in_watts> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_threads
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#cpu_has_threads> rdf:type owl:DatatypeProperty ;
+                                                                                                 
+                                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                 
+                                                                                                 rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> ;
+                                                                                                 
+                                                                                                 rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                 
+                                                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                 
+                                                                                                 rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver> ;
+                                                                                                 
+                                                                                                 rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_has_version
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#driver_has_version> rdf:type owl:DatatypeProperty ;
+                                                                                                    
+                                                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                    
+                                                                                                    rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver> ;
+                                                                                                    
+                                                                                                    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_capacity_in_gb
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_capacity_in_gb> rdf:type owl:DatatypeProperty ;
+                                                                                                                     
+                                                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                                     
+                                                                                                                     rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage> ;
+                                                                                                                     
+                                                                                                                     rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_form_factor
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_form_factor> rdf:type owl:DatatypeProperty ;
+                                                                                                                  
+                                                                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                                  
+                                                                                                                  rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage> ;
+                                                                                                                  
+                                                                                                                  rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#external_storage_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                           
+                                                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                           
+                                                                                                           rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage> ;
+                                                                                                           
+                                                                                                           rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_core_clock_in_mhz
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_core_clock_in_mhz> rdf:type owl:DatatypeProperty ;
+                                                                                                           
+                                                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                           
+                                                                                                           rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> ;
+                                                                                                           
+                                                                                                           rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_memory_clock
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_memory_clock> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                              
+                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                              
+                                                                                              rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> ;
+                                                                                              
+                                                                                              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_tdp_in_watts
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_tdp_in_watts> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_video_memory_in_mb
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#gpu_has_video_memory_in_mb> rdf:type owl:DatatypeProperty ;
+                                                                                                            
+                                                                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                            
+                                                                                                            rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> ;
+                                                                                                            
+                                                                                                            rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_library_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_library_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                          
+                                                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                          
+                                                                                                          rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library> ;
+                                                                                                          
+                                                                                                          rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_library_has_version
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphic_library_has_version> rdf:type owl:DatatypeProperty ;
+                                                                                                             
+                                                                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                             
+                                                                                                             rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library> ;
+                                                                                                             
+                                                                                                             rdfs:range xsd:decimal .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                                          
+                                                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                          
+                                                                                                          rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table> ;
+                                                                                                          
+                                                                                                          rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_resolution
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_resolution> rdf:type owl:DatatypeProperty ;
+                                                                                                                
+                                                                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                                
+                                                                                                                rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table> ;
+                                                                                                                
+                                                                                                                rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_size
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#graphical_table_has_size> rdf:type owl:DatatypeProperty ;
+                                                                                                          
+                                                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                          
+                                                                                                          rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table> ;
+                                                                                                          
+                                                                                                          rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_capacity_in_gb
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_capacity_in_gb> rdf:type owl:DatatypeProperty ;
+                                                                                                        
+                                                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                        
+                                                                                                        rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> ;
+                                                                                                        
+                                                                                                        rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_form_factor
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_form_factor> rdf:type owl:DatatypeProperty ;
+                                                                                                     
+                                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                     
+                                                                                                     rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> ;
+                                                                                                     
+                                                                                                     rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                              
+                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                              
+                                                                                              rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> ;
+                                                                                              
+                                                                                              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_rpm
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hdd_has_rpm> rdf:type owl:DatatypeProperty ;
+                                                                                             
+                                                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                             
+                                                                                             rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> ;
+                                                                                             
+                                                                                             rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_mic
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_mic> rdf:type owl:DatatypeProperty ;
+                                                                                                     
+                                                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                     
+                                                                                                     rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> ;
+                                                                                                     
+                                                                                                     rdfs:range xsd:boolean .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_name> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_sensitivity_in_db
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_sensitivity_in_db> rdf:type owl:DatatypeProperty ;
+                                                                                                                   
+                                                                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                                   
+                                                                                                                   rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> ;
+                                                                                                                   
+                                                                                                                   rdfs:range xsd:integer .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_type
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#headphones_have_type> rdf:type owl:DatatypeProperty ;
+                                                                                                      
+                                                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                      
+                                                                                                      rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> ;
+                                                                                                      
+                                                                                                      rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_brand
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_brand> rdf:type owl:DatatypeProperty ;
+                                                                                               
+                                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                               
+                                                                                               rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> ;
+                                                                                               
+                                                                                               rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_dimensions
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_dimensions> rdf:type owl:DatatypeProperty ;
+                                                                                                    
+                                                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                    
+                                                                                                    rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> ;
+                                                                                                    
+                                                                                                    rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_name
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_name> rdf:type owl:DatatypeProperty ;
+                                                                                              
+                                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                              
+                                                                                              rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> ;
+                                                                                              
+                                                                                              rdfs:range xsd:string .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_number_of_ports
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#hub_has_number_of_ports> rdf:type owl:DatatypeProperty ;
+                                                                                                         
+                                                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                                                         
+                                                                                                         rdfs:domain <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> ;
+                                                                                                         
+                                                                                                         rdfs:range xsd:integer .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Adapter> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Antivirus> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#CPU> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cache> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Camera> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Chipset> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Computer_case> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Cooler> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Driver> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#External_storage> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_card> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphic_library> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Graphical_table> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#HDD> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Headphones> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Hub> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joypad> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Joystick> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Keyboard> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_battery> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_charger> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Laptop_cooler> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Manufacturer> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Microphone> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Monitor> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Motherboard> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Mouse> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Network_card> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Office_package> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Operating_system> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Optical_devices> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PSU> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Port> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Printer> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Projector> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#RAM> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Router> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SSD> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Scanner> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Socket> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Sound_card> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Speakers> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Storage_interface> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Switch> rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Video_game> rdf:type owl:Class .
+
+
+
+
+###  Generated by the OWL API (version 5.0.0.20160228-2008) https://github.com/owlcs/owlapi/
+

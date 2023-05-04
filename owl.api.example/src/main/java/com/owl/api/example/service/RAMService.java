@@ -1,5 +1,6 @@
 package com.owl.api.example.service;
 
+import com.owl.api.example.additionalConfiguration.GlobalStrings;
 import com.owl.api.example.dto.RAMResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -25,26 +26,25 @@ public class RAMService {
     private OWLDataProperty hasVoltage;
     private OWLObjectProperty attachedRAM;
     private OWLClassExpression classRAM;
-    private static String baseIRI = "http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#";
     private OWLOntologyManager manager;
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
     private OWLReasoner reasoner;
 
 
-    public RAMService() throws OWLOntologyCreationException, OWLOntologyStorageException {
-        ontologyManager = new OntologyManager();
+    public RAMService(OntologyManager ontologyManager) {
+        this.ontologyManager = ontologyManager;;
         manager = OWLManager.createOWLOntologyManager();
         dataFactory = manager.getOWLDataFactory();
         reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(this.ontologyManager.getOntology());
-        hasName = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_name"));
-        hasType = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_type"));
-        hasLatency = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_latency"));
-        hasVoltage = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_voltage"));
-        hasCapacity = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "ram_has_capacity_in_gb"));
-        attachedRAM = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "ram_attached_to"));
-        classRAM = dataFactory.getOWLClass(IRI.create(baseIRI + "RAM"));
+        hasName = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "ram_has_name"));
+        hasType = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "ram_has_type"));
+        hasLatency = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "ram_has_latency"));
+        hasVoltage = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "ram_has_voltage"));
+        hasCapacity = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "ram_has_capacity_in_gb"));
+        attachedRAM = dataFactory.getOWLObjectProperty(IRI.create(GlobalStrings.baseIRI + "ram_attached_to"));
+        classRAM = dataFactory.getOWLClass(IRI.create(GlobalStrings.baseIRI + "RAM"));
     }
 
     public List<RAMResponseDTO> getAllRAMs(){
@@ -53,7 +53,7 @@ public class RAMService {
 
     public List<RAMResponseDTO> getRAMUpgrades(String ram, String motherboard){
 
-        OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + ram.replace(" ", "_")));
+        OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + ram.replace(" ", "_")));
 
         Set<OWLLiteral> capacityLiterals = reasoner.getDataPropertyValues(ramIndividual, hasCapacity);
         OWLLiteral capacityLiteral = capacityLiterals.stream().findFirst().orElse(null);
@@ -67,7 +67,7 @@ public class RAMService {
         OWLDataRange latencyRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
                 dataFactory.getOWLFacetRestriction(OWLFacet.MAX_EXCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(latencyLiteral.getLiteral()))));
 
-        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + motherboard.replace(" ", "_")));
 
         OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
                 classRAM,
@@ -80,6 +80,7 @@ public class RAMService {
 
     private List<RAMResponseDTO> getRAMResponseDTOs(OWLClassExpression classRAM) {
         Set<OWLNamedIndividual> individuals = reasoner.getInstances(classRAM, false).getFlattened();
+        System.out.println("\nTotal number of retrieved individuals: " + individuals.size());
         List<RAMResponseDTO> rams = new ArrayList<>();
         for (OWLNamedIndividual individual : individuals) {
             rams.add(setSpec(individual));

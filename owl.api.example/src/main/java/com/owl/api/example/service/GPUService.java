@@ -1,5 +1,6 @@
 package com.owl.api.example.service;
 
+import com.owl.api.example.additionalConfiguration.GlobalStrings;
 import com.owl.api.example.dto.GPURequestDTO;
 import com.owl.api.example.dto.GPUResponseDTO;
 import org.semanticweb.HermiT.ReasonerFactory;
@@ -28,28 +29,27 @@ public class GPUService {
     private OWLObjectProperty suppliedByPSU;
     private OWLObjectProperty compatibleCPU;
     private OWLClassExpression classGPU;
-    private static String baseIRI = "http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#";
     private OWLOntologyManager manager;
     private OWLDataFactory dataFactory;
     private OWLReasonerFactory reasonerFactory;
     private OWLReasoner reasoner;
 
 
-    public GPUService() throws OWLOntologyCreationException, OWLOntologyStorageException {
-        ontologyManager = new OntologyManager();
+    public GPUService(OntologyManager ontologyManager) {
+        this.ontologyManager = ontologyManager;;
         manager = OWLManager.createOWLOntologyManager();
         dataFactory = manager.getOWLDataFactory();
         reasonerFactory = new ReasonerFactory();
         reasoner = reasonerFactory.createReasoner(this.ontologyManager.getOntology());
-        hasName = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "gpu_has_name"));
-        hasTDP = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "gpu_has_tdp_in_watts"));
-        hasCoreClock = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "gpu_has_core_clock_in_mhz"));
-        hasMemoryClock = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "gpu_has_memory_clock"));
-        hasVideoMemory = dataFactory.getOWLDataProperty(IRI.create(baseIRI + "gpu_has_video_memory_in_mb"));
-        attachedGPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "graphic_card_attached_to"));
-        suppliedByPSU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "graphic_card_power_supply"));
-        compatibleCPU = dataFactory.getOWLObjectProperty(IRI.create(baseIRI + "unit1_is_compatible_with_unit2"));
-        classGPU = dataFactory.getOWLClass(IRI.create(baseIRI + "Graphic_card"));
+        hasName = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "gpu_has_name"));
+        hasTDP = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "gpu_has_tdp_in_watts"));
+        hasCoreClock = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "gpu_has_core_clock_in_mhz"));
+        hasMemoryClock = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "gpu_has_memory_clock"));
+        hasVideoMemory = dataFactory.getOWLDataProperty(IRI.create(GlobalStrings.baseIRI + "gpu_has_video_memory_in_mb"));
+        attachedGPU = dataFactory.getOWLObjectProperty(IRI.create(GlobalStrings.baseIRI + "graphic_card_attached_to"));
+        suppliedByPSU = dataFactory.getOWLObjectProperty(IRI.create(GlobalStrings.baseIRI + "graphic_card_power_supply"));
+        compatibleCPU = dataFactory.getOWLObjectProperty(IRI.create(GlobalStrings.baseIRI + "unit1_is_compatible_with_unit2"));
+        classGPU = dataFactory.getOWLClass(IRI.create(GlobalStrings.baseIRI + "Graphic_card"));
     }
 
     public List<GPUResponseDTO> getAllGPUs(){
@@ -58,7 +58,7 @@ public class GPUService {
 
     public List<GPUResponseDTO> getGPUUpgrades(String gpu, String motherboard, String cpu, String psu){
 
-        OWLNamedIndividual gpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + gpu.replace(" ", "_")));
+        OWLNamedIndividual gpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + gpu.replace(" ", "_")));
 
         Set<OWLLiteral> memoryLiterals = reasoner.getDataPropertyValues(gpuIndividual, hasVideoMemory);
         OWLLiteral memoryLiteral = memoryLiterals.stream().findFirst().orElse(null);
@@ -66,9 +66,9 @@ public class GPUService {
         OWLDataRange memoryRange = dataFactory.getOWLDatatypeRestriction(dataFactory.getIntegerOWLDatatype(),
                 dataFactory.getOWLFacetRestriction(OWLFacet.MIN_EXCLUSIVE, dataFactory.getOWLLiteral(Integer.parseInt(memoryLiteral.getLiteral()))));
 
-        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + motherboard.replace(" ", "_")));
-        OWLNamedIndividual cpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + cpu.replace(" ", "_")));
-        OWLNamedIndividual psuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(baseIRI + psu.replace(" ", "_")));
+        OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + motherboard.replace(" ", "_")));
+        OWLNamedIndividual cpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + cpu.replace(" ", "_")));
+        OWLNamedIndividual psuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + psu.replace(" ", "_")));
 
         OWLClassExpression queryExpression = dataFactory.getOWLObjectIntersectionOf(
                 classGPU,
@@ -81,6 +81,7 @@ public class GPUService {
     }
     private List<GPUResponseDTO> getGpuResponseDTOs(OWLClassExpression classGPU) {
         Set<OWLNamedIndividual> individuals = reasoner.getInstances(classGPU, false).getFlattened();
+        System.out.println("\nTotal number of retrieved individuals: " + individuals.size());
         List<GPUResponseDTO> gpus = new ArrayList<>();
         for (OWLNamedIndividual individual : individuals) {
             gpus.add(setSpec(individual));
