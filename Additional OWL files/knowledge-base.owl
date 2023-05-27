@@ -2867,6 +2867,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                     :enables_attachment_sound_card :Audigy_FX_Sound_card ;
                     :enables_attachment_ssd :Samsung_980_PRO_1TB ;
                     :hardware_produced_by_manufacturer :Gigabyte ;
+                    :has_chipset :Intel_B760 ;
                     :motherboard_has_port :USB_3.0 ;
                     :motherboard_has_socket :FCLGA1200 ;
                     :motherboard_has_storage_interface :SATA ;
@@ -3528,7 +3529,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_Z790
 :Intel_Z790 rdf:type owl:NamedIndividual ,
                      :Chipset ;
-            :motherboard_has_name "Intel Z790" .
+            :chipset_has_name "Intel Z790" .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#KFD-HP_Laptop_Charger
