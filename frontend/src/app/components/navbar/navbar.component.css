@@ -1,0 +1,20 @@
+mat-sidenav {
+    width: 200px;
+    padding:15px;
+}
+.mat-drawer { 
+    /* background-color: #023075; */
+    color:#fff
+}
+
+.btn{
+    padding: 1rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.space{
+    justify-content: space-between;
+}

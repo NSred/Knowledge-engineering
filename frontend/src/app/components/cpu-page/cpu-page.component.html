@@ -1,0 +1,49 @@
+<div class="container">
+    <h2>Search cpu by specifications</h2>
+    <form class="form">
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower clock speed</label>
+            <input type="number" [(ngModel)]="lowerClockSpeed" name="lowerClockSpeed" />
+        </div>
+        <div>
+            <label>Higher clock speed</label>
+            <input type="number" name="higherclockspeed" />
+        </div>
+      </div>
+      
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower tdp</label>
+            <input type="number" name="lowertdp" />
+        </div>
+        <div>
+            <label>Higher tdp</label>
+            <input type="number" name="highertdp" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower cores</label>
+            <input type="number" name="lowercores" />
+        </div>
+        <div>
+            <label>Higher cores</label>
+            <input type="number" name="highercores" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower threads</label>
+            <input type="number" name="lowerthreads" />
+        </div>
+        <div>
+            <label>Higher threads</label>
+            <input type="number" name="higherthreads" />
+        </div>
+      </div>
+      <button class="sign-in-button" type="submit">Search</button>
+    </form>
+  </div>

@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 20px 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 30%;
+}
+
+.input {
+    display: flex;
+    align-self: center;
+}
+
+.input input {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.row-margin {
+    margin-right: 3rem;
+}
+
+.sign-in-button {
+    height: 40px;
+    width: 50%;
+    align-self: center;
+    font-size: 16px;
+    background-color: #673AB7;
+    color: white;
+    border-radius: 10px;
+}
+
+.sign-in-button:hover {
+    cursor: pointer;
+}
