@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,6 +21,16 @@ public class GPUController {
     @GetMapping
     public ResponseEntity<List<GPUResponseDTO>> getAllGPUs() {
         return new ResponseEntity<>(this.GPUService.getAllGPUs(), HttpStatus.OK);
+    }
+
+    @GetMapping("/names")
+    public ResponseEntity<List<String>> getAllGpuNames() {
+        List<GPUResponseDTO> gpus = this.GPUService.getAllGPUs();
+        List<String> names = new ArrayList<>();
+        for(GPUResponseDTO gpu : gpus) {
+            names.add(gpu.getName());
+        }
+        return new ResponseEntity<>(names, HttpStatus.OK);
     }
 
     @GetMapping("/gpu-by-spec")

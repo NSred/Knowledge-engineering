@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { CpuPageComponent } from './components/cpu-page/cpu-page.component';
 import { GpuPageComponent } from './components/gpu-page/gpu-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { UpgradeComponentComponent } from './components/upgrade-component/upgrade-component.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },
   { path: 'cpus', component: CpuPageComponent },
-  { path: 'gpus', component: GpuPageComponent }
+  { path: 'gpus', component: GpuPageComponent },
+  { path: 'upgrade-component', component: UpgradeComponentComponent }
 ];
 
 @NgModule({

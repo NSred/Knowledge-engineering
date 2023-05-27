@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -20,6 +21,16 @@ public class CPUController {
     @GetMapping
     public ResponseEntity<List<CPUResponseDTO>> getAllCPUs() {
         return new ResponseEntity<>(this.CPUService.getAllCPUs(), HttpStatus.OK);
+    }
+
+    @GetMapping("/names")
+    public ResponseEntity<List<String>> getAllCpuNames() {
+        List<CPUResponseDTO> cpus = this.CPUService.getAllCPUs();
+        List<String> names = new ArrayList<>();
+        for(CPUResponseDTO cpu : cpus) {
+            names.add(cpu.getName());
+        }
+        return new ResponseEntity<>(names, HttpStatus.OK);
     }
 
     @GetMapping("/cpu-by-spec")

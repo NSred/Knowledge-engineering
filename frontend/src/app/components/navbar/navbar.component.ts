@@ -24,4 +24,8 @@ export class NavbarComponent implements OnInit{
   goToHomePage() : void {
     this.router.navigateByUrl('')
   }
+
+  goToUpgradePage() : void {
+    this.router.navigateByUrl('upgrade-component')
+  }
 }

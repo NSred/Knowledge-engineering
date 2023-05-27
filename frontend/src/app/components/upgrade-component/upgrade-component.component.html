@@ -1,0 +1,204 @@
+<div class="container">
+    <h2>Upgrade your pc</h2>
+    <form class="form">
+      <div class="input">
+        <div>
+            <label>For upgrade: </label>
+            <select [(ngModel)]="selectedComponent" name="selectedComponent" (change)="changeSubmitted()">
+                <option>CPU</option>
+                <option>GPU</option>
+                <option>Motherboard</option>
+                <option>PSU</option>
+                <option>RAM</option>
+            </select>
+        </div>
+      </div>
+      
+      <div class="input">
+        <div>
+            <label>Your Cpu: </label>
+            <select [(ngModel)]="selectedCpu" name="selectedCpu">
+                <option *ngFor="let option of cpuNames" [value]="option">{{ option }}</option>
+            </select>
+       </div>
+     </div>
+
+        <div class="input">
+            <div>
+                <label>Your Gpu: </label>
+                <select [(ngModel)]="selectedGpu" name="selectedGpu">
+                    <option *ngFor="let option of gpuNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input">
+            <div>
+                <label>Your motherboard: </label>
+                <select [(ngModel)]="selectedMotherboard" name="selectedMotherboard">
+                    <option *ngFor="let option of motherboardNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input">
+            <div>
+                <label>Your Psu: </label>
+                <select [(ngModel)]="selectedPsu" name="selectedPsu">
+                    <option *ngFor="let option of psuNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+      <div class="input">
+            <div>
+                <label>Your Ram: </label>
+                <select [(ngModel)]="selectedRam" name="selectedRam">
+                    <option *ngFor="let option of ramNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+      </div>
+      <button class="sign-in-button" type="submit" (click)="search()">Search</button>
+    </form>
+  </div>
+
+  <h2 class="results-headline">Search results: </h2>
+  <div class="cards-container" *ngIf="submitted === true && selectedComponent === 'GPU'">
+    <div class="card" *ngFor="let gpu of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{gpu.name}}</b></h2>
+        <table class="table-margin">
+          <tbody>
+            <tr>
+              <th>Core clock: </th>
+              <td>{{gpu.coreClock}} MHz</td>
+            </tr>
+            <tr>
+              <th>Memory clock: </th>
+              <td>{{gpu.memoryClock}} MHz</td>
+            </tr>
+            <tr>
+              <th>Video memory: </th>
+              <td>{{gpu.videoMemory}} MB</td>
+            </tr>
+            <tr>
+              <th>TDP: </th>
+              <td>{{gpu.tdp}} W</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-container" *ngIf="submitted === true && selectedComponent === 'CPU'">
+    <div class="card" *ngFor="let cpu of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{cpu.name}}</b></h2>
+        <table class="table-margin">
+            <tbody>
+                <tr>
+                  <th>Cores: </th>
+                  <td>{{cpu.cores}}</td>
+                </tr>
+                <tr>
+                  <th>Threads: </th>
+                  <td>{{cpu.threads}}</td>
+                </tr>
+                <tr>
+                  <th>Clock speed: </th>
+                  <td>{{cpu.clockSpeed}} GHz</td>
+                </tr>
+                <tr>
+                  <th>Socket: </th>
+                  <td>{{cpu.socket}}</td>
+                </tr>
+                <tr>
+                  <th>TDP: </th>
+                  <td>{{cpu.tdp}} W</td>
+                </tr>
+              </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-container" *ngIf="submitted === true && selectedComponent === 'Motherboard'">
+    <div class="card" *ngFor="let m of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{m.name}}</b></h2>
+        <table class="table-margin">
+          <tbody>
+            <tr>
+              <th>Form factor: </th>
+              <td>{{m.formFactor}}</td>
+            </tr>
+            <tr>
+              <th>Dimensions: </th>
+              <td>{{m.dimensions}}</td>
+            </tr>
+            <tr>
+              <th>Chipset: </th>
+              <td>{{m.chipset}}</td>
+            </tr>
+            <tr>
+              <th>Socket: </th>
+              <td>{{m.socket}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-container" *ngIf="submitted === true && selectedComponent === 'PSU'">
+    <div class="card" *ngFor="let psu of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{psu.name}}</b></h2>
+        <table class="table-margin">
+          <tbody>
+            <tr>
+              <th>Certificate: </th>
+              <td>{{psu.certificate}}</td>
+            </tr>
+            <tr>
+              <th>Dimensions: </th>
+              <td>{{psu.dimensions}}</td>
+            </tr>
+            <tr>
+              <th>Power: </th>
+              <td>{{psu.power}} W</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards-container" *ngIf="submitted === true && selectedComponent === 'RAM'">
+    <div class="card" *ngFor="let ram of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{ram.name}}</b></h2>
+        <table class="table-margin">
+          <tbody>
+            <tr>
+              <th>Type: </th>
+              <td>{{ram.type}}</td>
+            </tr>
+            <tr>
+              <th>Latency: </th>
+              <td>CL{{ram.latency}}</td>
+            </tr>
+            <tr>
+              <th>Voltage: </th>
+              <td>{{ram.voltage}} V</td>
+            </tr>
+            <tr>
+              <th>Capacity: </th>
+              <td>{{ram.capacity}} GB</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
