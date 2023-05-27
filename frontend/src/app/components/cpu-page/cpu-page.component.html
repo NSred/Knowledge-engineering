@@ -47,3 +47,36 @@
       <button class="sign-in-button" type="submit" (click)="search()">Search</button>
     </form>
   </div>
+
+  <h2 class="results-headline">Search results: </h2>
+  <div class="cards-container" *ngIf="submitted === true">
+    <div class="card" *ngFor="let cpu of cpus">
+      <div class="table">
+        <h2 class="results-headline"><b>{{cpu.name}}</b></h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Cores: </th>
+              <td>{{cpu.cores}}</td>
+            </tr>
+            <tr>
+              <th>Threads: </th>
+              <td>{{cpu.threads}}</td>
+            </tr>
+            <tr>
+              <th>Clock speed: </th>
+              <td>{{cpu.clockSpeed}} GHz</td>
+            </tr>
+            <tr>
+              <th>Socket: </th>
+              <td>{{cpu.socket}}</td>
+            </tr>
+            <tr>
+              <th>TDP: </th>
+              <td>{{cpu.tdp}} W</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

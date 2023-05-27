@@ -1,1 +1,79 @@
-<p>gpu-page works!</p>
+<div class="container">
+    <h2>Search gpu by specifications</h2>
+    <form class="form">
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower video memory</label>
+            <input type="number" [(ngModel)]="lowerVideoMemory" min="0" name="lowerVideoMemory" />
+        </div>
+        <div>
+            <label>Higher video memory</label>
+            <input type="number" [(ngModel)]="higherVideoMemory" min="0" name="higherVideoMemory" />
+        </div>
+      </div>
+      
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower tdp</label>
+            <input type="number" [(ngModel)]="lowerTdp" min="0" name="lowertdp" />
+        </div>
+        <div>
+            <label>Higher tdp</label>
+            <input type="number" [(ngModel)]="higherTdp" min="0" name="highertdp" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower core clock</label>
+            <input type="number" [(ngModel)]="lowerCoreClock" min="0" name="lowerCoreClock" />
+        </div>
+        <div>
+            <label>Higher core clock</label>
+            <input type="number" [(ngModel)]="higherCoreClock" min="0" name="higherCoreClock" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Lower memory clock</label>
+            <input type="number" [(ngModel)]="lowerMemoryClock" min="0" name="lowerMemoryClock" />
+        </div>
+        <div>
+            <label>Higher memory clock</label>
+            <input type="number" [(ngModel)]="higherMemoryClock" min="0" name="higherMemoryClock" />
+        </div>
+      </div>
+      <button class="sign-in-button" type="submit" (click)="search()">Search</button>
+    </form>
+  </div>
+
+  <h2 class="results-headline">Search results: </h2>
+  <div class="cards-container" *ngIf="submitted === true">
+    <div class="card" *ngFor="let gpu of gpus">
+      <div class="table">
+        <h2 class="results-headline"><b>{{gpu.name}}</b></h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Core clock: </th>
+              <td>{{gpu.coreClock}} MHz</td>
+            </tr>
+            <tr>
+              <th>Memory clock: </th>
+              <td>{{gpu.memoryClock}} MHz</td>
+            </tr>
+            <tr>
+              <th>Video memory: </th>
+              <td>{{gpu.videoMemory}} MB</td>
+            </tr>
+            <tr>
+              <th>TDP: </th>
+              <td>{{gpu.tdp}} W</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+

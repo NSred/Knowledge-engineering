@@ -48,3 +48,34 @@
 .sign-in-button:hover {
     cursor: pointer;
 }
+
+.results-headline{
+    margin-top: 3%;
+    text-align: center;
+    max-height: 30px;
+}
+
+.cards-container{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    min-height: 20vh;
+    width: 35vh;
+    margin: 0.5rem;
+}
+
+.table{
+    align-items: center;
+    margin: 0 auto;
+}
