@@ -18,7 +18,7 @@ export class UpgradeComponentComponent implements OnInit{
   public selectedComponent : any
   public selectedCpu : any
   public selectedGpu : any
-  public selectedMotherboard : any = 'MSI B550-M PRO'
+  public selectedMotherboard : any
   public selectedPsu : any
   public selectedRam : any
 
@@ -45,14 +45,14 @@ export class UpgradeComponentComponent implements OnInit{
         this.toast.error('Error while getting gpu names')
       }
     })
-    // this.componentService.getAllMotherboardNames().subscribe( {
-    //   next : res => {
-    //     this.motherboardNames = res
-    //   },
-    //   error : err => {
-    //     this.toast.error('Error while getting motherboard names')
-    //   }
-    // })
+    this.componentService.getAllMotherboardNames().subscribe( {
+      next : res => {
+        this.motherboardNames = res
+      },
+      error : err => {
+        this.toast.error('Error while getting motherboard names')
+      }
+    })
     this.componentService.getAllPsuNames().subscribe( {
       next : res => {
         this.psuNames = res
