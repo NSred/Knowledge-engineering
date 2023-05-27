@@ -3032,6 +3032,8 @@
                                                                                                     <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_port> <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#USB_3.0> ;
                                                                                                     
                                                                                                     <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_socket> <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#FCLGA1200> ;
+
+<http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#has_chipset> <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#Intel_B760> ;
                                                                                                     
                                                                                                     <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#motherboard_has_storage_interface> <http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#SATA> ;
                                                                                                     
