@@ -7,7 +7,9 @@ import { CpuPageComponent } from './cpu-page/cpu-page.component';
 import { GpuPageComponent } from './gpu-page/gpu-page.component';
 import { MaterialModule } from '../material/material/material.module';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,13 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right'
+    }),
+    BrowserAnimationsModule
   ],
   exports: [
     NavbarComponent,

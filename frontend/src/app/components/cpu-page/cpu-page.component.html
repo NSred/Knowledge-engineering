@@ -4,46 +4,46 @@
       <div class="input">
         <div class="row-margin">
             <label>Lower clock speed</label>
-            <input type="number" [(ngModel)]="lowerClockSpeed" name="lowerClockSpeed" />
+            <input type="number" [(ngModel)]="lowerClockSpeed" min="0" name="lowerClockSpeed" />
         </div>
         <div>
             <label>Higher clock speed</label>
-            <input type="number" name="higherclockspeed" />
+            <input type="number" [(ngModel)]="higherClockSpeed" min="0" name="higherclockspeed" />
         </div>
       </div>
       
       <div class="input">
         <div class="row-margin">
             <label>Lower tdp</label>
-            <input type="number" name="lowertdp" />
+            <input type="number" [(ngModel)]="lowerTdp" min="0" name="lowertdp" />
         </div>
         <div>
             <label>Higher tdp</label>
-            <input type="number" name="highertdp" />
+            <input type="number" [(ngModel)]="higherTdp" min="0" name="highertdp" />
         </div>
       </div>
 
       <div class="input">
         <div class="row-margin">
             <label>Lower cores</label>
-            <input type="number" name="lowercores" />
+            <input type="number" [(ngModel)]="lowerCores" min="0" name="lowercores" />
         </div>
         <div>
             <label>Higher cores</label>
-            <input type="number" name="highercores" />
+            <input type="number" [(ngModel)]="higherCores" min="0" name="highercores" />
         </div>
       </div>
 
       <div class="input">
         <div class="row-margin">
             <label>Lower threads</label>
-            <input type="number" name="lowerthreads" />
+            <input type="number" [(ngModel)]="lowerThreads" min="0" name="lowerthreads" />
         </div>
         <div>
             <label>Higher threads</label>
-            <input type="number" name="higherthreads" />
+            <input type="number" [(ngModel)]="higherThreads" min="0" name="higherthreads" />
         </div>
       </div>
-      <button class="sign-in-button" type="submit">Search</button>
+      <button class="sign-in-button" type="submit" (click)="search()">Search</button>
     </form>
   </div>

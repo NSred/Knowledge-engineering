@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { CpuService } from 'src/app/services/cpu.service';
 
 @Component({
   selector: 'app-cpu-page',
@@ -15,8 +17,22 @@ export class CpuPageComponent implements OnInit{
   public higherClockSpeed : number = 0;
   public lowerThreads : number = 0;
   public higherThreads : number = 0;
-  constructor() {}
+
+  constructor(private cpuService : CpuService, private toast : ToastrService) {}
 
   ngOnInit(): void {
+  }
+
+  search() : void {
+    this.cpuService.getCPUBySpec(this.lowerTdp, this.higherTdp, this.lowerClockSpeed, this.higherClockSpeed, this.lowerCores,
+       this.higherCores, this.lowerThreads, this.higherThreads).subscribe( {
+        next : res => {
+          this.toast.success('Success')
+          console.log(res)
+        },
+        error : err => {
+          this.toast.error('Error', err)
+        }
+       })
   }
 }
