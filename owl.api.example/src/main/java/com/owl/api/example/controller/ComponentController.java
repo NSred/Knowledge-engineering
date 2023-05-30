@@ -1,5 +1,6 @@
 package com.owl.api.example.controller;
 
+import com.owl.api.example.dto.PurposeTypeDTO;
 import com.owl.api.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -35,19 +36,28 @@ public class ComponentController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
+    @GetMapping("/purpose")
+    public ResponseEntity<PurposeTypeDTO> getPurposeType(
+            @RequestParam(required = true) double cpu_clock_speed_ghz,
+            @RequestParam(required = true) int ram_capacity_gb) {
+        return new ResponseEntity<>(this.fuzzyLogicService.getPurposeType(cpu_clock_speed_ghz, ram_capacity_gb), HttpStatus.OK);
+    }
+
     private final RAMService ramService;
     private final PSUService psuService;
     private final CPUService cpuService;
     private final GPUService gpuService;
     private final MotherboardService motherboardService;
+    private final FuzzyLogicService fuzzyLogicService;
 
     @Autowired
-    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService) {
+    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService, FuzzyLogicService fuzzyLogicService) {
         this.ramService = ramService;
         this.psuService = psuService;
         this.cpuService = cpuService;
         this.gpuService = gpuService;
         this.motherboardService = motherboardService;
+        this.fuzzyLogicService = fuzzyLogicService;
     }
 
 }
