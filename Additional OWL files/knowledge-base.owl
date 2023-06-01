@@ -3032,6 +3032,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                      :AMD_Ryzen_7_5700X ,
                                                      :AMD_Ryzen_7_5800X3D ;
                      :gpu_has_core_clock_in_mhz 1575 ;
+                     :gpu_has_memory_clock 1800 ;
                      :gpu_has_name "GeForce RTX 3070 Ti" ;
                      :gpu_has_tdp_in_watts 290 ;
                      :gpu_has_video_memory_in_mb 8192 .
@@ -3051,6 +3052,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                        :AMD_Ryzen_7_5700X ,
                                                        :AMD_Ryzen_7_5800X3D ;
                        :gpu_has_core_clock_in_mhz 1260 ;
+                       :gpu_has_memory_clock 1450 ;
                        :gpu_has_name "GeForce RTX 3080 12GB" ;
                        :gpu_has_tdp_in_watts 350 ;
                        :gpu_has_video_memory_in_mb 12288 .
@@ -3111,6 +3113,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                      :AMD_Ryzen_7_5700X ,
                                                      :AMD_Ryzen_7_5800X3D ;
                      :gpu_has_core_clock_in_mhz 2310 ;
+                     :gpu_has_memory_clock 2500 ;
                      :gpu_has_name "GeForce RTX 4070 Ti" ;
                      :gpu_has_tdp_in_watts 285 ;
                      :gpu_has_video_memory_in_mb 12288 .
@@ -3251,6 +3254,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                 :Intel_Core_i5-13600K ,
                                                 :Intel_Core_i9-13900KF ;
                 :gpu_has_core_clock_in_mhz 2050 ;
+                :gpu_has_memory_clock 2250 ;
                 :gpu_has_name "Intel Arc A750" ;
                 :gpu_has_tdp_in_watts 225 ;
                 :gpu_has_video_memory_in_mb 8192 .
@@ -4155,6 +4159,7 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
                                                    :Intel_Core_i5-13600K ,
                                                    :Intel_Core_i9-13900KF ;
                    :gpu_has_core_clock_in_mhz 2321 ;
+                   :gpu_has_memory_clock 2450 ;
                    :gpu_has_name "Radeon RX 6700 XT" ;
                    :gpu_has_tdp_in_watts 230 ;
                    :gpu_has_video_memory_in_mb 12288 .
