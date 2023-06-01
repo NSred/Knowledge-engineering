@@ -15,39 +15,31 @@ END_VAR
 //WITH FUZZIFY SECTION, SETS AND THEIR INTERVALS FOR INPUT VARIABLES ARE DEFINED
 
 FUZZIFY cpu_clock_speed_ghz
-    TERM low := (1, 1) (2, 0) ;
-    TERM medium_low := (1.6, 0) (2.2, 1) (2.8, 0);
-    TERM medium := (2.4, 0) (3, 1) (3.6, 0);
-    TERM medium_high := (3.2, 0) (3.8, 1) (4.4, 0);
-    TERM high := (4, 0) (5, 1);
+    TERM low := (1, 1) (2, 1) (2.5, 0);
+    TERM medium := (2, 0) (2.5, 1) (3.5, 1) (4, 0);
+    TERM high := (3.5, 0) (4, 1) (5, 1);
 END_FUZZIFY
 
 FUZZIFY ram_capacity_gb
-    TERM low := (1, 1) (2.1, 0) ;
-    TERM medium_low := (1.9, 0) (4, 1) (8.1, 0);
-    TERM medium := (7.9, 0) (16, 1) (32.1, 0);
-    TERM medium_high := (31.9, 0) (64, 1) (128.1, 0);
-    TERM high := (127.9, 0) (256, 1);
+    TERM low := (1, 1) (4, 1) (8, 0) ;
+    TERM medium := (8, 0) (16, 1) (32, 0);
+    TERM high := (32, 0) (64, 1) (256, 1);
 END_FUZZIFY
 
 //WITH DEFUZZIFY SECTION, SETS AND THEIR INTERVALS FOR OUTPUT VARIABLES ARE DEFINED
 
 DEFUZZIFY app_development
-    TERM worst := (0, 0) (10, 1) (20, 0);
-    TERM below_average := (20, 0) (30, 1) (40, 0);
-    TERM average := (40, 0) (50, 1) (60, 0);
-    TERM above_average := (60, 0) (70, 1) (80, 0);
-    TERM best := (80, 0) (90, 1) (100, 0);
+    TERM bad := (0, 0) (15, 1) (30, 0);
+    TERM average := (30, 0) (50, 1) (70, 0);
+    TERM excellent := (70, 0) (85, 1) (100, 0);
     METHOD : COG;
     DEFAULT := 0;
 END_DEFUZZIFY
 
 DEFUZZIFY video_games
-    TERM worst := (0, 0) (10, 1) (20, 0);
-    TERM below_average := (20, 0) (30, 1) (40, 0);
-    TERM average := (40, 0) (50, 1) (60, 0);
-    TERM above_average := (60, 0) (70, 1) (80, 0);
-    TERM best := (80, 0) (90, 1) (100, 0);
+    TERM bad := (0, 0) (15, 1) (30, 0);
+    TERM average := (30, 0) (50, 1) (70, 0);
+    TERM excellent := (70, 0) (85, 1) (100, 0);
     METHOD : COG;
     DEFAULT := 0;
 END_DEFUZZIFY
@@ -64,44 +56,32 @@ RULEBLOCK No1
 
     //SIMPLE RULES
     RULE 1 : IF cpu_clock_speed_ghz IS low
-                THEN app_development IS below_average WITH 0.1;
-    RULE 2 : IF cpu_clock_speed_ghz IS medium_low
-                THEN app_development IS average WITH 0.1;
-    RULE 3 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS medium_high
-                THEN app_development IS above_average WITH 0.1;
-    RULE 4 : IF cpu_clock_speed_ghz IS high
-                THEN app_development IS best WITH 0.1;
+                THEN app_development IS bad WITH 0.1;
+    RULE 2 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
+                THEN app_development IS excellent WITH 0.1;
 
-    RULE 5 : IF cpu_clock_speed_ghz IS low
-                THEN video_games IS worst WITH 0.1;
-    RULE 6 : IF cpu_clock_speed_ghz IS medium_low OR cpu_clock_speed_ghz IS medium
-                THEN video_games IS below_average WITH 0.1;
-    RULE 7 : IF cpu_clock_speed_ghz IS medium_high
-                THEN video_games IS above_average WITH 0.1;
-    RULE 8 : IF cpu_clock_speed_ghz IS high
-                THEN video_games IS best WITH 0.1;
-
-    RULE 9 : IF ram_capacity_gb IS low
-                THEN app_development IS worst WITH 0.1;
-    RULE 10 : IF ram_capacity_gb IS medium_low
-                THEN app_development IS below_average WITH 0.1;
-    RULE 11 : IF ram_capacity_gb IS medium
-                THEN app_development IS average WITH 0.1;
-    RULE 12 : IF ram_capacity_gb IS medium_high OR ram_capacity_gb IS high
-                THEN app_development IS best WITH 0.1;
-
-    RULE 13 : IF ram_capacity_gb IS low OR ram_capacity_gb IS medium_low
-                THEN video_games IS worst WITH 0.1;
-    RULE 14 : IF ram_capacity_gb IS medium
+    RULE 3 : IF cpu_clock_speed_ghz IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 4 : IF cpu_clock_speed_ghz IS medium
                 THEN video_games IS average WITH 0.1;
-    RULE 15 : IF ram_capacity_gb IS medium_high OR ram_capacity_gb IS high
-                THEN video_games IS best WITH 0.1;
+    RULE 5 : IF cpu_clock_speed_ghz IS high
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 6 : IF ram_capacity_gb IS low
+                THEN app_development IS bad WITH 0.1;
+    RULE 7 : IF ram_capacity_gb IS medium OR ram_capacity_gb IS high
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 8 : IF ram_capacity_gb IS low OR ram_capacity_gb IS medium
+                THEN video_games IS bad WITH 0.1;
+    RULE 9 : IF ram_capacity_gb IS high
+                THEN video_games IS excellent WITH 0.1;
 
     //COMPLEX RULES
-    RULE 15 : IF cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS medium
-                THEN app_development IS above_average;
-    RULE 16 : IF cpu_clock_speed_ghz IS medium_low AND ram_capacity_gb IS medium
-                THEN video_games IS below_average;
+    RULE 10 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
+                THEN app_development IS bad;
+    RULE 11 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
+                THEN video_games IS bad;
 END_RULEBLOCK
 
 END_FUNCTION_BLOCK

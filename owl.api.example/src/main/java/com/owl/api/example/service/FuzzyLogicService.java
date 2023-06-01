@@ -28,21 +28,19 @@ public class FuzzyLogicService {
         fis.evaluate();
 
         Map<String, Double> app_development = new HashMap<>();
-        app_development.put("worst", fis.getVariable("app_development").getMembership("worst"));
-        app_development.put("below_average", fis.getVariable("app_development").getMembership("below_average"));
+        app_development.put("bad", fis.getVariable("app_development").getMembership("bad"));
         app_development.put("average", fis.getVariable("app_development").getMembership("average"));
-        app_development.put("above_average", fis.getVariable("app_development").getMembership("above_average"));
-        app_development.put("best", fis.getVariable("app_development").getMembership("best"));
+        app_development.put("excellent", fis.getVariable("app_development").getMembership("excellent"));
 
+        System.out.println("APP DEV");
         purpose.setAppDevelopment(SetPurposeTypeValue(app_development));
 
         Map<String, Double> video_games = new HashMap<>();
-        video_games.put("worst", fis.getVariable("video_games").getMembership("worst"));
-        video_games.put("below_average", fis.getVariable("video_games").getMembership("below_average"));
+        video_games.put("bad", fis.getVariable("video_games").getMembership("bad"));
         video_games.put("average", fis.getVariable("video_games").getMembership("average"));
-        video_games.put("above_average", fis.getVariable("video_games").getMembership("above_average"));
-        video_games.put("best", fis.getVariable("video_games").getMembership("best"));
+        video_games.put("excellent", fis.getVariable("video_games").getMembership("excellent"));
 
+        System.out.println("VIDEO GAMES");
         purpose.setVideoGames(SetPurposeTypeValue(video_games));
 
         return purpose;
@@ -53,6 +51,7 @@ public class FuzzyLogicService {
         String keyForHighestValue = "";
         highestValue = Collections.max(map.values());
         for (Map.Entry<String, Double> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", value: " + entry.getValue());
             if (entry.getValue().equals(highestValue)) {
                 keyForHighestValue = entry.getKey();
                 break;
