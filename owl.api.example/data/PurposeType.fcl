@@ -16,6 +16,8 @@ END_VAR
 VAR_OUTPUT
     app_development : REAL;
     video_games : REAL;
+    home : REAL;
+    business : REAL;
 END_VAR
 
 FUZZIFY ram_latency_ns
@@ -95,6 +97,22 @@ DEFUZZIFY app_development
 END_DEFUZZIFY
 
 DEFUZZIFY video_games
+    TERM bad := (0, 0) (15, 1) (30, 0);
+    TERM average := (30, 0) (50, 1) (70, 0);
+    TERM excellent := (70, 0) (85, 1) (100, 0);
+    METHOD : COG;
+    DEFAULT := 0;
+END_DEFUZZIFY
+
+DEFUZZIFY home
+    TERM bad := (0, 0) (15, 1) (30, 0);
+    TERM average := (30, 0) (50, 1) (70, 0);
+    TERM excellent := (70, 0) (85, 1) (100, 0);
+    METHOD : COG;
+    DEFAULT := 0;
+END_DEFUZZIFY
+
+DEFUZZIFY business
     TERM bad := (0, 0) (15, 1) (30, 0);
     TERM average := (30, 0) (50, 1) (70, 0);
     TERM excellent := (70, 0) (85, 1) (100, 0);
@@ -259,5 +277,181 @@ RULEBLOCK video_games_rules
     RULE 17 : IF cpu_threads IS high OR cpu_threads IS ultra AND ram_capacity_gb IS low
                 THEN video_games IS bad;
 END_RULEBLOCK
+
+RULEBLOCK home_rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
+    //SIMPLE RULES
+    RULE 1 : IF cpu_clock_speed_ghz IS low
+                THEN home IS average WITH 0.1;
+    RULE 2 : IF cpu_clock_speed_ghz IS medium
+                THEN home IS excellent WITH 0.1;
+    RULE 3 : IF cpu_clock_speed_ghz IS high
+                    THEN home IS bad WITH 0.1;
+
+    RULE 4 : IF ram_capacity_gb IS low OR ram_capacity_gb IS ultra
+                THEN home IS bad WITH 0.5;
+    RULE 5 : IF ram_capacity_gb IS medium
+                THEN home IS average WITH 0.5;
+    RULE 6 : IF ram_capacity_gb IS high
+                THEN home IS excellent WITH 0.5;
+
+    RULE 7 : IF cpu_cores IS low
+                THEN home IS average WITH 0.5;
+    RULE 8 : IF cpu_cores IS medium
+                THEN home IS excellent WITH 0.5;
+    RULE 9 : IF cpu_cores IS ultra OR cpu_cores IS high
+                THEN home IS bad WITH 0.5;
+
+    RULE 10 : IF cpu_threads IS low
+                THEN home IS average WITH 0.5;
+    RULE 11 : IF cpu_threads IS medium
+                THEN home IS excellent WITH 0.5;
+    RULE 12 : IF cpu_threads IS ultra OR cpu_threads IS high
+                THEN home IS bad WITH 0.5;
+
+    RULE 13 : IF gpu_video_memory_gb IS low
+                THEN home IS average WITH 0.1;
+    RULE 14 : IF gpu_video_memory_gb IS medium OR gpu_video_memory_gb IS high
+                THEN home IS excellent WITH 0.1;
+    RULE 15 : IF gpu_video_memory_gb IS ultra
+                THEN home IS bad WITH 0.1;
+
+    RULE 16 : IF gpu_core_clock_mhz IS low
+                THEN home IS average WITH 0.1;
+    RULE 17 : IF gpu_core_clock_mhz IS medium
+                THEN home IS excellent WITH 0.1;
+    RULE 18 : IF gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra
+                THEN home IS bad WITH 0.1;
+
+    RULE 19 : IF hard_drive_capacity_gb IS low
+                THEN home IS bad WITH 0.1;
+    RULE 20 : IF hard_drive_capacity_gb IS medium
+                THEN home IS average WITH 0.1;
+    RULE 21 : IF hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN home IS excellent WITH 0.1;
+
+    RULE 22 : IF psu_power_watts IS low
+                THEN home IS average WITH 0.1;
+    RULE 23 : IF psu_power_watts IS medium
+                THEN home IS excellent WITH 0.1;
+    RULE 24 : IF psu_power_watts IS high OR psu_power_watts IS ultra
+                THEN home IS bad WITH 0.1;
+
+    RULE 25 : IF l3_size_mb IS low OR l3_size_mb IS medium
+                THEN home IS excellent WITH 0.1;
+    RULE 26 : IF l3_size_mb IS high OR l3_size_mb IS ultra
+                THEN home IS bad WITH 0.1;
+
+    RULE 27 : IF ram_latency_ns IS high
+                THEN home IS average WITH 0.1;
+    RULE 28 : IF ram_latency_ns IS medium OR ram_latency_ns IS low
+                THEN home IS excellent WITH 0.1;
+
+    //COMPLEX RULES
+    RULE 29 : IF cpu_clock_speed_ghz IS medium
+                    AND gpu_video_memory_gb IS medium
+                THEN home IS excellent;
+    RULE 30 : IF cpu_cores IS medium
+                    AND cpu_threads IS medium
+                    AND ram_capacity_gb IS high
+                THEN home IS excellent;
+    RULE 31 : IF psu_power_watts IS high OR psu_power_watts IS ultra
+                    AND gpu_video_memory_gb IS ultra
+                THEN home IS bad;
+END_RULEBLOCK
+
+RULEBLOCK business_rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
+    //SIMPLE RULES
+    RULE 1 : IF cpu_clock_speed_ghz IS low
+                THEN business IS average WITH 0.1;
+    RULE 2 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
+                THEN business IS excellent WITH 0.1;
+
+    RULE 3 : IF ram_capacity_gb IS low OR ram_capacity_gb IS ultra
+                THEN business IS bad WITH 0.5;
+    RULE 4 : IF ram_capacity_gb IS medium
+                THEN business IS average WITH 0.5;
+    RULE 5 : IF ram_capacity_gb IS high
+                THEN business IS excellent WITH 0.5;
+
+    RULE 6 : IF cpu_cores IS low
+                THEN business IS bad WITH 0.5;
+    RULE 7 : IF cpu_cores IS medium OR cpu_cores IS high
+                THEN business IS excellent WITH 0.5;
+    RULE 8 : IF cpu_cores IS ultra
+                THEN business IS bad WITH 0.5;
+
+    RULE 9 : IF cpu_threads IS low
+                THEN business IS bad WITH 0.5;
+    RULE 10 : IF cpu_threads IS medium OR cpu_threads IS high
+                THEN business IS excellent WITH 0.5;
+    RULE 11 : IF cpu_threads IS ultra
+                THEN business IS bad WITH 0.5;
+
+    RULE 12 : IF gpu_video_memory_gb IS low OR gpu_video_memory_gb IS ultra
+                THEN business IS bad WITH 0.1;
+    RULE 13 : IF gpu_video_memory_gb IS medium
+                THEN business IS average WITH 0.1;
+    RULE 14 : IF gpu_video_memory_gb IS high
+                THEN business IS excellent WITH 0.1;
+
+    RULE 15 : IF gpu_core_clock_mhz IS low OR gpu_core_clock_mhz IS ultra
+                THEN business IS bad WITH 0.1;
+    RULE 16 : IF gpu_core_clock_mhz IS medium
+                THEN business IS average WITH 0.1;
+    RULE 17 : IF gpu_core_clock_mhz IS high
+                THEN business IS excellent WITH 0.1;
+
+    RULE 18 : IF hard_drive_capacity_gb IS low
+                THEN business IS bad WITH 0.1;
+    RULE 19 : IF hard_drive_capacity_gb IS medium
+                THEN business IS average WITH 0.1;
+    RULE 20 : IF hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN business IS excellent WITH 0.1;
+
+    RULE 21 : IF psu_power_watts IS low
+                THEN business IS average WITH 0.1;
+    RULE 22 : IF psu_power_watts IS medium OR psu_power_watts IS high
+                THEN business IS excellent WITH 0.1;
+    RULE 23 : IF psu_power_watts IS ultra
+                THEN business IS bad WITH 0.1;
+
+    RULE 24 : IF l3_size_mb IS low OR l3_size_mb IS medium OR l3_size_mb IS high
+                THEN business IS excellent WITH 0.1;
+    RULE 25 : IF l3_size_mb IS ultra
+                THEN business IS bad WITH 0.1;
+
+    RULE 26 : IF ram_latency_ns IS high
+                THEN business IS bad WITH 0.1;
+    RULE 27 : IF ram_latency_ns IS medium
+                    THEN business IS average WITH 0.1;
+    RULE 28 : IF ram_latency_ns IS low
+                THEN business IS excellent WITH 0.1;
+
+    //COMPLEX RULES
+    RULE 29 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
+                    AND gpu_video_memory_gb IS high
+                THEN business IS excellent;
+    RULE 30 : IF cpu_cores IS medium OR cpu_cores IS high
+                    AND cpu_threads IS medium OR cpu_threads IS high
+                    AND ram_capacity_gb IS high
+                THEN business IS excellent;
+    RULE 31 : IF psu_power_watts IS ultra
+                    AND gpu_video_memory_gb IS ultra
+                    AND ram_capacity_gb IS ultra
+                THEN business IS bad;
+    RULE 32 : IF psu_power_watts IS low
+                     AND gpu_video_memory_gb IS low
+                     AND ram_capacity_gb IS low
+                 THEN business IS bad;
+END_RULEBLOCK
+
 
 END_FUNCTION_BLOCK

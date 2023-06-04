@@ -23,6 +23,8 @@ public class FuzzyLogicService {
         PurposeTypeDTO purpose = new PurposeTypeDTO();
         GroupMembershipDTO ADMemberships = new GroupMembershipDTO();
         GroupMembershipDTO VGMemberships = new GroupMembershipDTO();
+        GroupMembershipDTO HMMemberships = new GroupMembershipDTO();
+        GroupMembershipDTO BMemberships = new GroupMembershipDTO();
 
         //JFuzzyChart.get().chart(fis);
 
@@ -43,6 +45,10 @@ public class FuzzyLogicService {
         JFuzzyChart.get().chart(ad, ad.getDefuzzifier(), true);
         Variable vg = fis.getVariable("video_games");
         JFuzzyChart.get().chart(vg, vg.getDefuzzifier(), true);
+        Variable hm = fis.getVariable("home");
+        JFuzzyChart.get().chart(hm, hm.getDefuzzifier(), true);
+        Variable b = fis.getVariable("business");
+        JFuzzyChart.get().chart(b, b.getDefuzzifier(), true);
 
         ADMemberships.setBad(fis.getVariable("app_development").getMembership("bad"));
         ADMemberships.setAverage(fis.getVariable("app_development").getMembership("average"));
@@ -53,6 +59,16 @@ public class FuzzyLogicService {
         VGMemberships.setAverage(fis.getVariable("video_games").getMembership("average"));
         VGMemberships.setExcellent(fis.getVariable("video_games").getMembership("excellent"));
         purpose.setVideoGames(VGMemberships);
+
+        HMMemberships.setBad(fis.getVariable("home").getMembership("bad"));
+        HMMemberships.setAverage(fis.getVariable("home").getMembership("average"));
+        HMMemberships.setExcellent(fis.getVariable("home").getMembership("excellent"));
+        purpose.setHome(HMMemberships);
+
+        BMemberships.setBad(fis.getVariable("business").getMembership("bad"));
+        BMemberships.setAverage(fis.getVariable("business").getMembership("average"));
+        BMemberships.setExcellent(fis.getVariable("business").getMembership("excellent"));
+        purpose.setBusiness(BMemberships);
 
 
         return purpose;
