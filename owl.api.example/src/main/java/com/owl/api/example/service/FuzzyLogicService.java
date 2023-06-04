@@ -5,7 +5,6 @@ import com.owl.api.example.dto.PurposeTypeDTO;
 import net.sourceforge.jFuzzyLogic.FIS;
 import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
-import org.aspectj.weaver.ast.Var;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -26,6 +25,8 @@ public class FuzzyLogicService {
         GroupMembershipDTO VGMemberships = new GroupMembershipDTO();
         GroupMembershipDTO MMemberships = new GroupMembershipDTO();
         GroupMembershipDTO HMemberships = new GroupMembershipDTO();
+        GroupMembershipDTO HMMemberships = new GroupMembershipDTO();
+        GroupMembershipDTO BMemberships = new GroupMembershipDTO();
 
         JFuzzyChart.get().chart(fis);
 
@@ -50,6 +51,10 @@ public class FuzzyLogicService {
         JFuzzyChart.get().chart(m, m.getDefuzzifier(), true);
         Variable v = fis.getVariable("hosting");
         JFuzzyChart.get().chart(v, v.getDefuzzifier(), true);
+        Variable hm = fis.getVariable("home");
+        JFuzzyChart.get().chart(hm, hm.getDefuzzifier(), true);
+        Variable b = fis.getVariable("business");
+        JFuzzyChart.get().chart(b, b.getDefuzzifier(), true);
 
         ADMemberships.setBad(fis.getVariable("app_development").getMembership("bad"));
         ADMemberships.setAverage(fis.getVariable("app_development").getMembership("average"));
@@ -70,6 +75,16 @@ public class FuzzyLogicService {
         HMemberships.setAverage(fis.getVariable("hosting").getMembership("average"));
         HMemberships.setExcellent(fis.getVariable("hosting").getMembership("excellent"));
         purpose.setHosting(HMemberships);
+
+        HMMemberships.setBad(fis.getVariable("home").getMembership("bad"));
+        HMMemberships.setAverage(fis.getVariable("home").getMembership("average"));
+        HMMemberships.setExcellent(fis.getVariable("home").getMembership("excellent"));
+        purpose.setHome(HMMemberships);
+
+        BMemberships.setBad(fis.getVariable("business").getMembership("bad"));
+        BMemberships.setAverage(fis.getVariable("business").getMembership("average"));
+        BMemberships.setExcellent(fis.getVariable("business").getMembership("excellent"));
+        purpose.setBusiness(BMemberships);
 
         return purpose;
     }
