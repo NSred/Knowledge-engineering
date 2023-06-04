@@ -16,6 +16,8 @@ END_VAR
 VAR_OUTPUT
     app_development : REAL;
     video_games : REAL;
+    mining : REAL;
+    hosting : REAL;
     home : REAL;
     business : REAL;
 END_VAR
@@ -104,7 +106,23 @@ DEFUZZIFY video_games
     DEFAULT := 0;
 END_DEFUZZIFY
 
+DEFUZZIFY mining
+    TERM bad := (0, 0) (15, 1) (30, 0);
+        TERM average := (30, 0) (50, 1) (70, 0);
+        TERM excellent := (70, 0) (85, 1) (100, 0);
+        METHOD : COG;
+        DEFAULT := 0;
+END_DEFUZZIFY
+
 DEFUZZIFY home
+    TERM bad := (0, 0) (15, 1) (30, 0);
+    TERM average := (30, 0) (50, 1) (70, 0);
+    TERM excellent := (70, 0) (85, 1) (100, 0);
+    METHOD : COG;
+    DEFAULT := 0;
+END_DEFUZZIFY
+
+DEFUZZIFY hosting
     TERM bad := (0, 0) (15, 1) (30, 0);
     TERM average := (30, 0) (50, 1) (70, 0);
     TERM excellent := (70, 0) (85, 1) (100, 0);
@@ -278,12 +296,91 @@ RULEBLOCK video_games_rules
                 THEN video_games IS bad;
 END_RULEBLOCK
 
-RULEBLOCK home_rules
+RULEBLOCK mining_rules
     AND : MIN;
     ACT : MIN;
     ACCU : MAX;
 
     //SIMPLE RULES
+    RULE 1 : IF gpu_video_memory_gb IS low
+                THEN mining IS bad WITH 0.5;
+    RULE 2 : IF gpu_video_memory_gb IS medium
+                THEN mining IS average WITH 0.5;
+    RULE 3 : IF gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra
+                THEN mining IS excellent WITH 0.5;
+
+    RULE 4 : IF gpu_core_clock_mhz IS low
+                THEN mining IS bad WITH 0.5;
+    RULE 5 : IF gpu_core_clock_mhz IS medium
+                THEN mining IS average WITH 0.5;
+    RULE 6 : IF gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra
+                THEN mining IS excellent WITH 0.5;
+
+    RULE 7 : IF psu_power_watts IS low
+                THEN mining IS bad WITH 0.5;
+    RULE 8 : IF psu_power_watts IS medium
+                THEN mining IS average WITH 0.5;
+    RULE 9 : IF psu_power_watts IS high OR psu_power_watts IS ultra
+                THEN mining IS excellent WITH 0.5;
+
+    RULE 14 : IF cpu_cores IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 15 : IF cpu_cores IS medium OR cpu_cores IS high OR cpu_cores IS ultra
+                THEN mining IS average WITH 0.05;
+
+    RULE 16 : IF cpu_threads IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 17 : IF cpu_threads IS medium OR cpu_threads IS high OR cpu_threads IS ultra
+                THEN mining IS average WITH 0.05;
+
+    RULE 18 : IF cpu_clock_speed_ghz IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 19 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
+                THEN mining IS average WITH 0.05;
+
+    RULE 20 : IF l3_size_mb IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 21 : IF l3_size_mb IS medium OR l3_size_mb IS high OR l3_size_mb IS ultra
+                THEN mining IS average WITH 0.05;
+
+    RULE 22 : IF ram_capacity_gb IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 23 : IF ram_capacity_gb IS medium OR ram_capacity_gb IS high OR ram_capacity_gb IS ultra
+                THEN mining IS average WITH 0.05;
+
+    RULE 24 : IF ram_latency_ns IS low OR ram_latency_ns IS medium OR ram_latency_ns IS high
+                THEN mining IS average WITH 0.05;
+
+    RULE 26 : IF hard_drive_capacity_gb IS low
+                THEN mining IS bad WITH 0.05;
+    RULE 27 : IF hard_drive_capacity_gb IS medium OR hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN mining IS average WITH 0.05;
+
+    //COMPLEX RULES
+    RULE 10 : IF gpu_video_memory_gb IS low OR psu_power_watts IS low
+                THEN mining is bad;
+    RULE 11 : IF gpu_video_memory_gb IS medium OR psu_power_watts IS medium
+                THEN mining is average;
+    RULE 12 : IF gpu_video_memory_gb IS high AND psu_power_watts IS high AND gpu_core_clock_mhz IS high
+                THEN mining is excellent;
+    RULE 13 : IF psu_power_watts IS high OR psu_power_watts IS ultra AND gpu_video_memory_gb IS low
+                THEN mining is bad;
+    RULE 28 : IF gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra AND psu_power_watts IS low
+                THEN mining is bad;
+    RULE 29 : IF gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra AND psu_power_watts IS high OR psu_power_watts IS ultra AND cpu_cores IS low
+                THEN mining is excellent;
+    RULE 30 : IF gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra AND psu_power_watts is low
+                THEN mining is bad;
+    RULE 25 : IF gpu_video_memory_gb IS ultra AND psu_power_watts IS ultra AND gpu_core_clock_mhz IS ultra
+                THEN mining is excellent;
+
+END_RULEBLOCK
+
+RULEBLOCK home_rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
     RULE 1 : IF cpu_clock_speed_ghz IS low
                 THEN home IS average WITH 0.1;
     RULE 2 : IF cpu_clock_speed_ghz IS medium
@@ -368,7 +465,6 @@ RULEBLOCK business_rules
     ACT : MIN;
     ACCU : MAX;
 
-    //SIMPLE RULES
     RULE 1 : IF cpu_clock_speed_ghz IS low
                 THEN business IS average WITH 0.1;
     RULE 2 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
@@ -453,5 +549,84 @@ RULEBLOCK business_rules
                  THEN business IS bad;
 END_RULEBLOCK
 
+RULEBLOCK hosting_rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
+    //SIMPLE RULES
+    RULE 1 : IF cpu_cores IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 2 : IF cpu_cores IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 3 : IF cpu_cores IS high OR cpu_cores IS ultra
+                THEN hosting IS excellent WITH 0.5;
+
+    RULE 4 : IF cpu_threads IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 5 : IF cpu_threads IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 6 : IF cpu_threads IS high OR cpu_threads IS ultra
+                THEN hosting IS excellent WITH 0.5;
+
+    RULE 7 : IF cpu_clock_speed_ghz IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 8 : IF cpu_clock_speed_ghz IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 9 : IF cpu_clock_speed_ghz IS high
+                THEN hosting IS excellent WITH 0.5;
+
+    RULE 10 : IF ram_capacity_gb IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 11 : IF ram_capacity_gb IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 12 : IF ram_capacity_gb IS high OR ram_capacity_gb IS ultra
+                THEN hosting IS excellent WITH 0.5;
+
+    RULE 13 : IF ram_latency_ns IS high
+                THEN hosting IS bad WITH 0.1;
+    RULE 14 : IF ram_latency_ns IS medium OR ram_latency_ns IS low
+                THEN hosting IS average WITH 0.1;
+
+    RULE 15 : IF l3_size_mb IS low
+                THEN hosting IS bad WITH 0.1;
+    RULE 16 : IF l3_size_mb IS medium
+                THEN hosting IS average WITH 0.1;
+    RULE 17 : IF l3_size_mb IS high OR l3_size_mb IS ultra
+                THEN hosting IS excellent WITH 0.1;
+
+    RULE 18 : IF hard_drive_capacity_gb IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 19 : IF hard_drive_capacity_gb IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 20 : IF hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN hosting IS excellent WITH 0.5;
+
+    RULE 21 : IF gpu_video_memory_gb IS low OR gpu_video_memory_gb IS medium OR gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra
+                THEN hosting IS average WITH 0.1;
+
+    RULE 22 : IF gpu_core_clock_mhz IS low OR gpu_core_clock_mhz IS medium OR gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra
+                THEN hosting IS average WITH 0.1;
+
+    RULE 23 : IF psu_power_watts IS low
+                THEN hosting IS bad WITH 0.5;
+    RULE 24 : IF psu_power_watts IS medium
+                THEN hosting IS average WITH 0.3;
+    RULE 25 : IF psu_power_watts IS high OR psu_power_watts IS ultra
+                THEN hosting IS excellent WITH 0.5;
+
+    //COMPLEX RULES
+    RULE 26 : IF cpu_cores IS high AND psu_power_watts IS high AND ram_capacity_gb IS high AND cpu_threads IS high AND cpu_clock_speed_ghz IS high
+                THEN hosting is excellent;
+    RULE 27 : IF cpu_cores IS high OR cpu_cores IS ultra AND ram_capacity_gb IS low
+                THEN hosting is bad;
+    RULE 28 : IF psu_power_watts IS high OR psu_power_watts is ultra AND cpu_cores IS low OR cpu_threads IS low
+                THEN hosting is bad;
+    RULE 29 : IF cpu_clock_speed_ghz IS high AND cpu_cores IS low OR cpu_threads IS low
+                THEN hosting is bad;
+    RULE 30 : IF cpu_clock_speed_ghz IS high AND cpu_cores IS high AND ram_capacity_gb IS high AND psu_power_watts IS high AND gpu_video_memory_gb IS low
+                THEN hosting is excellent;
+
+END_RULEBLOCK
 
 END_FUNCTION_BLOCK
