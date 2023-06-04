@@ -1,12 +1,11 @@
 package com.owl.api.example.service;
 
+import com.owl.api.example.dto.GroupMembershipDTO;
 import com.owl.api.example.dto.PurposeTypeDTO;
 import net.sourceforge.jFuzzyLogic.FIS;
+import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
+import net.sourceforge.jFuzzyLogic.rule.Variable;
 import org.springframework.stereotype.Service;
-
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
 
 @Service
 public class FuzzyLogicService {
@@ -19,44 +18,43 @@ public class FuzzyLogicService {
         }
     }
 
-    public PurposeTypeDTO getPurposeType(double cpu_clock_speed_ghz, int ram_capacity_gb){
+    public PurposeTypeDTO getPurposeType(double cpu_clock_speed_ghz, int ram_capacity_gb, int cpu_cores, int cpu_threads, double gpu_video_memory_gb,
+                                         int gpu_core_clock_mhz, double hard_drive_capacity_gb, int psu_power_watts, int l3_size_mb, int ram_latency_ns){
         PurposeTypeDTO purpose = new PurposeTypeDTO();
+        GroupMembershipDTO ADMemberships = new GroupMembershipDTO();
+        GroupMembershipDTO VGMemberships = new GroupMembershipDTO();
+
+        //JFuzzyChart.get().chart(fis);
 
         fis.setVariable("cpu_clock_speed_ghz", cpu_clock_speed_ghz);
         fis.setVariable("ram_capacity_gb", ram_capacity_gb);
+        fis.setVariable("cpu_cores", cpu_cores);
+        fis.setVariable("cpu_threads", cpu_threads);
+        fis.setVariable("gpu_video_memory_gb", gpu_video_memory_gb);
+        fis.setVariable("gpu_core_clock_mhz", gpu_core_clock_mhz);
+        fis.setVariable("hard_drive_capacity_gb", hard_drive_capacity_gb);
+        fis.setVariable("psu_power_watts", psu_power_watts);
+        fis.setVariable("l3_size_mb", l3_size_mb);
+        fis.setVariable("ram_latency_ns", ram_latency_ns);
 
         fis.evaluate();
 
-        Map<String, Double> app_development = new HashMap<>();
-        app_development.put("bad", fis.getVariable("app_development").getMembership("bad"));
-        app_development.put("average", fis.getVariable("app_development").getMembership("average"));
-        app_development.put("excellent", fis.getVariable("app_development").getMembership("excellent"));
+        Variable ad = fis.getVariable("app_development");
+        JFuzzyChart.get().chart(ad, ad.getDefuzzifier(), true);
+        Variable vg = fis.getVariable("video_games");
+        JFuzzyChart.get().chart(vg, vg.getDefuzzifier(), true);
 
-        System.out.println("APP DEV");
-        purpose.setAppDevelopment(SetPurposeTypeValue(app_development));
+        ADMemberships.setBad(fis.getVariable("app_development").getMembership("bad"));
+        ADMemberships.setAverage(fis.getVariable("app_development").getMembership("average"));
+        ADMemberships.setExcellent(fis.getVariable("app_development").getMembership("excellent"));
+        purpose.setAppDevelopment(ADMemberships);
 
-        Map<String, Double> video_games = new HashMap<>();
-        video_games.put("bad", fis.getVariable("video_games").getMembership("bad"));
-        video_games.put("average", fis.getVariable("video_games").getMembership("average"));
-        video_games.put("excellent", fis.getVariable("video_games").getMembership("excellent"));
+        VGMemberships.setBad(fis.getVariable("video_games").getMembership("bad"));
+        VGMemberships.setAverage(fis.getVariable("video_games").getMembership("average"));
+        VGMemberships.setExcellent(fis.getVariable("video_games").getMembership("excellent"));
+        purpose.setVideoGames(VGMemberships);
 
-        System.out.println("VIDEO GAMES");
-        purpose.setVideoGames(SetPurposeTypeValue(video_games));
 
         return purpose;
-    }
-
-    private String SetPurposeTypeValue(Map<String, Double> map) {
-        Double highestValue = 0.0;
-        String keyForHighestValue = "";
-        highestValue = Collections.max(map.values());
-        for (Map.Entry<String, Double> entry : map.entrySet()) {
-            System.out.println("Key: " + entry.getKey() + ", value: " + entry.getValue());
-            if (entry.getValue().equals(highestValue)) {
-                keyForHighestValue = entry.getKey();
-                break;
-            }
-        }
-        return keyForHighestValue;
     }
 }

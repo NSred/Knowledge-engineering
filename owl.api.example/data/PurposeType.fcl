@@ -1,18 +1,77 @@
 FUNCTION_BLOCK purpose_type
 
 VAR_INPUT
-    //INPUT VARIABLES ARE ADDED HERE
     cpu_clock_speed_ghz : REAL;
     ram_capacity_gb : REAL;
+    cpu_cores : REAL;
+    cpu_threads : REAL;
+    gpu_video_memory_gb : REAL;
+    gpu_core_clock_mhz : REAL;
+    hard_drive_capacity_gb : REAL;
+    psu_power_watts : REAL;
+    l3_size_mb : REAL;
+    ram_latency_ns : REAL;
 END_VAR
 
 VAR_OUTPUT
-    //OUTPUT VARIABLES ARE ADDED HERE
     app_development : REAL;
     video_games : REAL;
 END_VAR
 
-//WITH FUZZIFY SECTION, SETS AND THEIR INTERVALS FOR INPUT VARIABLES ARE DEFINED
+FUZZIFY ram_latency_ns
+    TERM high := (40, 0) (50, 1) (100, 1);
+    TERM medium := (20, 0) (30, 1) (40, 0);
+    TERM low := (5, 0) (10, 1) (20, 1) (25, 0);
+END_FUZZIFY
+
+FUZZIFY l3_size_mb
+    TERM low := (2, 1) (4, 1) (6, 0);
+    TERM medium := (4, 0) (6, 1) (14, 1) (16, 0);
+    TERM high := (16, 0) (20, 1) (28, 1) (32, 0);
+    TERM ultra := (30, 0) (40, 1);
+END_FUZZIFY
+
+FUZZIFY psu_power_watts
+    TERM low := (200, 1) (300, 1) (400, 0);
+    TERM medium := (300, 0) (400, 1) (500, 1) (600, 0);
+    TERM high := (600, 0) (800, 1) (1000, 0);
+    TERM ultra := (1000, 0) (1500, 1);
+END_FUZZIFY
+
+FUZZIFY hard_drive_capacity_gb
+    TERM low := (120, 1) (250, 0);
+    TERM medium := (240, 0) (620, 1) (1000, 0);
+    TERM high := (1000, 0) (8000, 1) (15000, 0);
+    TERM ultra := (15000, 0) (18000, 1) (20000, 1);
+END_FUZZIFY
+
+FUZZIFY gpu_core_clock_mhz
+    TERM low := (100, 1) (200, 0);
+    TERM medium := (200, 0) (400, 1) (800, 1) (1000, 0);
+    TERM high := (1000, 0) (1250, 1) (1500, 0);
+    TERM ultra := (1500, 0) (2000, 1);
+END_FUZZIFY
+
+FUZZIFY gpu_video_memory_gb
+    TERM low := (1, 1) (2, 0);
+    TERM medium := (2, 0) (5, 1) (8, 0);
+    TERM high := (8, 0) (20, 1) (32, 0);
+    TERM ultra := (32, 0) (50, 1) (100, 1);
+END_FUZZIFY
+
+FUZZIFY cpu_threads
+    TERM low := (2, 1) (4, 1) (8, 0);
+    TERM medium := (8, 0) (20, 1) (32, 0);
+    TERM high := (32, 0) (80, 1) (128, 0);
+    TERM ultra := (128, 0) (150, 1) (200, 1);
+END_FUZZIFY
+
+FUZZIFY cpu_cores
+    TERM low := (2, 1) (4, 1) (8, 0);
+    TERM medium := (8, 0) (12, 1) (16, 0);
+    TERM high := (16, 0) (40, 1) (64, 0);
+    TERM ultra := (64, 0) (80, 1) (100, 1);
+END_FUZZIFY
 
 FUZZIFY cpu_clock_speed_ghz
     TERM low := (1, 1) (2, 1) (2.5, 0);
@@ -22,11 +81,10 @@ END_FUZZIFY
 
 FUZZIFY ram_capacity_gb
     TERM low := (1, 1) (4, 1) (8, 0) ;
-    TERM medium := (8, 0) (16, 1) (32, 0);
-    TERM high := (32, 0) (64, 1) (256, 1);
+    TERM medium := (8, 0) (20, 1) (32, 0);
+    TERM high := (32, 0) (80, 1) (128, 0);
+    TERM ultra := (128, 0) (150, 1) (256, 1);
 END_FUZZIFY
-
-//WITH DEFUZZIFY SECTION, SETS AND THEIR INTERVALS FOR OUTPUT VARIABLES ARE DEFINED
 
 DEFUZZIFY app_development
     TERM bad := (0, 0) (15, 1) (30, 0);
@@ -44,15 +102,10 @@ DEFUZZIFY video_games
     DEFAULT := 0;
 END_DEFUZZIFY
 
-RULEBLOCK No1
+RULEBLOCK app_development_rules
     AND : MIN;
     ACT : MIN;
     ACCU : MAX;
-
-    //AFTER 'WITH' COMES THE WEIGHT OF THE RULE IN THE INTERVAL FROM 0 TO 1
-    //DEFAULT VALUE IS 1
-    //CLOSER IT IS TO 1, THE MORE IMPORTANT THE RULE IS, THAT IS, IF MORE OF THEM ARE SATISFIED, THE PRIORITY OF THAT RULE IS HIGHER
-    //SIMPLE RULES HAVE LOWER WEIGHTS(~ 0.1) IN COMPARE TO COMPLEX(~ 1)
 
     //SIMPLE RULES
     RULE 1 : IF cpu_clock_speed_ghz IS low
@@ -60,27 +113,150 @@ RULEBLOCK No1
     RULE 2 : IF cpu_clock_speed_ghz IS medium OR cpu_clock_speed_ghz IS high
                 THEN app_development IS excellent WITH 0.1;
 
-    RULE 3 : IF cpu_clock_speed_ghz IS low
-                THEN video_games IS bad WITH 0.1;
-    RULE 4 : IF cpu_clock_speed_ghz IS medium
-                THEN video_games IS average WITH 0.1;
-    RULE 5 : IF cpu_clock_speed_ghz IS high
-                THEN video_games IS excellent WITH 0.1;
-
-    RULE 6 : IF ram_capacity_gb IS low
+    RULE 3 : IF ram_capacity_gb IS low
                 THEN app_development IS bad WITH 0.1;
-    RULE 7 : IF ram_capacity_gb IS medium OR ram_capacity_gb IS high
+    RULE 4 : IF ram_capacity_gb IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 5 : IF ram_capacity_gb IS high OR ram_capacity_gb IS ultra
                 THEN app_development IS excellent WITH 0.1;
 
-    RULE 8 : IF ram_capacity_gb IS low OR ram_capacity_gb IS medium
+    RULE 6 : IF cpu_cores IS low OR cpu_cores IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 7 : IF cpu_cores IS high OR cpu_cores IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 8 : IF cpu_threads IS low
+                THEN app_development IS bad WITH 0.1;
+    RULE 9 : IF cpu_threads IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 10 : IF cpu_threads IS high OR cpu_threads IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 15 : IF gpu_video_memory_gb IS low OR gpu_video_memory_gb IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 16 : IF gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 17 : IF gpu_core_clock_mhz IS low
+                THEN app_development IS bad WITH 0.1;
+    RULE 18 : IF gpu_core_clock_mhz IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 19 : IF gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 20 : IF hard_drive_capacity_gb IS low
+                THEN app_development IS bad WITH 0.1;
+    RULE 21 : IF hard_drive_capacity_gb IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 22 : IF hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 23 : IF psu_power_watts IS low
+                THEN app_development IS average WITH 0.1;
+    RULE 24 : IF psu_power_watts IS medium OR psu_power_watts IS high OR psu_power_watts IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 25 : IF l3_size_mb IS low OR l3_size_mb IS medium
+                THEN app_development IS average WITH 0.1;
+    RULE 26 : IF l3_size_mb IS high OR l3_size_mb IS ultra
+                THEN app_development IS excellent WITH 0.1;
+
+    RULE 27 : IF ram_latency_ns IS high
+                THEN app_development IS bad WITH 0.1;
+    RULE 28 : IF ram_latency_ns IS medium OR ram_latency_ns IS low
+                THEN app_development IS excellent WITH 0.1;
+
+    //COMPLEX RULES
+    RULE 11 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
+                THEN app_development IS bad;
+    RULE 12 : IF cpu_clock_speed_ghz IS low AND cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS ultra
+                THEN app_development IS excellent;
+    RULE 13 : IF cpu_cores IS high OR cpu_cores IS ultra AND ram_capacity_gb IS low
+                THEN app_development IS bad;
+    RULE 14 : IF cpu_threads IS high OR cpu_threads IS ultra AND ram_capacity_gb IS low
+                THEN app_development IS bad;
+END_RULEBLOCK
+
+RULEBLOCK video_games_rules
+    AND : MIN;
+    ACT : MIN;
+    ACCU : MAX;
+
+    //SIMPLE RULES
+    RULE 1 : IF cpu_clock_speed_ghz IS low
                 THEN video_games IS bad WITH 0.1;
-    RULE 9 : IF ram_capacity_gb IS high
+    RULE 2 : IF cpu_clock_speed_ghz IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 3 : IF cpu_clock_speed_ghz IS high
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 4 : IF ram_capacity_gb IS low OR ram_capacity_gb IS medium
+                THEN video_games IS bad WITH 0.1;
+    RULE 5 : IF ram_capacity_gb IS high OR ram_capacity_gb IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 6 : IF cpu_cores IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 7 : IF cpu_cores IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 8 : IF cpu_cores IS high OR cpu_cores IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 9 : IF cpu_threads IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 10 : IF cpu_threads IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 11 : IF cpu_threads IS high OR cpu_threads IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 18 : IF gpu_video_memory_gb IS low OR gpu_video_memory_gb IS medium
+                THEN video_games IS bad WITH 0.1;
+    RULE 19 : IF gpu_video_memory_gb IS high OR gpu_video_memory_gb IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 20 : IF gpu_core_clock_mhz IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 21 : IF gpu_core_clock_mhz IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 22 : IF gpu_core_clock_mhz IS high OR gpu_core_clock_mhz IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 23 : IF hard_drive_capacity_gb IS low OR hard_drive_capacity_gb IS medium
+                THEN video_games IS bad WITH 0.1;
+    RULE 24 : IF hard_drive_capacity_gb IS high OR hard_drive_capacity_gb IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 25 : IF psu_power_watts IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 26 : IF psu_power_watts IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 27 : IF psu_power_watts IS high OR psu_power_watts IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 28 : IF l3_size_mb IS low
+                THEN video_games IS bad WITH 0.1;
+    RULE 29 : IF l3_size_mb IS medium
+                THEN video_games IS average WITH 0.1;
+    RULE 30 : IF l3_size_mb IS high OR l3_size_mb IS ultra
+                THEN video_games IS excellent WITH 0.1;
+
+    RULE 31 : IF ram_latency_ns IS high
+                THEN video_games IS bad WITH 0.1;
+    RULE 32 : IF ram_latency_ns IS medium OR ram_latency_ns IS low
                 THEN video_games IS excellent WITH 0.1;
 
     //COMPLEX RULES
-    RULE 10 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
-                THEN app_development IS bad;
-    RULE 11 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
+    RULE 12 : IF cpu_clock_speed_ghz IS high OR cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS low
+                THEN video_games IS bad;
+    RULE 13 : IF cpu_clock_speed_ghz IS medium AND ram_capacity_gb IS ultra
+                THEN video_games IS excellent;
+    RULE 14 : IF cpu_cores IS high OR cpu_cores IS ultra AND ram_capacity_gb IS low
+                THEN video_games IS bad;
+    RULE 15 : IF cpu_cores IS low AND ram_capacity_gb IS high OR ram_capacity_gb IS ultra
+                THEN video_games IS bad;
+    RULE 16 : IF cpu_threads IS low AND ram_capacity_gb IS high OR ram_capacity_gb IS ultra
+                THEN video_games IS bad;
+    RULE 17 : IF cpu_threads IS high OR cpu_threads IS ultra AND ram_capacity_gb IS low
                 THEN video_games IS bad;
 END_RULEBLOCK
 

@@ -37,14 +37,14 @@
       <dependency>
           <groupId>net.sourceforge.jFuzzyLogic</groupId>
           <artifactId>jFuzzyLogic_core</artifactId>
-          <version>1.0.0</version>
+          <version>1.0.3</version>
           <scope>system</scope>
           <systemPath>${basedir}/lib/jFuzzyLogic_core.jar</systemPath>
       </dependency>
       <dependency>
           <groupId>net.sourceforge.jFuzzyLogic</groupId>
           <artifactId>jFuzzyLogic</artifactId>
-          <version>1.0.0</version>
+          <version>1.0.3</version>
           <scope>system</scope>
           <systemPath>${basedir}/lib/jFuzzyLogic.jar</systemPath>
       </dependency>

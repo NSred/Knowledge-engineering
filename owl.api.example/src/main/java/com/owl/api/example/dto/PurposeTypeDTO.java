@@ -4,10 +4,10 @@ import lombok.Data;
 
 @Data
 public class PurposeTypeDTO {
-    private String appDevelopment;
-    private String videoGames;
-    private String mining;
-    private String home;
-    private String business;
-    private String hosting;
+    private GroupMembershipDTO appDevelopment;
+    private GroupMembershipDTO videoGames;
+    private GroupMembershipDTO mining;
+    private GroupMembershipDTO home;
+    private GroupMembershipDTO business;
+    private GroupMembershipDTO hosting;
 }

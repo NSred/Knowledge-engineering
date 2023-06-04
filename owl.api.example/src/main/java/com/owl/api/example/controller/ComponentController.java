@@ -39,8 +39,17 @@ public class ComponentController {
     @GetMapping("/purpose")
     public ResponseEntity<PurposeTypeDTO> getPurposeType(
             @RequestParam(required = true) double cpu_clock_speed_ghz,
-            @RequestParam(required = true) int ram_capacity_gb) {
-        return new ResponseEntity<>(this.fuzzyLogicService.getPurposeType(cpu_clock_speed_ghz, ram_capacity_gb), HttpStatus.OK);
+            @RequestParam(required = true) int ram_capacity_gb,
+            @RequestParam(required = true) int cpu_cores,
+            @RequestParam(required = true) int cpu_threads,
+            @RequestParam(required = true) double gpu_video_memory_gb,
+            @RequestParam(required = true) int gpu_core_clock_mhz,
+            @RequestParam(required = true) double hard_drive_capacity_gb,
+            @RequestParam(required = true) int psu_power_watts,
+            @RequestParam(required = true) int l3_size_mb,
+            @RequestParam(required = true) int ram_latency_ns) {
+        return new ResponseEntity<>(this.fuzzyLogicService.getPurposeType(cpu_clock_speed_ghz, ram_capacity_gb, cpu_cores, cpu_threads, gpu_video_memory_gb,
+                gpu_core_clock_mhz, hard_drive_capacity_gb, psu_power_watts, l3_size_mb, ram_latency_ns), HttpStatus.OK);
     }
 
     private final RAMService ramService;
