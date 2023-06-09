@@ -57,10 +57,15 @@ public class ComponentController {
     }
 
     @GetMapping("/cause")
-    public ResponseEntity<List<CauseProbabilityDTO>> getProbabilityOfCause(
+    public ResponseEntity<?> getProbabilityOfCause(
             @RequestParam(required = true) String allCauses) {
         List<String> causes = Arrays.asList(allCauses.split(","));
-        return new ResponseEntity<>(this.bayesService.getAllProbabilities(causes), HttpStatus.OK);
+        try{
+            return new ResponseEntity<>(this.bayesService.getAllProbabilities(causes), HttpStatus.OK);
+        }
+        catch (Exception ex){
+            return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
+        }
     }
 
     private final RAMService ramService;

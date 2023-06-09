@@ -27,7 +27,7 @@ public class BayesService {
         BaseIO io = new NetIO();
         net = (ProbabilisticNetwork) io.load(new File("data/Bayes.net"));
     }
-    public List<CauseProbabilityDTO> getAllProbabilities(List<String> nodes) {
+    public List<CauseProbabilityDTO> getAllProbabilities(List<String> nodes) throws Exception {
         algorithm = new JunctionTreeAlgorithm();
         algorithm.setNetwork(net);
         algorithm.run();
@@ -35,6 +35,8 @@ public class BayesService {
         for(String node : nodes){
             ProbabilisticNode factNode = (ProbabilisticNode)net.getNode(node);
             int stateIndex = 0;
+            if(factNode == null)
+                throw new Exception("Unknown cause of malfunction!");
             factNode.addFinding(stateIndex);
         }
 
@@ -61,6 +63,9 @@ public class BayesService {
                 }
             }
         }
+
+        if(causeProbabilityDTOs.isEmpty())
+            throw new Exception("Unknown cause of malfunction!");
 
         causeProbabilityDTOs = causeProbabilityDTOs.stream().distinct().collect(Collectors.toList());
         for(String node : nodes) {

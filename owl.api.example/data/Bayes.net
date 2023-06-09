@@ -2,7 +2,7 @@ net
 {
      node_size = (0 0);
      name = "New BN";
-     tree = "(C1,C2,C3,C4,C5,C6,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C31,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C47,C48,C49,C50,C51)";
+     tree = "(C1,C2,C3,C4,C5,C6,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C31,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C47,C48,C49,C50,C51,C7,C8,C9,C30,C32)";
      UnBBayes_Color_Probabilistic_Description = "-256";
      UnBBayes_Color_Probabilistic_Explanation = "-16711936";
 }
@@ -24,14 +24,14 @@ node Insufficient_power_supply
 node Insufficient_or_old_thermal_paste
 {
      label = "C6";
-     position = (384 217);
+     position = (345 228);
      states = ("YES" "NO");
 }
 
 node Insufficient_cooling
 {
      label = "C7";
-     position = (108 273);
+     position = (109 235);
      states = ("YES" "NO");
 }
 
@@ -45,56 +45,56 @@ node Fans_malfunction
 node Dirty_computer_case
 {
      label = "C9";
-     position = (285 278);
+     position = (258 224);
      states = ("YES" "NO");
 }
 
 node Dirty_fans
 {
      label = "C10";
-     position = (24 244);
+     position = (24 225);
      states = ("YES" "NO");
 }
 
 node Blue_screen_of_death
 {
      label = "C11";
-     position = (12 379);
+     position = (54 370);
      states = ("YES" "NO");
 }
 
 node CPU_malfunction
 {
      label = "C12";
-     position = (323 397);
+     position = (296 393);
      states = ("YES" "NO");
 }
 
 node RAM_malfunction
 {
      label = "C13";
-     position = (291 534);
+     position = (276 530);
      states = ("YES" "NO");
 }
 
 node PSU_malfunction
 {
      label = "C14";
-     position = (257 667);
+     position = (238 598);
      states = ("YES" "NO");
 }
 
 node GPU_malfunction
 {
      label = "C15";
-     position = (301 455);
+     position = (280 464);
      states = ("YES" "NO");
 }
 
 node Program_not_responding
 {
      label = "C16";
-     position = (528 426);
+     position = (519 394);
      states = ("YES" "NO");
 }
 
@@ -115,133 +115,133 @@ node Insufficient_RAM
 node Hard_drive_malfunction
 {
      label = "C19";
-     position = (515 500);
+     position = (472 461);
      states = ("YES" "NO");
 }
 
 node Hard_drive_corrupted
 {
      label = "C21";
-     position = (806 524);
+     position = (634 500);
      states = ("YES" "NO");
 }
 
 node Hard_drive_damaged
 {
      label = "C22";
-     position = (819 475);
+     position = (595 451);
      states = ("YES" "NO");
 }
 
 node Hard_drive_overstuffed
 {
      label = "C23";
-     position = (733 426);
+     position = (631 406);
      states = ("YES" "NO");
 }
 
 node Strange_noises
 {
      label = "C24";
-     position = (481 276);
+     position = (452 262);
      states = ("YES" "NO");
 }
 
 node Self_restarting
 {
      label = "C25";
-     position = (31 444);
+     position = (27 440);
      states = ("YES" "NO");
 }
 
 node Motherboard_malfunction
 {
      label = "C27";
-     position = (31 600);
+     position = (20 583);
      states = ("YES" "NO");
 }
 
 node Not_booting
 {
      label = "C28";
-     position = (34 516);
+     position = (65 528);
      states = ("YES" "NO");
 }
 
 node Incorrectly_installed_RAM
 {
      label = "C29";
-     position = (270 597);
+     position = (356 594);
      states = ("YES" "NO");
 }
 
 node Frozen_screen
 {
      label = "C30";
-     position = (655 237);
+     position = (556 258);
      states = ("YES" "NO");
 }
 
 node No_display
 {
      label = "C32";
-     position = (64 672);
+     position = (114 612);
      states = ("YES" "NO");
 }
 
 node Not_starting
 {
      label = "C33";
-     position = (174 723);
+     position = (180 650);
      states = ("YES" "NO");
 }
 
 node Laptop_battery_malfunction
 {
      label = "C34";
-     position = (451 770);
+     position = (442 701);
      states = ("YES" "NO");
 }
 
 node Weak_motherboard_battery
 {
      label = "C35";
-     position = (402 703);
+     position = (357 649);
      states = ("YES" "NO");
 }
 
 node Laptop_battery_draining
 {
      label = "C36";
-     position = (697 684);
+     position = (566 599);
      states = ("YES" "NO");
 }
 
 node GPU_overuse
 {
      label = "C38";
-     position = (464 564);
+     position = (377 546);
      states = ("YES" "NO");
 }
 
 node Slow
 {
      label = "C39";
-     position = (789 275);
+     position = (663 272);
      states = ("YES" "NO");
 }
 
 node Hard_drive_fragmented
 {
      label = "C40";
-     position = (687 570);
+     position = (583 541);
      states = ("YES" "NO");
 }
 
 node System_clock_constantly_reseting
 {
      label = "C41";
-     position = (432 627);
+     position = (473 610);
      states = ("YES" "NO");
 }
 
