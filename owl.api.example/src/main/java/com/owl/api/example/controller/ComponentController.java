@@ -58,12 +58,12 @@ public class ComponentController {
 
     @GetMapping("/cause")
     public ResponseEntity<?> getProbabilityOfCause(
-            @RequestParam(required = true) String allCauses) {
-        /*CAUSES(Holja):Overheating,Blue_screen_of_death,Self_restarting,Not_booting,Strange_noises,Frozen_screen,Slow,Program_not_responding,No_display,
+            @RequestParam(required = true) String allSymptoms) {
+        /*SYMPTOMS(Holja):Overheating,Blue_screen_of_death,Self_restarting,Not_booting,Strange_noises,Frozen_screen,Slow,Program_not_responding,No_display,
         * Not_starting,System_clock_constantly_resetting,Laptop_battery_draining*/
-        List<String> causes = Arrays.asList(allCauses.split(","));
+        List<String> symptoms = Arrays.asList(allSymptoms.split(","));
         try{
-            return new ResponseEntity<>(this.bayesService.getAllProbabilities(causes), HttpStatus.OK);
+            return new ResponseEntity<>(this.bayesService.getAllProbabilities(symptoms), HttpStatus.OK);
         }
         catch (Exception ex){
             return new ResponseEntity<>(ex.getMessage(), HttpStatus.BAD_REQUEST);
