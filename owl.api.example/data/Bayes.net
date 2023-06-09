@@ -238,7 +238,7 @@ node Hard_drive_fragmented
      states = ("YES" "NO");
 }
 
-node System_clock_constantly_reseting
+node System_clock_constantly_resetting
 {
      label = "C41";
      position = (473 610);
@@ -690,7 +690,7 @@ potential (Hard_drive_fragmented)
  data = ( 0.75 0.25 );
 }
 
-potential (System_clock_constantly_reseting | Weak_motherboard_battery PSU_malfunction)
+potential (System_clock_constantly_resetting | Weak_motherboard_battery PSU_malfunction)
 {
  data = ((( 0.9 0.1 )
 ( 0.8 0.2 ))
