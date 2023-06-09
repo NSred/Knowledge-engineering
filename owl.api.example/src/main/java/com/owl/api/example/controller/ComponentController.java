@@ -1,5 +1,6 @@
 package com.owl.api.example.controller;
 
+import com.owl.api.example.dto.CauseProbabilityDTO;
 import com.owl.api.example.dto.PurposeTypeDTO;
 import com.owl.api.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Arrays;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/component")
@@ -52,21 +56,30 @@ public class ComponentController {
                 gpu_core_clock_mhz, hard_drive_capacity_gb, psu_power_watts, l3_size_mb, ram_latency_ns), HttpStatus.OK);
     }
 
+    @GetMapping("/cause")
+    public ResponseEntity<List<CauseProbabilityDTO>> getProbabilityOfCause(
+            @RequestParam(required = true) String allCauses) {
+        List<String> causes = Arrays.asList(allCauses.split(","));
+        return new ResponseEntity<>(this.bayesService.getAllProbabilities(causes), HttpStatus.OK);
+    }
+
     private final RAMService ramService;
     private final PSUService psuService;
     private final CPUService cpuService;
     private final GPUService gpuService;
     private final MotherboardService motherboardService;
     private final FuzzyLogicService fuzzyLogicService;
+    private final BayesService bayesService;
 
     @Autowired
-    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService, FuzzyLogicService fuzzyLogicService) {
+    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService, FuzzyLogicService fuzzyLogicService, BayesService bayesService) {
         this.ramService = ramService;
         this.psuService = psuService;
         this.cpuService = cpuService;
         this.gpuService = gpuService;
         this.motherboardService = motherboardService;
         this.fuzzyLogicService = fuzzyLogicService;
+        this.bayesService = bayesService;
     }
 
 }

@@ -1,0 +1,700 @@
+net
+{
+     node_size = (0 0);
+     name = "New BN";
+     tree = "(C1,C2,C3,C4,C5,C6,C10,C11,C12,C13,C14,C15,C16,C17,C18,C19,C20,C21,C22,C23,C24,C25,C26,C27,C28,C29,C31,C33,C34,C35,C36,C37,C38,C39,C40,C41,C42,C43,C44,C45,C47,C48,C49,C50,C51)";
+     UnBBayes_Color_Probabilistic_Description = "-256";
+     UnBBayes_Color_Probabilistic_Explanation = "-16711936";
+}
+
+node Overheating
+{
+     label = "C1";
+     position = (206 368);
+     states = ("YES" "NO");
+}
+
+node Insufficient_power_supply
+{
+     label = "C4";
+     position = (188 232);
+     states = ("YES" "NO");
+}
+
+node Insufficient_or_old_thermal_paste
+{
+     label = "C6";
+     position = (384 217);
+     states = ("YES" "NO");
+}
+
+node Insufficient_cooling
+{
+     label = "C7";
+     position = (108 273);
+     states = ("YES" "NO");
+}
+
+node Fans_malfunction
+{
+     label = "C8";
+     position = (20 310);
+     states = ("YES" "NO");
+}
+
+node Dirty_computer_case
+{
+     label = "C9";
+     position = (285 278);
+     states = ("YES" "NO");
+}
+
+node Dirty_fans
+{
+     label = "C10";
+     position = (24 244);
+     states = ("YES" "NO");
+}
+
+node Blue_screen_of_death
+{
+     label = "C11";
+     position = (12 379);
+     states = ("YES" "NO");
+}
+
+node CPU_malfunction
+{
+     label = "C12";
+     position = (323 397);
+     states = ("YES" "NO");
+}
+
+node RAM_malfunction
+{
+     label = "C13";
+     position = (291 534);
+     states = ("YES" "NO");
+}
+
+node PSU_malfunction
+{
+     label = "C14";
+     position = (257 667);
+     states = ("YES" "NO");
+}
+
+node GPU_malfunction
+{
+     label = "C15";
+     position = (301 455);
+     states = ("YES" "NO");
+}
+
+node Program_not_responding
+{
+     label = "C16";
+     position = (528 426);
+     states = ("YES" "NO");
+}
+
+node CPU_overuse
+{
+     label = "C17";
+     position = (368 334);
+     states = ("YES" "NO");
+}
+
+node Insufficient_RAM
+{
+     label = "C18";
+     position = (624 343);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_malfunction
+{
+     label = "C19";
+     position = (515 500);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_corrupted
+{
+     label = "C21";
+     position = (806 524);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_damaged
+{
+     label = "C22";
+     position = (819 475);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_overstuffed
+{
+     label = "C23";
+     position = (733 426);
+     states = ("YES" "NO");
+}
+
+node Strange_noises
+{
+     label = "C24";
+     position = (481 276);
+     states = ("YES" "NO");
+}
+
+node Self_restarting
+{
+     label = "C25";
+     position = (31 444);
+     states = ("YES" "NO");
+}
+
+node Motherboard_malfunction
+{
+     label = "C27";
+     position = (31 600);
+     states = ("YES" "NO");
+}
+
+node Not_booting
+{
+     label = "C28";
+     position = (34 516);
+     states = ("YES" "NO");
+}
+
+node Incorrectly_installed_RAM
+{
+     label = "C29";
+     position = (270 597);
+     states = ("YES" "NO");
+}
+
+node Frozen_screen
+{
+     label = "C30";
+     position = (655 237);
+     states = ("YES" "NO");
+}
+
+node No_display
+{
+     label = "C32";
+     position = (64 672);
+     states = ("YES" "NO");
+}
+
+node Not_starting
+{
+     label = "C33";
+     position = (174 723);
+     states = ("YES" "NO");
+}
+
+node Laptop_battery_malfunction
+{
+     label = "C34";
+     position = (451 770);
+     states = ("YES" "NO");
+}
+
+node Weak_motherboard_battery
+{
+     label = "C35";
+     position = (402 703);
+     states = ("YES" "NO");
+}
+
+node Laptop_battery_draining
+{
+     label = "C36";
+     position = (697 684);
+     states = ("YES" "NO");
+}
+
+node GPU_overuse
+{
+     label = "C38";
+     position = (464 564);
+     states = ("YES" "NO");
+}
+
+node Slow
+{
+     label = "C39";
+     position = (789 275);
+     states = ("YES" "NO");
+}
+
+node Hard_drive_fragmented
+{
+     label = "C40";
+     position = (687 570);
+     states = ("YES" "NO");
+}
+
+node System_clock_constantly_reseting
+{
+     label = "C41";
+     position = (432 627);
+     states = ("YES" "NO");
+}
+
+potential (Overheating | Dirty_computer_case Insufficient_or_old_thermal_paste Insufficient_power_supply Insufficient_cooling Fans_malfunction)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (Insufficient_power_supply)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Insufficient_or_old_thermal_paste)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Insufficient_cooling)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Fans_malfunction | Dirty_fans)
+{
+ data = (( 0.9 0.1 )
+( 0.4 0.6 ));
+}
+
+potential (Dirty_computer_case)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Dirty_fans)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Blue_screen_of_death | PSU_malfunction RAM_malfunction GPU_malfunction CPU_malfunction Overheating)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (CPU_malfunction | CPU_overuse)
+{
+ data = (( 0.7 0.3 )
+( 0.1 0.9 ));
+}
+
+potential (RAM_malfunction | Incorrectly_installed_RAM)
+{
+ data = (( 0.95 0.05 )
+( 0.5 0.5 ));
+}
+
+potential (PSU_malfunction)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (GPU_malfunction | GPU_overuse)
+{
+ data = (( 0.7 0.3 )
+( 0.15 0.85 ));
+}
+
+potential (Program_not_responding | Hard_drive_overstuffed Hard_drive_malfunction GPU_malfunction Insufficient_RAM CPU_malfunction)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (CPU_overuse)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (Insufficient_RAM)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Hard_drive_malfunction | Hard_drive_fragmented Hard_drive_damaged Hard_drive_corrupted)
+{
+ data = (((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.25 0.75 )))
+((( 0.6 0.4 )
+( 0.25 0.75 ))
+(( 0.25 0.75 )
+( 0.05 0.95 ))));
+}
+
+potential (Hard_drive_corrupted)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Hard_drive_damaged)
+{
+ data = ( 0.25 0.75 );
+}
+
+potential (Hard_drive_overstuffed)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Strange_noises | PSU_malfunction Hard_drive_malfunction Fans_malfunction)
+{
+ data = (((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.7 0.3 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.4 0.6 )
+( 0.15 0.85 ))));
+}
+
+potential (Self_restarting | Motherboard_malfunction RAM_malfunction Hard_drive_malfunction PSU_malfunction Overheating)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (Motherboard_malfunction)
+{
+ data = ( 0.1 0.9 );
+}
+
+potential (Not_booting | Motherboard_malfunction CPU_malfunction GPU_malfunction RAM_malfunction Insufficient_power_supply)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (Incorrectly_installed_RAM)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Frozen_screen | Hard_drive_overstuffed Overheating RAM_malfunction GPU_malfunction Insufficient_RAM)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (No_display | Insufficient_power_supply RAM_malfunction GPU_malfunction)
+{
+ data = (((( 0.9 0.1 )
+( 0.75 0.25 ))
+(( 0.75 0.25 )
+( 0.45 0.55 )))
+((( 0.75 0.25 )
+( 0.45 0.55 ))
+(( 0.45 0.55 )
+( 0.15 0.85 ))));
+}
+
+potential (Not_starting | Weak_motherboard_battery Laptop_battery_malfunction Motherboard_malfunction Insufficient_power_supply PSU_malfunction)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (Laptop_battery_malfunction)
+{
+ data = ( 0.25 0.75 );
+}
+
+potential (Weak_motherboard_battery)
+{
+ data = ( 0.15 0.85 );
+}
+
+potential (Laptop_battery_draining | GPU_malfunction CPU_malfunction Laptop_battery_malfunction)
+{
+ data = (((( 0.9 0.1 )
+( 0.75 0.25 ))
+(( 0.75 0.25 )
+( 0.45 0.55 )))
+((( 0.75 0.25 )
+( 0.45 0.55 ))
+(( 0.45 0.55 )
+( 0.15 0.85 ))));
+}
+
+potential (GPU_overuse)
+{
+ data = ( 0.35 0.65 );
+}
+
+potential (Slow | Hard_drive_malfunction Overheating CPU_malfunction Hard_drive_overstuffed Insufficient_RAM)
+{
+ data = (((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))))
+((((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 ))))
+(((( 0.8 0.2 )
+( 0.6 0.4 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.6 0.4 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.9 0.1 ))))));
+}
+
+potential (Hard_drive_fragmented)
+{
+ data = ( 0.75 0.25 );
+}
+
+potential (System_clock_constantly_reseting | Weak_motherboard_battery PSU_malfunction)
+{
+ data = ((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.55 0.45 )
+( 0.1 0.9 )));
+}
+
