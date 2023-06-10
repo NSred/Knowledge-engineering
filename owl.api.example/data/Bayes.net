@@ -59,7 +59,7 @@ node Dirty_fans
 node Blue_screen_of_death
 {
      label = "C11";
-     position = (54 370);
+     position = (164 447);
      states = ("YES" "NO");
 }
 
@@ -122,7 +122,7 @@ node Hard_drive_malfunction
 node Hard_drive_corrupted
 {
      label = "C21";
-     position = (634 500);
+     position = (634 501);
      states = ("YES" "NO");
 }
 
@@ -242,6 +242,216 @@ node System_clock_constantly_resetting
 {
      label = "C41";
      position = (473 610);
+     states = ("YES" "NO");
+}
+
+node Data_corruption
+{
+     label = "C1";
+     position = (1023 400);
+     states = ("YES" "NO");
+}
+
+node Virus
+{
+     label = "C2";
+     position = (1003 309);
+     states = ("YES" "NO");
+}
+
+node High_cpu_usage
+{
+     label = "C3";
+     position = (1053 186);
+     states = ("YES" "NO");
+}
+
+node Low_performance
+{
+     label = "C4";
+     position = (874 313);
+     states = ("YES" "NO");
+}
+
+node Operating_system_crash
+{
+     label = "C6";
+     position = (1124 425);
+     states = ("YES" "NO");
+}
+
+node Driver_incompability
+{
+     label = "C7";
+     position = (1143 335);
+     states = ("YES" "NO");
+}
+
+node Network_issues
+{
+     label = "C8";
+     position = (907 218);
+     states = ("YES" "NO");
+}
+
+node Memory_leaking
+{
+     label = "C9";
+     position = (1243 282);
+     states = ("YES" "NO");
+}
+
+node Browser_hijacking
+{
+     label = "C10";
+     position = (1407 284);
+     states = ("YES" "NO");
+}
+
+node Unauthorized_access
+{
+     label = "C11";
+     position = (1287 231);
+     states = ("YES" "NO");
+}
+
+node System_reboots_unexpectedly
+{
+     label = "C12";
+     position = (1206 388);
+     states = ("YES" "NO");
+}
+
+node Application_freezing
+{
+     label = "C13";
+     position = (1123 257);
+     states = ("YES" "NO");
+}
+
+node Malware_infection
+{
+     label = "C14";
+     position = (890 393);
+     states = ("YES" "NO");
+}
+
+node Overclocking
+{
+     label = "C15";
+     position = (1315 302);
+     states = ("YES" "NO");
+}
+
+node Display_driver_issue
+{
+     label = "C16";
+     position = (1231 452);
+     states = ("YES" "NO");
+}
+
+node Screen_flickering
+{
+     label = "C17";
+     position = (1302 370);
+     states = ("YES" "NO");
+}
+
+node Firewall_misconfiguration
+{
+     label = "C18";
+     position = (1100 110);
+     states = ("YES" "NO");
+}
+
+node Unresponsive_user_interface
+{
+     label = "C19";
+     position = (1150 192);
+     states = ("YES" "NO");
+}
+
+node Application_crash
+{
+     label = "C20";
+     position = (1078 480);
+     states = ("YES" "NO");
+}
+
+node Slow_startup
+{
+     label = "C21";
+     position = (954 437);
+     states = ("YES" "NO");
+}
+
+node Defective_monitor_cable
+{
+     label = "C22";
+     position = (1402 364);
+     states = ("YES" "NO");
+}
+
+node Wrong_refresh_rate
+{
+     label = "C23";
+     position = (1329 449);
+     states = ("YES" "NO");
+}
+
+node Missing_dll_files
+{
+     label = "C24";
+     position = (1180 496);
+     states = ("YES" "NO");
+}
+
+node Third_party_software_conflicts
+{
+     label = "C25";
+     position = (1329 171);
+     states = ("YES" "NO");
+}
+
+node Defective_modem
+{
+     label = "C26";
+     position = (878 138);
+     states = ("YES" "NO");
+}
+
+node Background_applications
+{
+     label = "C27";
+     position = (878 511);
+     states = ("YES" "NO");
+}
+
+node BIOS_misconfiguration
+{
+     label = "C28";
+     position = (1015 518);
+     states = ("YES" "NO");
+}
+
+node DoS_attacks
+{
+     label = "C29";
+     position = (987 116);
+     states = ("YES" "NO");
+}
+
+node Incorrect_IP_address
+{
+     label = "C30";
+     position = (819 184);
+     states = ("YES" "NO");
+}
+
+node Insufficient_graphic_resources
+{
+     label = "C31";
+     position = (1243 140);
      states = ("YES" "NO");
 }
 
@@ -429,9 +639,10 @@ potential (Hard_drive_malfunction | Hard_drive_fragmented Hard_drive_damaged Har
 ( 0.05 0.95 ))));
 }
 
-potential (Hard_drive_corrupted)
+potential (Hard_drive_corrupted | Malware_infection)
 {
- data = ( 0.4 0.6 );
+ data = (( 0.75 0.25 )
+( 0.2 0.8 ));
 }
 
 potential (Hard_drive_damaged)
@@ -696,5 +907,218 @@ potential (System_clock_constantly_resetting | Weak_motherboard_battery PSU_malf
 ( 0.8 0.2 ))
 (( 0.55 0.45 )
 ( 0.1 0.9 )));
+}
+
+potential (Data_corruption | Virus)
+{
+ data = (( 0.6 0.4 )
+( 0.3 0.7 ));
+}
+
+potential (Virus | Malware_infection)
+{
+ data = (( 0.85 0.15 )
+( 0.5 0.5 ));
+}
+
+potential (High_cpu_usage | Virus)
+{
+ data = (( 0.6 0.4 )
+( 0.3 0.7 ));
+}
+
+potential (Low_performance | Network_issues High_cpu_usage Virus)
+{
+ data = (((( 0.9 0.1 )
+( 0.75 0.25 ))
+(( 0.65 0.35 )
+( 0.3 0.7 )))
+((( 0.7 0.3 )
+( 0.5 0.5 ))
+(( 0.3 0.7 )
+( 0.1 0.9 ))));
+}
+
+potential (Operating_system_crash | High_cpu_usage Driver_incompability Data_corruption)
+{
+ data = (((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.65 0.35 )
+( 0.15 0.85 )))
+((( 0.7 0.3 )
+( 0.65 0.35 ))
+(( 0.45 0.55 )
+( 0.1 0.9 ))));
+}
+
+potential (Driver_incompability)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Network_issues | Incorrect_IP_address Firewall_misconfiguration DoS_attacks Defective_modem)
+{
+ data = ((((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )))
+((( 0.9 0.1 )
+( 0.6 0.4 ))
+(( 0.5 0.5 )
+( 0.35 0.65 ))))
+(((( 0.99 0.01 )
+( 0.8 0.2 ))
+(( 0.5 0.5 )
+( 0.35 0.65 )))
+((( 0.4 0.6 )
+( 0.25 0.75 ))
+(( 0.15 0.85 )
+( 0.1 0.9 )))));
+}
+
+potential (Memory_leaking)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Browser_hijacking)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Unauthorized_access | Firewall_misconfiguration Malware_infection Browser_hijacking)
+{
+ data = (((( 0.85 0.15 )
+( 0.65 0.35 ))
+(( 0.4 0.6 )
+( 0.25 0.75 )))
+((( 0.75 0.25 )
+( 0.55 0.45 ))
+(( 0.3 0.7 )
+( 0.1 0.9 ))));
+}
+
+potential (System_reboots_unexpectedly | Overclocking Driver_incompability)
+{
+ data = ((( 0.8 0.2 )
+( 0.5 0.5 ))
+(( 0.65 0.35 )
+( 0.2 0.8 )));
+}
+
+potential (Application_freezing | Third_party_software_conflicts Memory_leaking)
+{
+ data = ((( 0.85 0.15 )
+( 0.65 0.35 ))
+(( 0.7 0.3 )
+( 0.1 0.9 )));
+}
+
+potential (Malware_infection)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Overclocking)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Display_driver_issue)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Screen_flickering | Defective_monitor_cable Wrong_refresh_rate Display_driver_issue)
+{
+ data = (((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.3 0.7 )
+( 0.25 0.75 )))
+((( 0.7 0.3 )
+( 0.65 0.35 ))
+(( 0.4 0.6 )
+( 0.1 0.9 ))));
+}
+
+potential (Firewall_misconfiguration)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Unresponsive_user_interface | Insufficient_graphic_resources High_cpu_usage)
+{
+ data = ((( 0.85 0.15 )
+( 0.6 0.4 ))
+(( 0.55 0.45 )
+( 0.2 0.8 )));
+}
+
+potential (Application_crash | Missing_dll_files)
+{
+ data = (( 0.75 0.25 )
+( 0.4 0.6 ));
+}
+
+potential (Slow_startup | BIOS_misconfiguration Background_applications Virus)
+{
+ data = (((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.6 0.4 )
+( 0.45 0.54999995 )))
+((( 0.65 0.35 )
+( 0.3 0.7 ))
+(( 0.35 0.65 )
+( 0.25 0.75 ))));
+}
+
+potential (Defective_monitor_cable)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Wrong_refresh_rate)
+{
+ data = ( 0.35 0.65 );
+}
+
+potential (Missing_dll_files)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Third_party_software_conflicts)
+{
+ data = ( 0.5 0.5 );
+}
+
+potential (Defective_modem)
+{
+ data = ( 0.25 0.75 );
+}
+
+potential (Background_applications)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (BIOS_misconfiguration)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (DoS_attacks)
+{
+ data = ( 0.3 0.7 );
+}
+
+potential (Incorrect_IP_address)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Insufficient_graphic_resources)
+{
+ data = ( 0.35 0.65 );
 }
 

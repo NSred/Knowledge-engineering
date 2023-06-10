@@ -61,6 +61,7 @@ public class ComponentController {
             @RequestParam(required = true) String allSymptoms) {
         /*SYMPTOMS(Holja):Overheating,Blue_screen_of_death,Self_restarting,Not_booting,Strange_noises,Frozen_screen,Slow,Program_not_responding,No_display,
         * Not_starting,System_clock_constantly_resetting,Laptop_battery_draining*/
+        /*SYMPTOMS(Shone):Network_issues,Low_performance,Virus,High_cpu_usage,Unresponsive_user_interface,Unauthorized_access,Application_freezing,System_reboots_unexpectedly,Screen_flickering,Data_corruption,Operating_system_crash,Slow_startup,Application_crash*/
         List<String> symptoms = Arrays.asList(allSymptoms.split(","));
         try{
             return new ResponseEntity<>(this.bayesService.getAllProbabilities(symptoms), HttpStatus.OK);
