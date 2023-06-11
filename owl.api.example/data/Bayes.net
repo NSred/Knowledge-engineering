@@ -504,9 +504,9 @@ node Cursor_movement_issues
      states = ("YES" "NO");
 }
 
-node Demaged_screen
+node Damaged_screen
 {
-     label = "Demaged_screen";
+     label = "Damaged_screen";
      position = (1201 743);
      states = ("YES" "NO");
 }
@@ -595,9 +595,9 @@ node Damage_to_scanner_glass
      states = ("YES" "NO");
 }
 
-node Insufficient_power_supply
+node Insufficient_PSU_power
 {
-     label = "Insufficient_power_supply";
+     label = "Insufficient_PSU_power";
      position = (1003 1043);
      states = ("YES" "NO");
 }
@@ -1246,7 +1246,7 @@ potential (Display_driver_issue)
  data = ( 0.4 0.6 );
 }
 
-potential (Screen_flickering | Demaged_screen Defective_monitor_cable Wrong_refresh_rate Display_driver_issue)
+potential (Screen_flickering | Damaged_screen Defective_monitor_cable Wrong_refresh_rate Display_driver_issue)
 {
  data = ((((( 0.9 0.1 )
 ( 0.8 0.2 ))
@@ -1396,12 +1396,12 @@ potential (Cursor_movement_issues | Battery_or_power_issues Dirty_mouse_sensor L
 ( 0.1 0.9 ))));
 }
 
-potential (Demaged_screen)
+potential (Damaged_screen)
 {
  data = ( 0.4 0.6 );
 }
 
-potential (No_display_on_monitor | Defective_monitor_cable Demaged_screen GPU_malfunction)
+potential (No_display_on_monitor | Defective_monitor_cable Damaged_screen GPU_malfunction)
 {
  data = (((( 0.99 0.01 )
 ( 0.6 0.4 ))
@@ -1483,7 +1483,7 @@ potential (Webcam_no_video_feed | Compatibility_issues Privacy_settings Physical
 ( 0.01 0.99 )))));
 }
 
-potential (Scanner_not_responding | Loose_connection Insufficient_power_supply Damage_to_scanner_glass)
+potential (Scanner_not_responding | Loose_connection Insufficient_PSU_power Damage_to_scanner_glass)
 {
  data = (((( 0.9 0.1 )
 ( 0.8 0.2 ))
@@ -1495,7 +1495,7 @@ potential (Scanner_not_responding | Loose_connection Insufficient_power_supply D
 ( 0.1 0.9 ))));
 }
 
-potential (Distorted_scans | Damage_to_scanner_glass Insufficient_power_supply)
+potential (Distorted_scans | Damage_to_scanner_glass Insufficient_PSU_power)
 {
  data = ((( 0.9 0.1 )
 ( 0.8 0.2 ))
@@ -1508,7 +1508,7 @@ potential (Damage_to_scanner_glass)
  data = ( 0.6 0.4 );
 }
 
-potential (Insufficient_power_supply)
+potential (Insufficient_PSU_power)
 {
  data = ( 0.6 0.4 );
 }
