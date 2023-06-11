@@ -60,11 +60,14 @@ public class ComponentController {
     public ResponseEntity<?> getProbabilityOfCause(
             @RequestParam(required = true) String allSymptoms) {
         /*SYMPTOMS(Holja):Overheating,Blue_screen_of_death,Self_restarting,Not_booting,Strange_noises,Frozen_screen,Slow,Program_not_responding,No_display,
-        * Not_starting,System_clock_constantly_resetting,Laptop_battery_draining*/
-        /*SYMPTOMS(Shone):Network_issues,Low_performance,Virus,High_cpu_usage,Unresponsive_user_interface,Unauthorized_access,Application_freezing,System_reboots_unexpectedly,Screen_flickering,Data_corruption,Operating_system_crash,Slow_startup,Application_crash*/
-        /*SYMPTOMS(Kata):No_display_on_monitor,Speakers_no_sound_output,Headphones_no_sound_output,Cursor_movement_issues,
-                         Keyboard_keys_unresponsive,Disc_not_recognized,External_optical_drive_tray_not_opening,Webcam_no_video_feed,
-                         Scanner_not_responding,Distorted_scans,Printer_not_printing,Printer_paper_jams*/
+        Not_starting,System_clock_constantly_resetting,Laptop_battery_draining*/
+        
+        /*SYMPTOMS(Shone):Network_issues,Low_performance,Virus,High_cpu_usage,Unresponsive_user_interface,Unauthorized_access,Application_freezing,
+        System_reboots_unexpectedly,Screen_flickering,Data_corruption,Operating_system_crash,Slow_startup,Application_crash*/
+
+        /*SYMPTOMS(Kata):No_display_on_monitor,Speakers_no_sound_output,Headphones_no_sound_output,Cursor_movement_issues,Keyboard_keys_unresponsive,
+        Disc_not_recognized,External_optical_drive_tray_not_opening,Webcam_no_video_feed,Scanner_not_responding,Distorted_scans,Printer_not_printing,
+        Printer_paper_jams*/
         List<String> symptoms = Arrays.asList(allSymptoms.split(","));
         try{
             return new ResponseEntity<>(this.bayesService.getAllProbabilities(symptoms), HttpStatus.OK);

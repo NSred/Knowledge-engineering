@@ -28,7 +28,7 @@ public class FuzzyLogicService {
         GroupMembershipDTO HMMemberships = new GroupMembershipDTO();
         GroupMembershipDTO BMemberships = new GroupMembershipDTO();
 
-        JFuzzyChart.get().chart(fis);
+        //JFuzzyChart.get().chart(fis);
 
         fis.setVariable("cpu_clock_speed_ghz", cpu_clock_speed_ghz);
         fis.setVariable("ram_capacity_gb", ram_capacity_gb);
