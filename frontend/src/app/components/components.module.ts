@@ -12,6 +12,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeComponentComponent } from './upgrade-component/upgrade-component.component';
 import { PurposeEstimationComponent } from './purpose-estimation/purpose-estimation.component';
+import { MalfunctionProbabilityComponent } from './malfunction-probability/malfunction-probability.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PurposeEstimationComponent } from './purpose-estimation/purpose-estimat
     GpuPageComponent,
     UpgradeComponentComponent,
     PurposeEstimationComponent,
+    MalfunctionProbabilityComponent,
   ],
   imports: [
     CommonModule,

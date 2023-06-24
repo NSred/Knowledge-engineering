@@ -32,4 +32,8 @@ export class NavbarComponent implements OnInit{
   goToPurposeEstimationPage() : void {
     this.router.navigateByUrl('purpose-estimation')
   }
+
+  goToMalfunctionProbability() : void {
+    this.router.navigateByUrl('malfunction-probability')
+  }
 }

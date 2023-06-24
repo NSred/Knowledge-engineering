@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Calculate malfunction probability</h2>
+    <form class="form">
+      <div class="input">
+        <div>
+            <mat-form-field>
+                <mat-label>Select you malfunctions:</mat-label>
+                <mat-select [formControl]="options" multiple>
+                    <mat-option *ngFor="let option of allOptions" [value]="option">{{option}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+      </div>
+      <button class="sign-in-button" type="submit" (click)="calculate()">Calculate</button>
+    </form>
+  </div>
+
+  <h2 class="results-headline">Malfunction probabilities: </h2>
+  <div class="cards-container" *ngIf="submitted === true">
+    <div class="card" *ngFor="let r of result">
+      <div class="table">
+        <h2 class="results-headline"><b>{{r.cause}}</b></h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Probability: </th>
+              <td>{{r.probability}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

@@ -45,4 +45,8 @@ export class ComponentService {
     .set('gpu_core_clock_mhz', gpu_core_clock_mhz).set('hard_drive_capacity_gb', hard_drive_capacity_gb).set('psu_power_watts', psu_power_watts)
     .set('l3_size_mb', l3_size_mb).set('ram_latency_ns', ram_latency_ns)})
   }
+
+  getProbabilityOfCause(allSymptoms : string) : Observable<any>{
+    return this.http.get<any>(this.apiHost + 'component/cause', {params : new HttpParams().set('allSymptoms', allSymptoms)})
+  }
 }
