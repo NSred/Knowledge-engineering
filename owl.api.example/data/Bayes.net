@@ -290,7 +290,7 @@ node Driver_incompability
 node Network_issues
 {
      label = "C8";
-     position = (907 218);
+     position = (908 158);
      states = ("YES" "NO");
 }
 
@@ -388,21 +388,21 @@ node Slow_startup
 node Defective_monitor_cable
 {
      label = "C22";
-     position = (1402 364);
+     position = (1352 555);
      states = ("YES" "NO");
 }
 
 node Wrong_refresh_rate
 {
      label = "C23";
-     position = (1329 449);
+     position = (1389 396);
      states = ("YES" "NO");
 }
 
 node Missing_dll_files
 {
      label = "C24";
-     position = (1180 496);
+     position = (1186 518);
      states = ("YES" "NO");
 }
 
@@ -416,7 +416,7 @@ node Third_party_software_conflicts
 node Defective_modem
 {
      label = "C26";
-     position = (878 138);
+     position = (821 88);
      states = ("YES" "NO");
 }
 
@@ -452,6 +452,223 @@ node Insufficient_graphic_resources
 {
      label = "C31";
      position = (1243 140);
+     states = ("YES" "NO");
+}
+
+node Physical_damage
+{
+     label = "Physical_damage";
+     position = (974 802);
+     states = ("YES" "NO");
+}
+
+node Liquid_spill
+{
+     label = "Liquid_spill";
+     position = (1076 833);
+     states = ("YES" "NO");
+}
+
+node Loose_connection
+{
+     label = "Loose_connection";
+     position = (879 814);
+     states = ("YES" "NO");
+}
+
+node Keyboard_keys_unresponsive
+{
+     label = "Keyboard_keys_unresponsive";
+     position = (993 956);
+     states = ("YES" "NO");
+}
+
+node Dirty_mouse_sensor
+{
+     label = "Dirty_mouse_sensor";
+     position = (753 903);
+     states = ("YES" "NO");
+}
+
+node Battery_or_power_issues
+{
+     label = "Battery_or_power_issues";
+     position = (746 969);
+     states = ("YES" "NO");
+}
+
+node Cursor_movement_issues
+{
+     label = "Cursor_movement_issues";
+     position = (844 936);
+     states = ("YES" "NO");
+}
+
+node Damaged_screen
+{
+     label = "Damaged_screen";
+     position = (1201 743);
+     states = ("YES" "NO");
+}
+
+node No_display_on_monitor
+{
+     label = "No_display_on_monitor";
+     position = (920 709);
+     states = ("YES" "NO");
+}
+
+node Paper_misalignment
+{
+     label = "Paper_misalignment";
+     position = (1163 932);
+     states = ("YES" "NO");
+}
+
+node Worn_out_printer_rolls
+{
+     label = "Worn_out_printer_rolls";
+     position = (1257 943);
+     states = ("YES" "NO");
+}
+
+node Low_toner_levels
+{
+     label = "Low_toner_levels";
+     position = (1343 958);
+     states = ("YES" "NO");
+}
+
+node Clogged_print_heads
+{
+     label = "Clogged_print_heads";
+     position = (1068 990);
+     states = ("YES" "NO");
+}
+
+node Printer_not_printing
+{
+     label = "Printer_not_printing";
+     position = (1198 1043);
+     states = ("YES" "NO");
+}
+
+node Privacy_settings
+{
+     label = "Privacy_settings";
+     position = (772 1041);
+     states = ("YES" "NO");
+}
+
+node Compatibility_issues
+{
+     label = "Compatibility_issues";
+     position = (739 1108);
+     states = ("YES" "NO");
+}
+
+node Webcam_no_video_feed
+{
+     label = "Webcam_no_video_feed";
+     position = (867 1102);
+     states = ("YES" "NO");
+}
+
+node Scanner_not_responding
+{
+     label = "Scanner_not_responding";
+     position = (966 1143);
+     states = ("YES" "NO");
+}
+
+node Distorted_scans
+{
+     label = "Distorted_scans";
+     position = (1136 1157);
+     states = ("YES" "NO");
+}
+
+node Damage_to_scanner_glass
+{
+     label = "Physical_damage_to_scanner_glass";
+     position = (1129 1072);
+     states = ("YES" "NO");
+}
+
+node Insufficient_PSU_power
+{
+     label = "Insufficient_PSU_power";
+     position = (1003 1043);
+     states = ("YES" "NO");
+}
+
+node Volume_settings
+{
+     label = "Volume_settings";
+     position = (599 932);
+     states = ("YES" "NO");
+}
+
+node Faulty_audio_driver
+{
+     label = "Faulty_audio_driver";
+     position = (547 858);
+     states = ("YES" "NO");
+}
+
+node Speakers_no_sound_output
+{
+     label = "Speakers_no_sound_output";
+     position = (705 778);
+     states = ("YES" "NO");
+}
+
+node Headphones_no_sound_output
+{
+     label = "Headphones_no_sound_output";
+     position = (735 850);
+     states = ("YES" "NO");
+}
+
+node Damaged_optical_lens
+{
+     label = "C28";
+     position = (684 1019);
+     states = ("YES" "NO");
+}
+
+node Missing_drivers
+{
+     label = "Missing_drivers";
+     position = (555 1116);
+     states = ("YES" "NO");
+}
+
+node External_optical_drive_tray_not_opening
+{
+     label = "C30";
+     position = (597 1031);
+     states = ("YES" "NO");
+}
+
+node Disc_not_recognized
+{
+     label = "Disc_not_recognized";
+     position = (522 957);
+     states = ("YES" "NO");
+}
+
+node Paper_jams
+{
+     label = "Paper_jams";
+     position = (1297 1066);
+     states = ("YES" "NO");
+}
+
+node Paper_overloading
+{
+     label = "Paper_overloading";
+     position = (1380 1020);
      states = ("YES" "NO");
 }
 
@@ -1029,16 +1246,24 @@ potential (Display_driver_issue)
  data = ( 0.4 0.6 );
 }
 
-potential (Screen_flickering | Defective_monitor_cable Wrong_refresh_rate Display_driver_issue)
+potential (Screen_flickering | Damaged_screen Defective_monitor_cable Wrong_refresh_rate Display_driver_issue)
 {
- data = (((( 0.9 0.1 )
+ data = ((((( 0.9 0.1 )
 ( 0.8 0.2 ))
 (( 0.3 0.7 )
 ( 0.25 0.75 )))
 ((( 0.7 0.3 )
 ( 0.65 0.35 ))
 (( 0.4 0.6 )
-( 0.1 0.9 ))));
+( 0.1 0.9 ))))
+(((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.3 0.7 )
+( 0.25 0.75 )))
+((( 0.7 0.3 )
+( 0.65 0.35 ))
+(( 0.4 0.6 )
+( 0.1 0.9 )))));
 }
 
 potential (Firewall_misconfiguration)
@@ -1120,5 +1345,248 @@ potential (Incorrect_IP_address)
 potential (Insufficient_graphic_resources)
 {
  data = ( 0.35 0.65 );
+}
+
+potential (Physical_damage)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Liquid_spill)
+{
+ data = ( 0.2 0.8 );
+}
+
+potential (Loose_connection)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Keyboard_keys_unresponsive | Liquid_spill Physical_damage Loose_connection)
+{
+ data = (((( 0.99 0.01 )
+( 0.9 0.1 ))
+(( 0.8 0.2 )
+( 0.6 0.4 )))
+((( 0.7 0.3 )
+( 0.65 0.35 ))
+(( 0.4 0.6 )
+( 0.2 0.8 ))));
+}
+
+potential (Dirty_mouse_sensor)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Battery_or_power_issues)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Cursor_movement_issues | Battery_or_power_issues Dirty_mouse_sensor Loose_connection)
+{
+ data = (((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.85 0.15 )
+( 0.6 0.4 )))
+((( 0.65 0.35 )
+( 0.4 0.6 ))
+(( 0.6 0.4 )
+( 0.1 0.9 ))));
+}
+
+potential (Damaged_screen)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (No_display_on_monitor | Defective_monitor_cable Damaged_screen GPU_malfunction)
+{
+ data = (((( 0.99 0.01 )
+( 0.6 0.4 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.3 0.7 ))
+(( 0.8 0.2 )
+( 0.1 0.9 ))));
+}
+
+potential (Paper_misalignment)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Worn_out_printer_rolls)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Low_toner_levels)
+{
+ data = ( 0.9 0.1 );
+}
+
+potential (Clogged_print_heads)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Printer_not_printing | Low_toner_levels Worn_out_printer_rolls Paper_misalignment Clogged_print_heads)
+{
+ data = ((((( 0.99 0.01 )
+( 0.95 0.05 ))
+(( 0.9 0.1 )
+( 0.8 0.2 )))
+((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.75 0.25 )
+( 0.65 0.35 ))))
+(((( 0.8 0.2 )
+( 0.75 0.25 ))
+(( 0.6 0.4 )
+( 0.4 0.6 )))
+((( 0.55 0.45 )
+( 0.3 0.7 ))
+(( 0.3 0.7 )
+( 0.01 0.99 )))));
+}
+
+potential (Privacy_settings)
+{
+ data = ( 0.4 0.6 );
+}
+
+potential (Compatibility_issues)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Webcam_no_video_feed | Compatibility_issues Privacy_settings Physical_damage Loose_connection)
+{
+ data = ((((( 0.99 0.01 )
+( 0.95 0.05 ))
+(( 0.8 0.2 )
+( 0.7 0.3 )))
+((( 0.9 0.1 )
+( 0.85 0.15 ))
+(( 0.6 0.4 )
+( 0.4 0.6 ))))
+(((( 0.8 0.2 )
+( 0.7 0.3 ))
+(( 0.6 0.4 )
+( 0.3 0.7 )))
+((( 0.75 0.25 )
+( 0.6 0.4 ))
+(( 0.2 0.8 )
+( 0.01 0.99 )))));
+}
+
+potential (Scanner_not_responding | Loose_connection Insufficient_PSU_power Damage_to_scanner_glass)
+{
+ data = (((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.85 0.15 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.4 0.6 ))
+(( 0.3 0.7 )
+( 0.1 0.9 ))));
+}
+
+potential (Distorted_scans | Damage_to_scanner_glass Insufficient_PSU_power)
+{
+ data = ((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.4 0.6 )
+( 0.1 0.9 )));
+}
+
+potential (Damage_to_scanner_glass)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Insufficient_PSU_power)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Volume_settings)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (Faulty_audio_driver)
+{
+ data = ( 0.8 0.2 );
+}
+
+potential (Speakers_no_sound_output | Loose_connection Volume_settings Faulty_audio_driver)
+{
+ data = (((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.65 0.35 )
+( 0.1 0.9 ))));
+}
+
+potential (Headphones_no_sound_output | Loose_connection Volume_settings Faulty_audio_driver)
+{
+ data = (((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.4 0.6 )))
+((( 0.7 0.3 )
+( 0.6 0.4 ))
+(( 0.65 0.35 )
+( 0.1 0.9 ))));
+}
+
+potential (Damaged_optical_lens)
+{
+ data = ( 0.6 0.4 );
+}
+
+potential (Missing_drivers)
+{
+ data = ( 0.7 0.3 );
+}
+
+potential (External_optical_drive_tray_not_opening | Missing_drivers Damaged_optical_lens)
+{
+ data = ((( 0.9 0.1 )
+( 0.7 0.3 ))
+(( 0.8 0.2 )
+( 0.1 0.9 )));
+}
+
+potential (Disc_not_recognized | Damaged_optical_lens Missing_drivers)
+{
+ data = ((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.6 0.4 )
+( 0.1 0.9 )));
+}
+
+potential (Paper_jams | Paper_overloading Paper_misalignment Worn_out_printer_rolls)
+{
+ data = (((( 0.9 0.1 )
+( 0.8 0.2 ))
+(( 0.85 0.15 )
+( 0.6 0.4 )))
+((( 0.7 0.3 )
+( 0.35 0.65 ))
+(( 0.6 0.4 )
+( 0.1 0.9 ))));
+}
+
+potential (Paper_overloading)
+{
+ data = ( 0.6 0.4 );
 }
 
