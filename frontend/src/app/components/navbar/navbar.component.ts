@@ -28,4 +28,8 @@ export class NavbarComponent implements OnInit{
   goToUpgradePage() : void {
     this.router.navigateByUrl('upgrade-component')
   }
+
+  goToPurposeEstimationPage() : void {
+    this.router.navigateByUrl('purpose-estimation')
+  }
 }

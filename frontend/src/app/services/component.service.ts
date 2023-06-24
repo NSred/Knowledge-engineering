@@ -36,4 +36,13 @@ export class ComponentService {
   getAllRamNames() : Observable<any>{
     return this.http.get<any>(this.apiHost + 'ram/names')
   }
+
+  getPurposeType(cpu_clock_speed_ghz : number, ram_capacity_gb : number, cpu_cores : number, cpu_threads : number, gpu_video_memory_gb : number,
+                 gpu_core_clock_mhz : number, hard_drive_capacity_gb : number, psu_power_watts : number, l3_size_mb : number, ram_latency_ns : number) : Observable<any>{
+    return this.http.get<any>(this.apiHost + 'component/purpose', 
+    {params : new HttpParams().set('cpu_clock_speed_ghz', cpu_clock_speed_ghz)
+    .set('ram_capacity_gb', ram_capacity_gb).set('cpu_cores', cpu_cores).set('cpu_threads', cpu_threads).set('gpu_video_memory_gb', gpu_video_memory_gb)
+    .set('gpu_core_clock_mhz', gpu_core_clock_mhz).set('hard_drive_capacity_gb', hard_drive_capacity_gb).set('psu_power_watts', psu_power_watts)
+    .set('l3_size_mb', l3_size_mb).set('ram_latency_ns', ram_latency_ns)})
+  }
 }

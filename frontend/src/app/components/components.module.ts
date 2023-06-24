@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeComponentComponent } from './upgrade-component/upgrade-component.component';
+import { PurposeEstimationComponent } from './purpose-estimation/purpose-estimation.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { UpgradeComponentComponent } from './upgrade-component/upgrade-component
     CpuPageComponent,
     GpuPageComponent,
     UpgradeComponentComponent,
+    PurposeEstimationComponent,
   ],
   imports: [
     CommonModule,

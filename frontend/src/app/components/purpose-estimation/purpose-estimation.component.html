@@ -1,0 +1,86 @@
+<div class="container">
+    <h2>Enter you pc specs and see which purpose it fits best</h2>
+    <form class="form">
+      <div class="input">
+        <div class="row-margin">
+            <label>Cpu clock speed in ghz: </label>
+            <input type="number" [(ngModel)]="cpu_clock_speed_ghz " min="0" name="lowerClockSpeed" />
+        </div>
+        <div>
+            <label>Ram capacity in gb: </label>
+            <input type="number" [(ngModel)]="ram_capacity_gb " min="0" name="higherclockspeed" />
+        </div>
+      </div>
+      
+      <div class="input">
+        <div class="row-margin">
+            <label>Cpu cores: </label>
+            <input type="number" [(ngModel)]="cpu_cores " min="0" name="lowertdp" />
+        </div>
+        <div>
+            <label>Cpu threads: </label>
+            <input type="number" [(ngModel)]="cpu_threads " min="0" name="highertdp" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Gpu video memory in gb: </label>
+            <input type="number" [(ngModel)]="gpu_video_memory_gb " min="0" name="lowercores" />
+        </div>
+        <div>
+            <label>Gpu core clock in mhz: </label>
+            <input type="number" [(ngModel)]="gpu_core_clock_mhz " min="0" name="highercores" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>Hdd capacity in gb: </label>
+            <input type="number" [(ngModel)]="hard_drive_capacity_gb " min="0" name="lowerthreads" />
+        </div>
+        <div>
+            <label>Psu power in watts: </label>
+            <input type="number" [(ngModel)]="psu_power_watts " min="0" name="higherthreads" />
+        </div>
+      </div>
+
+      <div class="input">
+        <div class="row-margin">
+            <label>L3 size cache in mb: </label>
+            <input type="number" [(ngModel)]="l3_size_mb  " min="0" name="lowerthreads" />
+        </div>
+        <div>
+            <label>Ram latency in ns: </label>
+            <input type="number" [(ngModel)]="ram_latency_ns " min="0" name="higherthreads" />
+        </div>
+      </div>
+
+      <button class="sign-in-button" type="submit" (click)="estimate()">Estimate</button>
+    </form>
+  </div>
+
+  <h2 class="results-headline">Estimation results: </h2>
+  <div class="cards-container" *ngIf="submitted === true">
+    <div class="card" *ngFor="let prop of getPropertyArray()">
+      <div class="table">
+        <h2 class="results-headline"><b>{{prop.key}}</b></h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>Bad: </th>
+              <td>{{prop.value.bad}}</td>
+            </tr>
+            <tr>
+              <th>Average: </th>
+              <td>{{prop.value.average}}</td>
+            </tr>
+            <tr>
+              <th>Excellent: </th>
+              <td>{{prop.value.excellent}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

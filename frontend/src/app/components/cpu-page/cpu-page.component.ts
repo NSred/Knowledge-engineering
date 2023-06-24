@@ -24,13 +24,6 @@ export class CpuPageComponent implements OnInit{
   constructor(private cpuService : CpuService, private toast : ToastrService) {}
 
   ngOnInit(): void {
-    // this.cpuService.getCPUBySpec(100, 300, 2, 4, 8, 64, 16, 64).subscribe( {
-    //    next : res => {
-    //      this.temp = res
-    //    },
-    //    error : err => {
-    //    }
-    //   })
   }
 
   search() : void {
