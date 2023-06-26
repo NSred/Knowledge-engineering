@@ -57,6 +57,15 @@ public class MotherboardService {
         return getMotherboardResponseDTOs(classMotherboard);
     }
 
+    public MotherboardResponseDTO getMotherboardByName(String name){
+        List<MotherboardResponseDTO> motherboardResponseDTOS = getAllMotherboards();
+        for(MotherboardResponseDTO motherboardDTO : motherboardResponseDTOS){
+            if(motherboardDTO.getName().equals(name))
+                return motherboardDTO;
+        }
+        return null;
+    }
+
     public List<MotherboardResponseDTO> getMotherboardUpgrades(String motherboard, String cpu, String gpu, String ram, String psu){
 
         OWLNamedIndividual motherboardIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + motherboard.replace(" ", "_")));

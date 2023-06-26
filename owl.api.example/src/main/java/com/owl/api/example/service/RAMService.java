@@ -51,6 +51,15 @@ public class RAMService {
         return getRAMResponseDTOs(classRAM);
     }
 
+    public RAMResponseDTO getRAMByName(String name){
+        List<RAMResponseDTO> ramResponseDTOS = getAllRAMs();
+        for(RAMResponseDTO ramDTO : ramResponseDTOS){
+            if(ramDTO.getName().equals(name))
+                return ramDTO;
+        }
+        return null;
+    }
+
     public List<RAMResponseDTO> getRAMUpgrades(String ram, String motherboard){
 
         OWLNamedIndividual ramIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + ram.replace(" ", "_")));

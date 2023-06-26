@@ -51,6 +51,15 @@ public class PSUService {
         return getPSUResponseDTOs(classPSU);
     }
 
+    public PSUResponseDTO getPSUByName(String name){
+        List<PSUResponseDTO> psuResponseDTOS = getAllPSUs();
+        for(PSUResponseDTO psuDTO : psuResponseDTOS){
+            if(psuDTO.getName().equals(name))
+                return psuDTO;
+        }
+        return null;
+    }
+
     public List<PSUResponseDTO> getPSUUpgrades(String psu, String motherboard, String gpu){
 
         OWLNamedIndividual psuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + psu.replace(" ", "_")));

@@ -56,6 +56,15 @@ public class GPUService {
         return getGpuResponseDTOs(classGPU);
     }
 
+    public GPUResponseDTO getGPUByName(String name){
+        List<GPUResponseDTO> gpuResponseDTOS = getAllGPUs();
+        for(GPUResponseDTO gpuDTO : gpuResponseDTOS){
+            if(gpuDTO.getName().equals(name))
+                return gpuDTO;
+        }
+        return null;
+    }
+
     public List<GPUResponseDTO> getGPUUpgrades(String gpu, String motherboard, String cpu, String psu){
 
         OWLNamedIndividual gpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + gpu.replace(" ", "_")));

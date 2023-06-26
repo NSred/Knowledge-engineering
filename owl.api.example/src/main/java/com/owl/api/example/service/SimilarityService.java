@@ -16,6 +16,7 @@ import ucm.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import ucm.gaia.jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.global.Average;
 import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Equal;
+import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval;
 import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.MaxString;
 import ucm.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Threshold;
 import ucm.gaia.jcolibri.method.retrieve.RetrievalResult;
@@ -70,13 +71,13 @@ public class SimilarityService implements StandardCBRApplication {
         simConfig.addMapping(new Attribute("cpuCores", SimilarityDTO.class), new Threshold(1));
         simConfig.addMapping(new Attribute("cpuThreads", SimilarityDTO.class), new Threshold(1));
         simConfig.addMapping(new Attribute("cpuSocket", SimilarityDTO.class), new Equal());
-        simConfig.addMapping(new Attribute("cpuTDP", SimilarityDTO.class), new Threshold(5));
+        simConfig.addMapping(new Attribute("cpuTDP", SimilarityDTO.class), new Interval(345));
 
         simConfig.addMapping(new Attribute("gpuName", SimilarityDTO.class), new MaxString());
         simConfig.addMapping(new Attribute("gpuCoreClock", SimilarityDTO.class), new Threshold(100));
         simConfig.addMapping(new Attribute("gpuMemoryClock", SimilarityDTO.class), new Threshold(100));
         simConfig.addMapping(new Attribute("gpuVideoMemory", SimilarityDTO.class), new Threshold(1000));
-        simConfig.addMapping(new Attribute("gpuTDP", SimilarityDTO.class), new Threshold(5));
+        simConfig.addMapping(new Attribute("gpuTDP", SimilarityDTO.class), new Interval(400));
 
         if(!this.motherboard.isEmpty()){
             setConfig1();
@@ -99,13 +100,13 @@ public class SimilarityService implements StandardCBRApplication {
 
     private void setConfig2(){
         simConfig.addMapping(new Attribute("ramType", SimilarityDTO.class), new Equal());
-        simConfig.addMapping(new Attribute("ramLatency", SimilarityDTO.class), new Threshold(2));
+        simConfig.addMapping(new Attribute("ramLatency", SimilarityDTO.class), new Interval(30));
         simConfig.addMapping(new Attribute("ramVoltage", SimilarityDTO.class), new Equal());
         simConfig.addMapping(new Attribute("ramCapacity", SimilarityDTO.class), new Equal());
     }
 
     private void setConfig3(){
-        simConfig.addMapping(new Attribute("psuPower", SimilarityDTO.class), new Threshold(50));
+        simConfig.addMapping(new Attribute("psuPower", SimilarityDTO.class), new Interval(1200));
     }
 
     @Override
@@ -128,6 +129,10 @@ public class SimilarityService implements StandardCBRApplication {
             similarityEvaluationDTO.setEvaluation(Double.parseDouble(df.format(res.getEval()*100))+"%");
             similarityEvaluationDTOS.add(similarityEvaluationDTO);
         }
+        saveResultsToTXTFile(similarityEvaluationDTOS);
+    }
+
+    private void saveResultsToTXTFile(List<SimilarityEvaluationDTO> similarityEvaluationDTOS) {
         String jsonString;
         try {
             jsonString = objectMapper.writeValueAsString(similarityEvaluationDTOS);
@@ -145,7 +150,7 @@ public class SimilarityService implements StandardCBRApplication {
     public void postCycle() throws ExecutionException {
     }
 
-    public void main(String cpu, String gpu, String motherboard, String ram, String psu)
+    public void getSimilarPCs(String cpu, String gpu, String motherboard, String ram, String psu)
     {
         this.psu = psu;
         this.motherboard = motherboard;
@@ -158,53 +163,43 @@ public class SimilarityService implements StandardCBRApplication {
 
             CBRQuery query = new CBRQuery();
 
-            List<CPUResponseDTO> cpuResponseDTOS = this.cpuService.getAllCPUs();
-            for(CPUResponseDTO cpuDTO : cpuResponseDTOS){
-                if(cpuDTO.getName().equals(cpu)){
-                    similarityDTO.setCpuName(cpuDTO.getName());
-                    similarityDTO.setCpuClockSpeed(cpuDTO.getClockSpeed());
-                    similarityDTO.setCpuCores(cpuDTO.getCores());
-                    similarityDTO.setCpuThreads(cpuDTO.getThreads());
-                    similarityDTO.setCpuSocket(cpuDTO.getSocket());
-                    similarityDTO.setCpuTDP(cpuDTO.getTDP());
-                }
+            CPUResponseDTO cpuDTO = this.cpuService.getCPUByName(cpu);
+            if(cpuDTO != null) {
+                similarityDTO.setCpuName(cpuDTO.getName());
+                similarityDTO.setCpuClockSpeed(cpuDTO.getClockSpeed());
+                similarityDTO.setCpuCores(cpuDTO.getCores());
+                similarityDTO.setCpuThreads(cpuDTO.getThreads());
+                similarityDTO.setCpuSocket(cpuDTO.getSocket());
+                similarityDTO.setCpuTDP(cpuDTO.getTDP());
             }
 
-            List<GPUResponseDTO> gpuResponseDTOS = this.gpuService.getAllGPUs();
-            for(GPUResponseDTO gpuDTO : gpuResponseDTOS){
-                if(gpuDTO.getName().equals(gpu)){
-                    similarityDTO.setGpuName(gpuDTO.getName());
-                    similarityDTO.setGpuCoreClock(gpuDTO.getCoreClock());
-                    similarityDTO.setGpuMemoryClock(gpuDTO.getMemoryClock());
-                    similarityDTO.setGpuVideoMemory(gpuDTO.getVideoMemory());
-                    similarityDTO.setGpuTDP(gpuDTO.getTDP());
-                }
+            GPUResponseDTO gpuDTO = this.gpuService.getGPUByName(gpu);
+            if(gpuDTO != null){
+                similarityDTO.setGpuName(gpuDTO.getName());
+                similarityDTO.setGpuCoreClock(gpuDTO.getCoreClock());
+                similarityDTO.setGpuMemoryClock(gpuDTO.getMemoryClock());
+                similarityDTO.setGpuVideoMemory(gpuDTO.getVideoMemory());
+                similarityDTO.setGpuTDP(gpuDTO.getTDP());
             }
 
-            List<MotherboardResponseDTO> motherboardResponseDTOS = this.motherboardService.getAllMotherboards();
-            for(MotherboardResponseDTO motherboardDTO : motherboardResponseDTOS){
-                if(motherboardDTO.getName().equals(motherboard)){
-                    similarityDTO.setMotherboardFormFactor(motherboardDTO.getFormFactor());
-                    similarityDTO.setMotherboardChipset(motherboardDTO.getChipset());
-                    similarityDTO.setMotherboardSocket(motherboardDTO.getSocket());
-                }
+            MotherboardResponseDTO motherboardDTO = this.motherboardService.getMotherboardByName(motherboard);
+            if(motherboardDTO != null) {
+                similarityDTO.setMotherboardFormFactor(motherboardDTO.getFormFactor());
+                similarityDTO.setMotherboardChipset(motherboardDTO.getChipset());
+                similarityDTO.setMotherboardSocket(motherboardDTO.getSocket());
             }
 
-            List<RAMResponseDTO> ramResponseDTOS = this.ramService.getAllRAMs();
-            for(RAMResponseDTO ramDTO : ramResponseDTOS){
-                if(ramDTO.getName().equals(ram)){
-                    similarityDTO.setRamType(ramDTO.getType());
-                    similarityDTO.setRamLatency(ramDTO.getLatency());
-                    similarityDTO.setRamVoltage(ramDTO.getVoltage());
-                    similarityDTO.setRamCapacity(ramDTO.getCapacity());
-                }
+            RAMResponseDTO ramDTO = this.ramService.getRAMByName(ram);
+            if(ramDTO != null){
+                similarityDTO.setRamType(ramDTO.getType());
+                similarityDTO.setRamLatency(ramDTO.getLatency());
+                similarityDTO.setRamVoltage(ramDTO.getVoltage());
+                similarityDTO.setRamCapacity(ramDTO.getCapacity());
             }
 
-            List<PSUResponseDTO> psuResponseDTOS = this.psuService.getAllPSUs();
-            for(PSUResponseDTO psuDTO : psuResponseDTOS){
-                if(psuDTO.getName().equals(psu)){
-                    similarityDTO.setPsuPower(psuDTO.getPower());
-                }
+            PSUResponseDTO psuDTO = this.psuService.getPSUByName(psu);
+            if(psuDTO != null){
+                similarityDTO.setPsuPower(psuDTO.getPower());
             }
 
             query.setDescription(similarityDTO);
@@ -212,40 +207,43 @@ public class SimilarityService implements StandardCBRApplication {
             recommender.cycle(query);
 
             if(!ram.isEmpty() && !motherboard.isEmpty() && !psu.isEmpty()) {
-                try (CSVWriter writer = (CSVWriter) new CSVWriterBuilder(new FileWriter("data/Similarity.csv", true))
-                        .withSeparator(';')
-                        .withQuoteChar(CSVWriter.NO_QUOTE_CHARACTER)
-                        .build()) {
-                    String[] data = {
-                            similarityDTO.getCpuName(),
-                            String.valueOf(similarityDTO.getCpuClockSpeed()),
-                            String.valueOf(similarityDTO.getCpuCores()),
-                            String.valueOf(similarityDTO.getCpuThreads()),
-                            similarityDTO.getCpuSocket(),
-                            String.valueOf(similarityDTO.getCpuTDP()),
-                            similarityDTO.getGpuName(),
-                            String.valueOf(similarityDTO.getGpuCoreClock()),
-                            String.valueOf(similarityDTO.getGpuMemoryClock()),
-                            String.valueOf(similarityDTO.getGpuVideoMemory()),
-                            String.valueOf(similarityDTO.getGpuTDP()),
-                            similarityDTO.getMotherboardFormFactor(),
-                            similarityDTO.getMotherboardChipset(),
-                            similarityDTO.getMotherboardSocket(),
-                            similarityDTO.getRamType(),
-                            String.valueOf(similarityDTO.getRamLatency()),
-                            String.valueOf(similarityDTO.getRamVoltage()),
-                            String.valueOf(similarityDTO.getRamCapacity()),
-                            String.valueOf(similarityDTO.getPsuPower())
-                    };
-                    writer.writeNext(data);
-                } catch (IOException e) {
-                    // Handle the exception appropriately
-                    e.printStackTrace();
-                }
+                saveInputToCSVFile();
             }
 
             recommender.postCycle();
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void saveInputToCSVFile() {
+        try (CSVWriter writer = (CSVWriter) new CSVWriterBuilder(new FileWriter("data/Similarity.csv", true))
+                .withSeparator(';')
+                .withQuoteChar(CSVWriter.NO_QUOTE_CHARACTER)
+                .build()) {
+            String[] data = {
+                    similarityDTO.getCpuName(),
+                    String.valueOf(similarityDTO.getCpuClockSpeed()),
+                    String.valueOf(similarityDTO.getCpuCores()),
+                    String.valueOf(similarityDTO.getCpuThreads()),
+                    similarityDTO.getCpuSocket(),
+                    String.valueOf(similarityDTO.getCpuTDP()),
+                    similarityDTO.getGpuName(),
+                    String.valueOf(similarityDTO.getGpuCoreClock()),
+                    String.valueOf(similarityDTO.getGpuMemoryClock()),
+                    String.valueOf(similarityDTO.getGpuVideoMemory()),
+                    String.valueOf(similarityDTO.getGpuTDP()),
+                    similarityDTO.getMotherboardFormFactor(),
+                    similarityDTO.getMotherboardChipset(),
+                    similarityDTO.getMotherboardSocket(),
+                    similarityDTO.getRamType(),
+                    String.valueOf(similarityDTO.getRamLatency()),
+                    String.valueOf(similarityDTO.getRamVoltage()),
+                    String.valueOf(similarityDTO.getRamCapacity()),
+                    String.valueOf(similarityDTO.getPsuPower())
+            };
+            writer.writeNext(data);
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

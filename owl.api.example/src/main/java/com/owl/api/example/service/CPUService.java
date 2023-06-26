@@ -56,6 +56,15 @@ public class CPUService {
         return getCpuResponseDTOs(classCPU);
     }
 
+    public CPUResponseDTO getCPUByName(String name){
+        List<CPUResponseDTO> cpuResponseDTOS = getAllCPUs();
+        for(CPUResponseDTO cpuDTO : cpuResponseDTOS){
+            if(cpuDTO.getName().equals(name))
+                return cpuDTO;
+        }
+        return null;
+    }
+
     public List<CPUResponseDTO> getCPUUpgrades(String cpu, String motherboard, String gpu){
 
         OWLNamedIndividual cpuIndividual = dataFactory.getOWLNamedIndividual(IRI.create(GlobalStrings.baseIRI + cpu.replace(" ", "_")));

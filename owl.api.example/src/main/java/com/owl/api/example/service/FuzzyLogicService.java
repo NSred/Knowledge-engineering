@@ -7,6 +7,9 @@ import net.sourceforge.jFuzzyLogic.plot.JFuzzyChart;
 import net.sourceforge.jFuzzyLogic.rule.Variable;
 import org.springframework.stereotype.Service;
 
+import java.math.RoundingMode;
+import java.text.DecimalFormat;
+
 @Service
 public class FuzzyLogicService {
     private FIS fis;
@@ -44,46 +47,49 @@ public class FuzzyLogicService {
         fis.evaluate();
 
         Variable ad = fis.getVariable("app_development");
-        JFuzzyChart.get().chart(ad, ad.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(ad, ad.getDefuzzifier(), true);
         Variable vg = fis.getVariable("video_games");
-        JFuzzyChart.get().chart(vg, vg.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(vg, vg.getDefuzzifier(), true);
         Variable m = fis.getVariable("mining");
-        JFuzzyChart.get().chart(m, m.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(m, m.getDefuzzifier(), true);
         Variable v = fis.getVariable("hosting");
-        JFuzzyChart.get().chart(v, v.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(v, v.getDefuzzifier(), true);
         Variable hm = fis.getVariable("home");
-        JFuzzyChart.get().chart(hm, hm.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(hm, hm.getDefuzzifier(), true);
         Variable b = fis.getVariable("business");
-        JFuzzyChart.get().chart(b, b.getDefuzzifier(), true);
+        //JFuzzyChart.get().chart(b, b.getDefuzzifier(), true);
 
-        ADMemberships.setBad(fis.getVariable("app_development").getMembership("bad"));
-        ADMemberships.setAverage(fis.getVariable("app_development").getMembership("average"));
-        ADMemberships.setExcellent(fis.getVariable("app_development").getMembership("excellent"));
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.HALF_UP);
+
+        ADMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("app_development").getMembership("bad")*100)));
+        ADMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("app_development").getMembership("average")*100)));
+        ADMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("app_development").getMembership("excellent")*100)));
         purpose.setAppDevelopment(ADMemberships);
 
-        VGMemberships.setBad(fis.getVariable("video_games").getMembership("bad"));
-        VGMemberships.setAverage(fis.getVariable("video_games").getMembership("average"));
-        VGMemberships.setExcellent(fis.getVariable("video_games").getMembership("excellent"));
+        VGMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("video_games").getMembership("bad")*100)));
+        VGMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("video_games").getMembership("average")*100)));
+        VGMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("video_games").getMembership("excellent")*100)));
         purpose.setVideoGames(VGMemberships);
 
-        MMemberships.setBad(fis.getVariable("mining").getMembership("bad"));
-        MMemberships.setAverage(fis.getVariable("mining").getMembership("average"));
-        MMemberships.setExcellent(fis.getVariable("mining").getMembership("excellent"));
+        MMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("mining").getMembership("bad")*100)));
+        MMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("mining").getMembership("average")*100)));
+        MMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("mining").getMembership("excellent")*100)));
         purpose.setMining(MMemberships);
 
-        HMemberships.setBad(fis.getVariable("hosting").getMembership("bad"));
-        HMemberships.setAverage(fis.getVariable("hosting").getMembership("average"));
-        HMemberships.setExcellent(fis.getVariable("hosting").getMembership("excellent"));
+        HMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("hosting").getMembership("bad")*100)));
+        HMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("hosting").getMembership("average")*100)));
+        HMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("hosting").getMembership("excellent")*100)));
         purpose.setHosting(HMemberships);
 
-        HMMemberships.setBad(fis.getVariable("home").getMembership("bad"));
-        HMMemberships.setAverage(fis.getVariable("home").getMembership("average"));
-        HMMemberships.setExcellent(fis.getVariable("home").getMembership("excellent"));
+        HMMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("home").getMembership("bad")*100)));
+        HMMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("home").getMembership("average")*100)));
+        HMMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("home").getMembership("excellent")*100)));
         purpose.setHome(HMMemberships);
 
-        BMemberships.setBad(fis.getVariable("business").getMembership("bad"));
-        BMemberships.setAverage(fis.getVariable("business").getMembership("average"));
-        BMemberships.setExcellent(fis.getVariable("business").getMembership("excellent"));
+        BMemberships.setBad(Double.parseDouble(df.format(fis.getVariable("business").getMembership("bad")*100)));
+        BMemberships.setAverage(Double.parseDouble(df.format(fis.getVariable("business").getMembership("average")*100)));
+        BMemberships.setExcellent(Double.parseDouble(df.format(fis.getVariable("business").getMembership("excellent")*100)));
         purpose.setBusiness(BMemberships);
 
         return purpose;

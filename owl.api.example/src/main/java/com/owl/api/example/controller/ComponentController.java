@@ -68,7 +68,11 @@ public class ComponentController {
             @RequestParam(required = false, defaultValue = "") String motherboard,
             @RequestParam(required = false, defaultValue = "") String ram,
             @RequestParam(required = false, defaultValue = "") String psu) {
-        this.similarityService.main(cpu, gpu, motherboard, ram, psu);
+        this.similarityService.getSimilarPCs(cpu, gpu, motherboard, ram, psu);
+        return new ResponseEntity<>(getResultsFromTXTFile(), HttpStatus.OK);
+    }
+
+    private List<SimilarityEvaluationDTO> getResultsFromTXTFile() {
         List<SimilarityEvaluationDTO> results;
         try (BufferedReader reader = new BufferedReader(new FileReader("data/Results.txt"))) {
             String jsonString = reader.readLine();
@@ -76,7 +80,7 @@ public class ComponentController {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return new ResponseEntity<>(results, HttpStatus.OK);
+        return results;
     }
 
     @GetMapping("/cause")
