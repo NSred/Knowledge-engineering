@@ -1,7 +1,9 @@
 package com.owl.api.example.controller;
 
-import com.owl.api.example.dto.CauseProbabilityDTO;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.owl.api.example.dto.PurposeTypeDTO;
+import com.owl.api.example.dto.SimilarityEvaluationDTO;
 import com.owl.api.example.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -56,6 +61,24 @@ public class ComponentController {
                 gpu_core_clock_mhz, hard_drive_capacity_gb, psu_power_watts, l3_size_mb, ram_latency_ns), HttpStatus.OK);
     }
 
+    @GetMapping("/similarity")
+    public ResponseEntity<List<SimilarityEvaluationDTO>> getSimilarPCs(
+            @RequestParam(required = true) String cpu,
+            @RequestParam(required = true) String gpu,
+            @RequestParam(required = false, defaultValue = "") String motherboard,
+            @RequestParam(required = false, defaultValue = "") String ram,
+            @RequestParam(required = false, defaultValue = "") String psu) {
+        this.similarityService.main(cpu, gpu, motherboard, ram, psu);
+        List<SimilarityEvaluationDTO> results;
+        try (BufferedReader reader = new BufferedReader(new FileReader("data/Results.txt"))) {
+            String jsonString = reader.readLine();
+            results = objectMapper.readValue(jsonString, new TypeReference<List<SimilarityEvaluationDTO>>() {});
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return new ResponseEntity<>(results, HttpStatus.OK);
+    }
+
     @GetMapping("/cause")
     public ResponseEntity<?> getProbabilityOfCause(
             @RequestParam(required = true) String allSymptoms) {
@@ -84,9 +107,10 @@ public class ComponentController {
     private final MotherboardService motherboardService;
     private final FuzzyLogicService fuzzyLogicService;
     private final BayesService bayesService;
-
+    private final SimilarityService similarityService;
+    private final ObjectMapper objectMapper;
     @Autowired
-    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService, FuzzyLogicService fuzzyLogicService, BayesService bayesService) {
+    public ComponentController(RAMService ramService, PSUService psuService, CPUService cpuService, GPUService gpuService, MotherboardService motherboardService, FuzzyLogicService fuzzyLogicService, BayesService bayesService, SimilarityService similarityService, ObjectMapper objectMapper) {
         this.ramService = ramService;
         this.psuService = psuService;
         this.cpuService = cpuService;
@@ -94,6 +118,8 @@ public class ComponentController {
         this.motherboardService = motherboardService;
         this.fuzzyLogicService = fuzzyLogicService;
         this.bayesService = bayesService;
+        this.similarityService = similarityService;
+        this.objectMapper = objectMapper;
     }
 
 }

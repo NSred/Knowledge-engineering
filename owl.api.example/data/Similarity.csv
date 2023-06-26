@@ -1,0 +1,8 @@
+#cpu name;cpu clock speed;cpu cores;cpu threads;cpu socket;cpu tdp;gpu name;gpu core clock;gpu memory clock;gpu video memory;gpu tdp;motherboard form factor;motherboard chipset;motherboard socket;ram type;ram latency;ram voltage;ram capacity;psu power
+Intel Core i5-12600K;3.7;10;16;LGA 1700;125;Radeon RX 6600;1626;1750;8192;132;ATX;B550;AM4;DDR5;28;1.1;16;1200
+Intel Core i9-13900KF;3.0;24;32;LGA 1700;125;Radeon RX 6800;1815;16000;16384;250;Micro ATX;Intel B760;FCLGA1200;DDR4;14;1.2;8;750
+Intel Core i5-12600K;3.7;10;16;LGA 1700;125;Radeon RX 6800;1815;16000;16384;250;ATX;B550;AM4;DDR4;14;1.2;8;1200
+Intel Core i9-13900KF;3.0;24;32;LGA 1700;125;Radeon RX 6600;1626;1750;8192;132;Micro ATX;Intel B760;FCLGA1200;DDR5;28;1.1;16;1200
+Intel Core i5-12600K;3.7;10;16;LGA 1700;125;Radeon RX 6600;1626;1750;8192;132;Micro ATX;Intel B760;FCLGA1200;DDR4;14;1.2;8;750
+Intel Core i9-13900KF;3.0;24;32;LGA 1700;125;Radeon RX 6600;1626;1750;8192;132;ATX;B550;AM4;DDR5;28;1.1;16;750
+Intel Core i9-13900KF;3.0;24;32;LGA 1700;125;Radeon RX 6800;1815;16000;16384;250;ATX;B550;AM4;DDR5;28;1.1;16;750
