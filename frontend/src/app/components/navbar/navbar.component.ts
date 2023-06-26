@@ -36,4 +36,8 @@ export class NavbarComponent implements OnInit{
   goToMalfunctionProbability() : void {
     this.router.navigateByUrl('malfunction-probability')
   }
+
+  goToSimilarPcPage() : void {
+    this.router.navigateByUrl('similar-pc')
+  }
 }

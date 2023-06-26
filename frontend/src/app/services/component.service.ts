@@ -49,4 +49,15 @@ export class ComponentService {
   getProbabilityOfCause(allSymptoms : string) : Observable<any>{
     return this.http.get<any>(this.apiHost + 'component/cause', {params : new HttpParams().set('allSymptoms', allSymptoms)})
   }
+
+  getSimilarPCs(cpu : string, gpu : string, motherboard? : string, ram? : string, psu? : string) : Observable<any>{
+    return this.http.get<any>(this.apiHost + 'component/similarity', 
+    {params: new HttpParams()
+      .set('cpu', cpu)
+      .set('gpu', gpu)
+      .set('motherboard', motherboard || '')
+      .set('ram', ram || '')
+      .set('psu', psu || '')
+      })
+  }
 }

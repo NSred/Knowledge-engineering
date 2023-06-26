@@ -1,0 +1,148 @@
+<div class="container">
+    <h2>Choose your components and find similar configurations</h2>
+    <form class="form">
+      <!-- <div class="input">
+        <div>
+            <label>For upgrade: </label>
+            <select [(ngModel)]="selectedComponent" name="selectedComponent" (change)="changeSubmitted()">
+                <option>CPU</option>
+                <option>GPU</option>
+                <option>Motherboard</option>
+                <option>PSU</option>
+                <option>RAM</option>
+            </select>
+        </div>
+      </div> -->
+      
+      <div class="input">
+        <div>
+            <label>Your Cpu: </label>
+            <select [(ngModel)]="selectedCpu" name="selectedCpu">
+                <option *ngFor="let option of cpuNames" [value]="option">{{ option }}</option>
+            </select>
+       </div>
+     </div>
+
+        <div class="input">
+            <div>
+                <label>Your Gpu: </label>
+                <select [(ngModel)]="selectedGpu" name="selectedGpu">
+                    <option *ngFor="let option of gpuNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input">
+            <div>
+                <label>Your motherboard: </label>
+                <select [(ngModel)]="selectedMotherboard" name="selectedMotherboard">
+                    <option *ngFor="let option of motherboardNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="input">
+            <div>
+                <label>Your Psu: </label>
+                <select [(ngModel)]="selectedPsu" name="selectedPsu">
+                    <option *ngFor="let option of psuNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+        </div>
+
+      <div class="input">
+            <div>
+                <label>Your Ram: </label>
+                <select [(ngModel)]="selectedRam" name="selectedRam">
+                    <option *ngFor="let option of ramNames" [value]="option">{{ option }}</option>
+                </select>
+            </div>
+      </div>
+      <button class="sign-in-button" type="submit" (click)="findSimilar()">Find similar</button>
+    </form>
+  </div>
+
+
+  <h2 class="results-headline">Similar configurations: </h2>
+  <div class="cards-container" *ngIf="submitted === true">
+    <div class="card" *ngFor="let res of similarityList; let i = index">
+      <div class="table">
+        <h2 class="results-headline"><b>Configuration {{i + 1}}</b></h2>
+        <table class="table-margin">
+          <tbody>
+            <tr>
+                <th class="evaluation">Evaluation: </th>
+                <td class="evaluation"><b>{{res.evaluation}}</b></td>
+
+                <th></th>
+                <td></td>
+
+                <th>Motherboard form factor: </th>
+                <td>{{res.object.motherboardFormFactor}}</td>
+            </tr>
+            <tr>
+                <th>Cpu name: </th>
+                <td>{{res.object.cpuName}}</td>
+
+                <th>Gpu name: </th>
+                <td>{{res.object.gpuName}}</td>
+
+                <th>Motherboard chipset: </th>
+                <td>{{res.object.motherboardChipset}}</td>
+
+            </tr>
+            <tr>
+                <th>Cpu cores: </th>
+                <td>{{res.object.cpuCores}}</td>
+
+                <th>Gpu video memory: </th>
+                <td>{{res.object.gpuVideoMemory}}</td>
+
+                <th>Motherboard socket: </th>
+                <td>{{res.object.motherboardSocket}}</td>
+            </tr>
+            <tr>
+                <th>Cpu threads: </th>
+                <td>{{res.object.cpuThreads}}</td>
+
+                <th>Gpu core clock: </th>
+                <td>{{res.object.gpuCoreClock}}</td>
+
+                <th>Ram capacity: </th>
+                <td>{{res.object.ramCapacity}}</td>
+            </tr>
+            <tr>
+                <th>Cpu TDP: </th>
+                <td>{{res.object.cpuTDP}}</td>
+
+                <th>Gpu TDP: </th>
+                <td>{{res.object.gpuTDP}}</td>
+
+                <th>Ram type: </th>
+                <td>{{res.object.ramType}}</td>
+            </tr>
+            <tr>
+                <th>Cpu clock speed: </th>
+                <td>{{res.object.cpuClockSpeed}}</td>
+
+                <th>Gpu memory clock: </th>
+                <td>{{res.object.gpuMemoryClock}}</td>
+
+                <th>Ram latency: </th>
+                <td>{{res.object.ramLatency}}</td>
+            </tr>
+            <tr>
+                <th>Cpu socket: </th>
+                <td>{{res.object.cpuSocket}}</td>
+
+                <th>Psu power: </th>
+                <td>{{res.object.psuPower}}</td>
+
+                <th>Ram voltage: </th>
+                <td>{{res.object.ramVoltage}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

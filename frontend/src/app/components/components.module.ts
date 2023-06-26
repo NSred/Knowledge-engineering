@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { UpgradeComponentComponent } from './upgrade-component/upgrade-component.component';
 import { PurposeEstimationComponent } from './purpose-estimation/purpose-estimation.component';
 import { MalfunctionProbabilityComponent } from './malfunction-probability/malfunction-probability.component';
+import { SimilarPcComponent } from './similar-pc/similar-pc.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MalfunctionProbabilityComponent } from './malfunction-probability/malfu
     UpgradeComponentComponent,
     PurposeEstimationComponent,
     MalfunctionProbabilityComponent,
+    SimilarPcComponent,
   ],
   imports: [
     CommonModule,

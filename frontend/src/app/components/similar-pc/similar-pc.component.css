@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px 20px 20px;
+    margin-top: 2%;
+    margin-left: 30%;
+    margin-right: 30%;
+    border: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 30%;
+}
+
+.input {
+    display: flex;
+    align-self: center;
+}
+
+.input input {
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.input select {
+    /* max-width: 40%;
+    min-width: 40%; */
+    max-width: 30vh;
+    min-width: 30vh;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.sign-in-button {
+    height: 40px;
+    width: 50%;
+    align-self: center;
+    font-size: 16px;
+    background-color: #673AB7;
+    color: white;
+    border-radius: 10px;
+}
+
+.sign-in-button:hover {
+    cursor: pointer;
+}
+
+.last-row-margin {
+    margin-left: -14vh;
+}
+
+.results-headline{
+    margin-top: 3%;
+    text-align: center;
+    max-height: 30px;
+}
+
+.cards-container{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    min-height: 20vh;
+    width: 40%;
+    margin: 0.5rem;
+}
+
+.table{
+    align-items: center;
+    margin: 0 auto;
+}
+
+.table-margin{
+    margin-top: 2rem;
+}
+
+.evaluation{
+    font-size: 20px;
+    color: #b78f3a;
+}
