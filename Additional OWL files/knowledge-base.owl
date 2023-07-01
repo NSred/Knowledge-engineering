@@ -5195,6 +5195,56 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
       :PC_contains_ram :Kingston_FURY_Beast_32_GB .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC55
+:PC55 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Ryzen_7_5800x ;
+      :PC_contains_gpu :Radeon_RX_5500_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Beast_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC56
+:PC56 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Xeon_w9-3475X ;
+      :PC_contains_gpu :Radeon_RX_5600_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :ASUS_ROG_Strix_650G ;
+      :PC_contains_ram :Kingston_FURY_Beast_RGB_16_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC57
+:PC57 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Xeon_Platinum_8380 ;
+      :PC_contains_gpu :Radeon_RX_5700 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :ASUS_TUF_GAMING_550B ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC58
+:PC58 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Xeon_Gold_6414U ;
+      :PC_contains_gpu :GeForce_RTX_3070_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :ASUS_ROG_Strix_850G ;
+      :PC_contains_ram :Kingston_FURY_Beast_RGB_16_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC59
+:PC59 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i9-13900KS ;
+      :PC_contains_gpu :Radeon_RX_6600_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :ASUS_ROG_Strix_850G ;
+      :PC_contains_ram :G_Skill_Intl_F5-6800J3445G16G_16GB .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC6
 :PC6 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
@@ -5203,6 +5253,106 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
      :PC_contains_motherboard :MSI_B550-M_PRO ;
      :PC_contains_psu :Thermaltake_Toughpower_GF1 ;
      :PC_contains_ram :TRANSCEND_JM3200HLH-4GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC60
+:PC60 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i9-13900KF ;
+      :PC_contains_gpu :Radeon_RX_7900_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :ASUS_ROG_Strix_650G ;
+      :PC_contains_ram :G_Skill_Intl_F5-6800J3445G16G_16GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC61
+:PC61 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i9-10900F ;
+      :PC_contains_gpu :GeForce_RTX_4080 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Corsair_RM550x ;
+      :PC_contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC62
+:PC62 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i7-13700 ;
+      :PC_contains_gpu :Radeon_RX_6900_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Corsair_HX1200 ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZSWE_8GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC63
+:PC63 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i7-10700K ;
+      :PC_contains_gpu :GeForce_RTX_4070 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F5-5600J4040C16G_16GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC64
+:PC64 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-13600K ;
+      :PC_contains_gpu :GeForce_RTX_3090_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZSWE_8GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC65
+:PC65 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-12600K ;
+      :PC_contains_gpu :GeForce_RTX_2080_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC66
+:PC66 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-10500 ;
+      :PC_contains_gpu :Radeon_RX_5700 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC67
+:PC67 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-10400F ;
+      :PC_contains_gpu :GeForce_RTX_3080_12GB ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Beast_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC68
+:PC68 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i3-12100F ;
+      :PC_contains_gpu :Radeon_RX_5500_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC69
+:PC69 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i3-10100F ;
+      :PC_contains_gpu :Radeon_RX_6600 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZKKE_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC7
@@ -5215,6 +5365,106 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
      :PC_contains_ram :TRANSCEND_JetRam_JM2666HLB_8GB .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC70
+:PC70 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Celeron_G6900 ;
+      :PC_contains_gpu :Radeon_RX_5600_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Trident_Z5_RGB_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC71
+:PC71 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_Threadripper_PRO_5995WX ;
+      :PC_contains_gpu :Radeon_RX_580 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F5-5600J4040C16G_16GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC72
+:PC72 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_Threadripper_3990X ;
+      :PC_contains_gpu :GeForce_RTX_4070_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_HyperX_Fury_16_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC73
+:PC73 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_9_7845HX ;
+      :PC_contains_gpu :GeForce_RTX_2080_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC74
+:PC74 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_7_5800X3D ;
+      :PC_contains_gpu :Radeon_RX_5500_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZSWE_8GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC75
+:PC75 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_7_5700X ;
+      :PC_contains_gpu :GeForce_RTX_3080_12GB ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Beast_RGB_16_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC76
+:PC76 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600X ;
+      :PC_contains_gpu :Radeon_RX_6750_XT ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC77
+:PC77 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600G ;
+      :PC_contains_gpu :GeForce_RTX_3080_12GB ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F5-6800J3445G16G_16GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC78
+:PC78 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600 ;
+      :PC_contains_gpu :GeForce_RTX_4070 ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :Kingston_FURY_Beast_RGB_16_GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC79
+:PC79 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_3_3350U ;
+      :PC_contains_gpu :GeForce_RTX_3080_12GB ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Trident_Z5_RGB_32_GB .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC8
 :PC8 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
@@ -5223,6 +5473,16 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
      :PC_contains_motherboard :MSI_B550-M_PRO ;
      :PC_contains_psu :Corsair_CX750M ;
      :PC_contains_ram :TRANSCEND_JetRam_JM3200HLG_8GB .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC80
+:PC80 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_EPYC_9474F ;
+      :PC_contains_gpu :GeForce_RTX_4070_Ti ;
+      :PC_contains_motherboard :GIGABYTE_B760M_DS3H_AX_DDR4 ;
+      :PC_contains_psu :Cooler_Master_V750_Gold_V2 ;
+      :PC_contains_ram :G_Skill_Intl_F5-5600J4040C16G_16GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC9
