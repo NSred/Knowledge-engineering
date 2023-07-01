@@ -4699,189 +4699,270 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
 :PC1 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :AMD_EPYC_7773X ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :GeForce_RTX_2080_Ti ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :ASUS_ROG_Strix_850G ;
+     :PC_contains_ram :Corsair_CM5S16GM4800A40K2_16GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC10
 :PC10 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_EPYC_9474F ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_3060 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_TUF_GAMING_550B ;
+      :PC_contains_ram :Corsair_CMT32GX5M2X6600C32_16GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC11
 :PC11 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_3_3350U ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_3070_Ti ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_ROG_Strix_750W_Gold ;
+      :PC_contains_ram :Corsair_Vengeance_RGB_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC12
 :PC12 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_5_5600 ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_3080_12GB ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_TUF_GAMING_750B ;
+      :PC_contains_ram :Corsair_Vengeance_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC13
 :PC13 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_5_5600G ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_3090_Ti ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_ROG_Strix_650G ;
+      :PC_contains_ram :Corsair_CMK16GX4M2F4400C19_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC14
 :PC14 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_5_5600X ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_4070 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_TUF_GAMING_550B ;
+      :PC_contains_ram :Corsair_CMTS16GM4800A40T2_16GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC15
 :PC15 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_7_5700X ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_4070_Ti ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_ROG_Strix_750W_Gold ;
+      :PC_contains_ram :Corsair_Vengeance_RGB_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC16
 :PC16 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_7_5800X3D ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_4080 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_TUF_GAMING_550B ;
+      :PC_contains_ram :Corsair_CMK16GX4M2F4400C19_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC17
 :PC17 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_9_7845HX ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :GeForce_RTX_4090 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :ASUS_TUF_GAMING_750B ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZKKE_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC18
 :PC18 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_Threadripper_3990X ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Intel_Arc_A750 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_CX550F_RGB ;
+      :PC_contains_ram :G_Skill_Intl_F4-4500C19-8GTZSWE_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC19
 :PC19 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :AMD_Ryzen_Threadripper_PRO_5995WX ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Quadro_GV100 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM550x ;
+      :PC_contains_ram :G_Skill_Trident_Z5_RGB_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC2
 :PC2 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Celeron_G6900 ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_5500_XT ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Corsair_HX1200 ;
+     :PC_contains_ram :G_Skill_Flare_X5_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC20
 :PC20 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i3-10100F ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_5600_XT ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM1000x ;
+      :PC_contains_ram :G_Skill_Intl_F5-5600J4040C16G_16GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC21
 :PC21 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i3-12100F ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_5700 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_CX450 ;
+      :PC_contains_ram :G_Skill_Trident_Z5_RGB_64_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC22
 :PC22 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i5-10400F ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_5700_XT ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM650x ;
+      :PC_contains_ram :Kingston_FURY_Beast_8_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC23
 :PC23 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i5-10500 ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_580 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_SF750 ;
+      :PC_contains_ram :Kingston_HyperX_Fury_16_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC24
 :PC24 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i5-12600K ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_6400 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM550x ;
+      :PC_contains_ram :Kingston_FURY_Beast_8_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC25
 :PC25 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i5-13600K ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_6600 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM550x ;
+      :PC_contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC26
 :PC26 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i7-10700K ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_6600_XT ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_RM750x ;
+      :PC_contains_ram :Kingston_FURY_Renegade_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC27
 :PC27 rdf:type owl:NamedIndividual ,
                :Personal_computer ;
       :PC_contains_cpu :Intel_Core_i7-13700 ;
-      :PC_contains_motherboard :MSI_B550-M_PRO .
+      :PC_contains_gpu :Radeon_RX_6700_XT ;
+      :PC_contains_motherboard :MSI_B550-M_PRO ;
+      :PC_contains_psu :Corsair_HX1200 ;
+      :PC_contains_ram :Kingston_FURY_Beast_32_GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC3
 :PC3 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Core_i9-10900F ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_6750_XT ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Thermaltake_Toughpower_GF1 ;
+     :PC_contains_ram :Kingston_HyperX_Fury_DDR4_8GB_3200MHZ .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC4
 :PC4 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Core_i9-13900KF ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_6800 ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Thermaltake_Smart_BM2 ;
+     :PC_contains_ram :TRANSCEND_JetRam_JM3200HLE_32GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC5
 :PC5 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Core_i9-13900KS ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_6900_XT ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Thermaltake_Toughpower_GF3_1350W ;
+     :PC_contains_ram :TRANSCEND_JetRam_JM3200HLE_32GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC6
 :PC6 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Xeon_Gold_6414U ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_6950_XT ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Thermaltake_Toughpower_GF1 ;
+     :PC_contains_ram :TRANSCEND_JM3200HLH-4GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC7
 :PC7 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Xeon_Platinum_8380 ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_7900_XT ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Thermaltake_Smart_BM2 ;
+     :PC_contains_ram :TRANSCEND_JetRam_JM2666HLB_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC8
 :PC8 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Intel_Xeon_w9-3475X ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :Radeon_RX_7900_XTX ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :Corsair_CX750M ;
+     :PC_contains_ram :TRANSCEND_JetRam_JM3200HLG_8GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC9
 :PC9 rdf:type owl:NamedIndividual ,
               :Personal_computer ;
      :PC_contains_cpu :Ryzen_7_5800x ;
-     :PC_contains_motherboard :MSI_B550-M_PRO .
+     :PC_contains_gpu :RTX_A5000 ;
+     :PC_contains_motherboard :MSI_B550-M_PRO ;
+     :PC_contains_psu :ASUS_ROG_Strix_750W_Gold ;
+     :PC_contains_ram :TRANSCEND_JetRam_JM2666HLH_4GB .
 
 
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PLUGIT_HDMI_adapter_mini
