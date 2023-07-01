@@ -4695,6 +4695,195 @@ owl:topObjectProperty rdf:type owl:ObjectProperty .
         :graphic_library_has_version 4.2 .
 
 
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC1
+:PC1 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :AMD_EPYC_7773X ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC10
+:PC10 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_EPYC_9474F ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC11
+:PC11 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_3_3350U ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC12
+:PC12 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC13
+:PC13 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600G ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC14
+:PC14 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_5_5600X ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC15
+:PC15 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_7_5700X ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC16
+:PC16 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_7_5800X3D ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC17
+:PC17 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_9_7845HX ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC18
+:PC18 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_Threadripper_3990X ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC19
+:PC19 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :AMD_Ryzen_Threadripper_PRO_5995WX ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC2
+:PC2 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Celeron_G6900 ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC20
+:PC20 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i3-10100F ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC21
+:PC21 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i3-12100F ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC22
+:PC22 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-10400F ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC23
+:PC23 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-10500 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC24
+:PC24 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-12600K ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC25
+:PC25 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i5-13600K ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC26
+:PC26 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i7-10700K ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC27
+:PC27 rdf:type owl:NamedIndividual ,
+               :Personal_computer ;
+      :PC_contains_cpu :Intel_Core_i7-13700 ;
+      :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC3
+:PC3 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Core_i9-10900F ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC4
+:PC4 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Core_i9-13900KF ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC5
+:PC5 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Core_i9-13900KS ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC6
+:PC6 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Xeon_Gold_6414U ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC7
+:PC7 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Xeon_Platinum_8380 ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC8
+:PC8 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Intel_Xeon_w9-3475X ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
+###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PC9
+:PC9 rdf:type owl:NamedIndividual ,
+              :Personal_computer ;
+     :PC_contains_cpu :Ryzen_7_5800x ;
+     :PC_contains_motherboard :MSI_B550-M_PRO .
+
+
 ###  http://www.semanticweb.org/administrator/ontologies/2023/2/untitled-ontology-3#PLUGIT_HDMI_adapter_mini
 :PLUGIT_HDMI_adapter_mini rdf:type owl:NamedIndividual ,
                                    :Adapter ;
